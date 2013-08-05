@@ -1,0 +1,208 @@
+@charset "utf-8";
+
+
+	#MainHeadline {
+		position:absolute;
+		Top:275px;
+		width: 860px;
+		height: 30px;
+		margin-top: 8px;
+		font-family: "proxima-nova-soft",sans-serif;
+		font-style:normal;
+		font-stretch:extra-expanded;
+		font-variant:small-caps;
+		font-weight:700;
+		font-size:32px;
+	 	text-align:center;							
+		padding-top:0px;
+		padding-bottom:12px;
+		margin-left:85px;
+		background-color:#77d4ff;
+    	}
+
+		/*Box Header Text*/
+	.HeaderText {
+	border-bottom: 1px;
+	border-bottom-color: #030303;
+	border-bottom-style: solid;
+	font-family: "proxima-nova-soft",sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 22px;
+	color:#000080;
+	text-align: center;
+	margin-bottom: 2px;
+	
+	  	/*color: #030303*/
+	}
+		
+	/*4 Arrow Boxes	*/
+	.buildArrow {
+		position: relative;
+		width: 240px;
+		height: 54px;
+		float:left;
+		margin-top: 12px;
+		margin-bottom:3px;
+		background-image: url(../_images/BlueArrow8.gif);
+		background-repeat: no-repeat;
+		background-position:center
+		}
+
+
+	/*4 Main Boxes */
+	.buildBox {
+		position: relative;
+		width: 230px;
+		height: 350px;
+		margin-left:5px;
+		padding-right:5px;
+		margin-bottom: 18px;
+		background:#F3F3F3;
+		Float:left;
+		}
+		
+	/* Give box pics some space */
+	.picSpace {
+		width: 235px;
+		height: 109px;
+		float:left;
+		border:1px;
+		margin-right:10px;
+	}
+	
+	/*Box Body Text*/
+	.BodyText {
+		border:thin;
+		border-top-left-radius: 20px 20px;
+		font-family: "nimbus-sans-condensed",sans-serif;
+		font-style: normal;
+		font-size: 18px;
+		font-weight: 300;
+	 	text-align:left;
+		padding-left: 8px;
+		padding-right: 1px;
+	  	color:#000;
+		}
+		
+	.bulletText {
+		font-family: "nimbus-sans-condensed",sans-serif;
+		font-style: normal;
+		font-size: 14px;
+	}
+	
+	/*Second To Bottom Layout*/
+	.wireBox {
+		position:relative;
+		Left: 525px;
+		width: 490px;
+		height: 625px;
+		border:none
+		}
+
+	/*Bottom Layout Text Container*/
+	#TextPicWrap {
+	 	text-align:left;
+	  	color: #d6d1d1;
+		padding-left:10px;
+		padding-right:5px;
+	}
+
+	.formatHeadingtext {
+		font-family: "proxima-nova-soft",sans-serif;
+		font-style: normal;
+		font-weight: 900;
+		font-size:20px;
+		color:#030303;
+		text-align:center;
+	}
+	
+		.formatHeadingtextDST {
+		font-family: "proxima-nova-soft",sans-serif;
+		font-style: normal;
+		font-weight: 900;
+		font-size: 1em;
+		text-align:center;
+		bottom: 0px;
+		background-color:#77d4ff;
+		margin-left: 40px;
+		margin-right: 40px;
+		margin-top: 10px;
+		border: thin;
+		border-style:solid;
+		border-color: #000;
+		border-top-right-radius:20px 20px;
+		border-top-left-radius: 20px 20px;
+		vertical-align:bottom;
+		margin-bottom: 0;
+		padding-bottom: 1px;
+		Padding-top: 4px ;
+		line-height: 70%;
+	}
+	
+	.formatReadingText {
+		font-family: "nimbus-sans-condensed",sans-serif;
+		font-style: normal;
+		font-weight: 400;
+		color:#FFF;
+		line-height: 95%;
+	}
+	
+	.pixHeader {
+		font-family: "proxima-nova-soft",sans-serif;
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 700;
+		font-variant:small-caps;
+		color:#FC6907;
+		padding-left:15px;
+		margin-bottom: 6px;
+		
+	}
+	
+	.picContainer {
+			display:inline-table;
+			width: 1020px;
+			padding-left:15px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 0px;
+	}
+	
+	.picRow {
+		display: inline;
+		float:left;
+		height: 100px;
+		padding-bottom: 65px;
+		
+	}
+	
+	
+	.textRow {
+		font-family: "proxima-nova-soft",sans-serif;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 700;
+		vertical-align:central;
+		margin-left:4px;
+		margin-right:17px;
+		padding-top: 10px;
+		float:left;
+		
+	}
+	
+	.MoreHereLink {
+		position: absolute;
+		bottom: 0px;
+		padding-bottom: 4px;
+		margin-left:100px;
+		font-family: "proxima-nova-soft",sans-serif;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 700;
+		appearance:hyperlink;
+		color:#F03;
+	}
+
+
+
