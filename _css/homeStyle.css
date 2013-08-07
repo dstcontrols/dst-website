@@ -6,17 +6,13 @@
 		width: 860px;
 		height: 25px;
 		margin-top: 20px;
-		/*font-family: "proxima-nova-soft",sans-serif;
-		font-style:normal;*/
 		font-family: "news-gothic-std",sans-serif;
 		font-size: 22px;
 		font-style: normal;
 		font-weight:700;
 		font-variant:small-caps;
-		
-		
 	 	text-align:center;							
-		padding-top:0px;
+		padding-top:5px;
 		padding-bottom:6px;
 		margin-left:83px;
 		background-color:#77d4ff;
