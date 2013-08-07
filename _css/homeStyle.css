@@ -5,14 +5,14 @@
 		Top:270px;
 		width: 860px;
 		height: 25px;
-		margin-top: 10px;
+		margin-top: 20px;
 		font-family: "news-gothic-std",sans-serif;
 		font-size: 22px;
 		font-style: normal;
 		font-weight:700;
 		font-variant:small-caps;
 	 	text-align:center;							
-		padding-top:5px;
+		padding-top:0px;
 		padding-bottom:6px;
 		margin-left:83px;
 		background-color:#77d4ff;
@@ -122,7 +122,7 @@
 		font-weight: 700;
 		vertical-align:central;
 		margin-left:4px;
-		margin-right:28px;
+		margin-right:31px;
 		padding-top: 10px;
 		float:left;
 		}
