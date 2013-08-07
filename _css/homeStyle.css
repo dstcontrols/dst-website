@@ -120,17 +120,13 @@
 		}
 	
 		.textRow {
-		/*font-family: "proxima-nova-n8", "proxima-nova-soft", sans-serif;
-		font-size: 14px;
-		font-style: normal;
-		font-weight: 800;*/
 		font-family: "news-gothic-std",sans-serif;
 		font-size: 12px;
 		font-style: normal;
 		font-weight: 700;
 		vertical-align:central;
 		margin-left:4px;
-		margin-right:31px;
+		margin-right:28px;
 		padding-top: 10px;
 		float:left;
 		}
