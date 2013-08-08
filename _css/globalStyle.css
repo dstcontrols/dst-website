@@ -302,6 +302,13 @@
 		font-size:15px;
 		}
 		
+		.newsGothic11B {
+		font-family: "news-gothic-std",sans-serif;
+		font-style: normal;
+		font-weight: Bold;
+		font-size:11px;
+		}
+		
 		.bolder {
 		font-weight: 600;
 		font-size:16px;
