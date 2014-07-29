@@ -280,6 +280,7 @@
     <Content Include="404.aspx" />
     <Content Include="500.aspx" />
     <Content Include="betterCms.license.txt" />
+    <Content Include="Content\images\dst-logo-100px-transparent.png" />
     <Content Include="Content\images\dst-logo-500px-transparent.png" />
     <Content Include="Content\images\revolution\arrow-down.png" />
     <Content Include="Content\images\revolution\arrow-up.png" />
