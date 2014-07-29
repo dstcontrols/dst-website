@@ -152,23 +152,30 @@
                 </div>
             </div><!-- .header-wrapper -->
         </header><!-- .header -->
+        @if (Model.Title != "index")
+        {
+            <div class="breadcrumb-box">
+                <div class="container">
+                    <ul class="breadcrumb">
 
-        <div class="breadcrumb-box">
-            <div class="container">
-                <ul class="breadcrumb">
-                    <li><a href="index.html">Home</a> </li>
-                    <li class="active">Contacts Us</li>
-                </ul>
-            </div>
-        </div><!-- .breadcrumb-box -->
-
+                            <li><a href="/">Home</a> </li>
+                            <li class="active">@Model.Title</li>
+           
+                    </ul>
+                </div>
+            </div><!-- .breadcrumb-box -->
+        }  
         <section id="main">
             <header class="page-header">
                 <div class="container">
-                    <h1 class="title">Contacts Us</h1>
+                    @if (Model.Title != "index")
+                    {
+                        <h1 class="title">@Model.Title</h1>
+                    }
+
                 </div>
             </header>
-            <div class="container">
+            <article class="container">
                 <div class="row">
                     <div class="content col-sm-12 col-md-12">
                         <div class="row">
@@ -197,7 +204,7 @@
                         </div>
                     </div>
                 </div>
-            </div><!-- .container -->
+            </article><!-- .container -->
         </section><!-- #main -->
     </div><!-- .page-box-content -->
 </div><!-- .page-box -->

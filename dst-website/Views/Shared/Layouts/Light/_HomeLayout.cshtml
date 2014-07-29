@@ -3,21 +3,22 @@
 }
 
 @section MainContent {
-    <section class="home-banner" id="home-slides">
-        @RenderSection("Slider", false)
-    </section>
+<div class="content col-sm-12 col-md-12">
+    @RenderSection("Content1", false)
+</div>
+
+<div class="col-sm-12 col-md-6">
+    @RenderSection("Content2", false)
+</div>
+
+<div class="col-sm-12 col-md-6">
+    @RenderSection("Content3", false)
+</div>  
     
-    <div class="home-bottom">
-        <article>
-            @RenderSection("Article", false)
-        </article>
-        
-        <section class="home-gallery">
-            <div id="gallery-main-content" style="visibility: hidden;">
-                @RenderSection("SideBar", false)
-            </div>
-        </section>
-    </div>
+<div class="content col-sm-12 col-md-12">
+    @RenderSection("Content4", false)
+</div>
+
 }
 
 @section HeadScripts {
