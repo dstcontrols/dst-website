@@ -1,14 +1,15 @@
-﻿@model IList<dst_website.Models.CategoryItem>
+﻿@using dst_website.Models
+@model IList<dst_website.Models.CategoryItem>
 
 @{
-    var categoryId = Request.Params["categoryId"] ?? null;
+    string categoryId = Request.Params["categoryId"] ?? null;
 }
 
 <div class="submenu">
-    <a href="@Request.Path" class="@(categoryId == null ? "submenu-active": null)">All</a>
-    @foreach (var category in Model)
+    <a href="@Request.Path" class="@(categoryId == null ? "submenu-active" : null)">All</a>
+    @foreach (CategoryItem category in Model)
     {
-        var active = categoryId != null && categoryId.ToUpper() == category.Id.ToString("D").ToUpper();
-        <a href="@Request.Path?categoryId=@category.Id" class="@(active ? "submenu-active": null)">@category.Name</a>
+        bool active = categoryId != null && categoryId.ToUpper() == category.Id.ToString("D").ToUpper();
+        <a href="@Request.Path?categoryId=@category.Id" class="@(active ? "submenu-active" : null)">@category.Name</a>
     }
 </div>

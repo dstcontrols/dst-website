@@ -1,10 +1,9 @@
-﻿@using BetterCms.Module.Root.ViewModels.Cms
-@using dst_website.Helpers
-@model RenderWidgetViewModel
+﻿@using dst_website.Helpers
+@model BetterCms.Module.Root.ViewModels.Cms.RenderWidgetViewModel
 
 @{
-    var useSideBoxOption = OptionsHelper.GetValue(Model.Options, "useSideBox");
-    var useSideBox = !string.IsNullOrWhiteSpace(useSideBoxOption) && Convert.ToBoolean(useSideBoxOption);
+    string useSideBoxOption = OptionsHelper.GetValue(Model.Options, "useSideBox");
+    bool useSideBox = !string.IsNullOrWhiteSpace(useSideBoxOption) && Convert.ToBoolean(useSideBoxOption);
 }
 
 @if (useSideBox)

@@ -1,13 +1,15 @@
-﻿@model IList<dst_website.Models.BlogItem>
+﻿@using dst_website.Models
+@model IList<dst_website.Models.BlogItem>
 
-@foreach (var item in Model)
+@foreach (BlogItem item in Model)
 {
     <section class="blog-post">
         <h1><a href="@item.Url">@item.Title</a></h1>
         <span class="author">@item.Author</span><time datetime="@item.PublishedOn.ToString("yyyy-MM-dd")">@item.PublishedOn.ToString("MMM d, yyyy")</time>
         <span>
-            @if (item.Tags != null) {
-                foreach (var tag in item.Tags)
+            @if (item.Tags != null)
+            {
+                foreach (string tag in item.Tags)
                 {
                     <a href="@Request.Path?tagName=@tag" class="single-tag">@tag</a>
                 }

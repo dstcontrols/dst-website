@@ -1,10 +1,14 @@
 ﻿namespace dst_website.Controllers
 {
+    #region Namespace import directives
+
     using System;
     using System.Net.Mail;
     using System.Web.Mvc;
     using dst_website.Helpers;
     using dst_website.Models;
+
+    #endregion
 
     public class ContactController : Controller
     {
@@ -14,7 +18,7 @@
             bool success;
             if (this.ModelState.IsValid)
             {
-                using (var message = new MailMessage())
+                using (MailMessage message = new MailMessage())
                 {
                     message.From = new MailAddress("info@BetterCmsDemo.com");
                     message.ReplyToList.Add(new MailAddress(viewModel.Email));
@@ -41,13 +45,16 @@
             }
 
             return new JsonResult
-            {
-                Data = new
-                {
-                    success = success,
-                    message = success ? "Your message successfully send." : "Sorry there has been an error while sending your message, please try again later."
-                }
-            };
+                   {
+                       Data = new
+                              {
+                                  success,
+                                  message =
+                           success
+                               ? "Your message successfully send."
+                               : "Sorry there has been an error while sending your message, please try again later."
+                              }
+                   };
         }
     }
 }

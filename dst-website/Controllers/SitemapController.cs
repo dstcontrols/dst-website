@@ -1,5 +1,7 @@
 ﻿namespace dst_website.Controllers
 {
+    #region Namespace import directives
+
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -13,25 +15,29 @@
     using BetterCms.Module.Api.Operations.Pages.Sitemap.Tree;
     using dst_website.Models;
 
+    #endregion
+
     public class SiteMapController : Controller
     {
-        private static Guid defaultSitemapId = new Guid("17ABFEE9-5AE6-470C-92E1-C2905036574B");
+        private static readonly Guid defaultSitemapId = new Guid("17ABFEE9-5AE6-470C-92E1-C2905036574B");
 
         public virtual ActionResult Index()
         {
-            var menuItems = new List<MenuItemViewModel>();
+            List<MenuItemViewModel> menuItems = new List<MenuItemViewModel>();
 
-            using (var api = ApiFactory.Create())
+            using (IApiFacade api = ApiFactory.Create())
             {
-                var sitemapId = this.GetSitemapId(api);
+                Guid? sitemapId = this.GetSitemapId(api);
                 if (sitemapId.HasValue)
                 {
-                    var request = new GetSitemapTreeRequest { SitemapId = sitemapId.Value };
+                    GetSitemapTreeRequest request = new GetSitemapTreeRequest {SitemapId = sitemapId.Value};
 
-                    var response = api.Pages.Sitemap.Tree.Get(request);
+                    GetSitemapTreeResponse response = api.Pages.Sitemap.Tree.Get(request);
                     if (response.Data.Count > 0)
                     {
-                        menuItems = response.Data.Select(mi => new MenuItemViewModel { Caption = mi.Title, Url = mi.Url }).ToList();
+                        menuItems =
+                            response.Data.Select(mi => new MenuItemViewModel {Caption = mi.Title, Url = mi.Url})
+                                    .ToList();
                     }
                 }
             }
@@ -41,22 +47,22 @@
 
         public virtual ActionResult SubMenu(string parentUrl)
         {
-            var menuItems = new List<MenuItemViewModel>();
+            List<MenuItemViewModel> menuItems = new List<MenuItemViewModel>();
 
-            using (var api = ApiFactory.Create())
+            using (IApiFacade api = ApiFactory.Create())
             {
-                var pageRequest = new PageExistsRequest { PageUrl = parentUrl };
-                var pageResponse = api.Pages.Page.Exists(pageRequest);
+                PageExistsRequest pageRequest = new PageExistsRequest {PageUrl = parentUrl};
+                PageExistsResponse pageResponse = api.Pages.Page.Exists(pageRequest);
 
-                var sitemapId = this.GetSitemapId(api);
+                Guid? sitemapId = this.GetSitemapId(api);
                 if (sitemapId.HasValue)
                 {
-                    var parentRequest = new GetSitemapNodesRequest();
+                    GetSitemapNodesRequest parentRequest = new GetSitemapNodesRequest();
                     parentRequest.SitemapId = sitemapId.Value;
                     parentRequest.Data.Take = 1;
                     parentRequest.Data.Filter.Add("ParentId", null);
 
-                    var filter = new DataFilter(FilterConnector.Or);
+                    DataFilter filter = new DataFilter(FilterConnector.Or);
                     parentRequest.Data.Filter.Inner.Add(filter);
                     filter.Add("Url", parentUrl);
                     if (pageResponse.Data.Exists)
@@ -65,30 +71,33 @@
                     }
                     parentRequest.Data.Order.Add("DisplayOrder");
 
-                    var parentResponse = api.Pages.Sitemap.Nodes.Get(parentRequest);
+                    GetSitemapNodesResponse parentResponse = api.Pages.Sitemap.Nodes.Get(parentRequest);
                     if (parentResponse.Data.Items.Count == 1)
                     {
-                        var request = new GetSitemapTreeRequest { SitemapId = sitemapId.Value };
+                        GetSitemapTreeRequest request = new GetSitemapTreeRequest {SitemapId = sitemapId.Value};
                         request.Data.NodeId = parentResponse.Data.Items[0].Id;
-                        var response = api.Pages.Sitemap.Tree.Get(request);
+                        GetSitemapTreeResponse response = api.Pages.Sitemap.Tree.Get(request);
                         if (response.Data.Count > 0)
                         {
-                            menuItems = response.Data.Select(mi => new MenuItemViewModel { Caption = mi.Title, Url = mi.Url }).ToList();
-                            menuItems.Insert(0, new MenuItemViewModel { Caption = "Main", Url = parentUrl });
+                            menuItems =
+                                response.Data.Select(mi => new MenuItemViewModel {Caption = mi.Title, Url = mi.Url})
+                                        .ToList();
+                            menuItems.Insert(0, new MenuItemViewModel {Caption = "Main", Url = parentUrl});
                         }
                     }
                 }
             }
 
-            return this.View(menuItems);            
+            return this.View(menuItems);
         }
 
         private Guid? GetSitemapId(IApiFacade api)
         {
-            var allSitemaps = api.Pages.Sitemap.Get(new GetSitemapsRequest());
+            GetSitemapsResponse allSitemaps = api.Pages.Sitemap.Get(new GetSitemapsRequest());
             if (allSitemaps.Data.Items.Count > 0)
             {
-                var sitemap = allSitemaps.Data.Items.FirstOrDefault(map => map.Id == defaultSitemapId) ?? allSitemaps.Data.Items.First();
+                SitemapModel sitemap = allSitemaps.Data.Items.FirstOrDefault(map => map.Id == defaultSitemapId) ??
+                                       allSitemaps.Data.Items.First();
                 return sitemap.Id;
             }
 

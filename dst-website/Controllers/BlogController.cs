@@ -1,5 +1,7 @@
 ﻿namespace dst_website.Controllers
 {
+    #region Namespace import directives
+
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -11,17 +13,19 @@
     using BetterCms.Module.Api.Operations.Root.Categories;
     using dst_website.Models;
 
+    #endregion
+
     public class BlogController : Controller
     {
         public virtual ActionResult Index(Guid? categoryId, string tagName)
         {
             IList<BlogItem> posts;
-            
-            using (var api = ApiFactory.Create())
-            {
-                var request = new GetBlogPostsModel { Take = 10, IncludeTags = true };
 
-                var orFilter = new DataFilter(FilterConnector.Or);
+            using (IApiFacade api = ApiFactory.Create())
+            {
+                GetBlogPostsModel request = new GetBlogPostsModel {Take = 10, IncludeTags = true};
+
+                DataFilter orFilter = new DataFilter(FilterConnector.Or);
                 orFilter.Add("ExpirationDate", null);
                 orFilter.Add("ExpirationDate", DateTime.Today, FilterOperation.GreaterOrEqual);
 
@@ -39,20 +43,20 @@
                     request.FilterByTags.Add(tagName);
                 }
 
-                var pages = api.Blog.BlogPosts.Get(new GetBlogPostsRequest { Data = request });
+                GetBlogPostsResponse pages = api.Blog.BlogPosts.Get(new GetBlogPostsRequest {Data = request});
 
                 posts = pages.Data.Items.Select(
-                        x => new BlogItem
-                        {
-                            IntroText = x.IntroText, 
-                            PublishedOn = x.ActivationDate, 
-                            Title = x.Title, 
-                            Url = x.BlogPostUrl,
-                            Author = x.AuthorName,
-                            Tags = x.Tags
-                        }).ToList();
+                                                x => new BlogItem
+                                                     {
+                                                         IntroText = x.IntroText,
+                                                         PublishedOn = x.ActivationDate,
+                                                         Title = x.Title,
+                                                         Url = x.BlogPostUrl,
+                                                         Author = x.AuthorName,
+                                                         Tags = x.Tags
+                                                     }).ToList();
             }
-            
+
             return this.View(posts);
         }
 
@@ -60,11 +64,11 @@
         {
             BlogItem post = null;
 
-            using (var api = ApiFactory.Create())
+            using (IApiFacade api = ApiFactory.Create())
             {
-                var requestLatestNewsModel = new GetBlogPostsModel { Take = 1, IncludeTags = true };
+                GetBlogPostsModel requestLatestNewsModel = new GetBlogPostsModel {Take = 1, IncludeTags = true};
 
-                var orFilter = new DataFilter(FilterConnector.Or);
+                DataFilter orFilter = new DataFilter(FilterConnector.Or);
 
                 orFilter.Add("ExpirationDate", null);
                 orFilter.Add("ExpirationDate", DateTime.Today, FilterOperation.GreaterOrEqual);
@@ -75,42 +79,42 @@
 
                 requestLatestNewsModel.Filter.Inner.Add(orFilter);
 
-                var request = new GetBlogPostsRequest { Data = requestLatestNewsModel };
+                GetBlogPostsRequest request = new GetBlogPostsRequest {Data = requestLatestNewsModel};
 
-                var pages = api.Blog.BlogPosts.Get(request);
+                GetBlogPostsResponse pages = api.Blog.BlogPosts.Get(request);
 
                 post = pages.Data.Items.Select(
-                        x => new BlogItem
-                        {
-                            IntroText = x.IntroText,
-                            PublishedOn = x.ActivationDate,
-                            Title = x.Title,
-                            Url = x.BlogPostUrl,
-                            Author = x.AuthorName,
-                            Tags = x.Tags
-                        }).SingleOrDefault();
+                                               x => new BlogItem
+                                                    {
+                                                        IntroText = x.IntroText,
+                                                        PublishedOn = x.ActivationDate,
+                                                        Title = x.Title,
+                                                        Url = x.BlogPostUrl,
+                                                        Author = x.AuthorName,
+                                                        Tags = x.Tags
+                                                    }).SingleOrDefault();
             }
 
-            return this.View(post);            
+            return this.View(post);
         }
 
         public virtual ActionResult GetCategories()
         {
             IList<CategoryItem> categories;
 
-            using (var api = ApiFactory.Create())
+            using (IApiFacade api = ApiFactory.Create())
             {
-                var request = new GetCategoriesRequest();
+                GetCategoriesRequest request = new GetCategoriesRequest();
                 request.Data.Order.By.Add(new OrderItem("Name"));
 
-                var pages = api.Root.Categories.Get(request);
+                GetCategoriesResponse pages = api.Root.Categories.Get(request);
 
                 categories = pages.Data.Items.Select(
-                        x => new CategoryItem
-                        {
-                            Id = x.Id,
-                            Name = x.Name
-                        }).ToList();
+                                                     x => new CategoryItem
+                                                          {
+                                                              Id = x.Id,
+                                                              Name = x.Name
+                                                          }).ToList();
             }
 
             return this.View(categories);
@@ -120,11 +124,11 @@
         {
             IList<BlogItem> posts;
 
-            using (var api = ApiFactory.Create())
+            using (IApiFacade api = ApiFactory.Create())
             {
-                var request = new GetBlogPostsModel { Take = 10, IncludeTags = true };
+                GetBlogPostsModel request = new GetBlogPostsModel {Take = 10, IncludeTags = true};
 
-                var orFilter = new DataFilter(FilterConnector.Or);
+                DataFilter orFilter = new DataFilter(FilterConnector.Or);
                 orFilter.Add("ExpirationDate", null);
                 orFilter.Add("ExpirationDate", DateTime.Today, FilterOperation.GreaterOrEqual);
 
@@ -132,19 +136,19 @@
                 request.Order.By.Add(new OrderItem("Id"));
                 request.Filter.Add("ActivationDate", DateTime.Today, FilterOperation.LessOrEqual);
 
-                var pages = api.Blog.BlogPosts.Get(new GetBlogPostsRequest { Data = request });
+                GetBlogPostsResponse pages = api.Blog.BlogPosts.Get(new GetBlogPostsRequest {Data = request});
 
                 posts = pages.Data.Items.Select(
-                        x => new BlogItem
-                        {
-                            IntroText = x.IntroText,
-                            PublishedOn = x.ActivationDate,
-                            Title = x.Title,
-                            Url = x.BlogPostUrl,
-                            Author = x.AuthorName,
-                            ImageUrl = x.MainImageUrl,
-                            Tags = x.Tags
-                        }).ToList();
+                                                x => new BlogItem
+                                                     {
+                                                         IntroText = x.IntroText,
+                                                         PublishedOn = x.ActivationDate,
+                                                         Title = x.Title,
+                                                         Url = x.BlogPostUrl,
+                                                         Author = x.AuthorName,
+                                                         ImageUrl = x.MainImageUrl,
+                                                         Tags = x.Tags
+                                                     }).ToList();
             }
 
             return this.View(posts);

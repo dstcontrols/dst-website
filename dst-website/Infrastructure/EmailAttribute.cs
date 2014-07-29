@@ -1,8 +1,12 @@
 ﻿namespace dst_website.Infrastructure
 {
+    #region Namespace import directives
+
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.Web.Mvc;
+
+    #endregion
 
     public class EmailAttribute : RegularExpressionAttribute, IClientValidatable
     {
@@ -11,9 +15,10 @@
         {
         }
 
-        public IEnumerable<ModelClientValidationRule> GetClientValidationRules(ModelMetadata metadata, ControllerContext context)
+        public IEnumerable<ModelClientValidationRule> GetClientValidationRules(ModelMetadata metadata,
+                                                                               ControllerContext context)
         {
-            yield return 
+            yield return
                 new ModelClientValidationRule
                 {
                     ErrorMessage = this.FormatErrorMessage(metadata.GetDisplayName()),

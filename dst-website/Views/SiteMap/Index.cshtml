@@ -1,6 +1,7 @@
-﻿@model IList<dst_website.Models.MenuItemViewModel>
+﻿@using dst_website.Models
+@model IList<dst_website.Models.MenuItemViewModel>
 
-@foreach (var item in Model)
+@foreach (MenuItemViewModel item in Model)
 {
-     <a href="@item.Url">@item.Caption<span class="active-border"><span></span></span></a>
+    <a href="@item.Url">@item.Caption<span class="active-border"><span></span></span></a>
 }

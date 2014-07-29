@@ -1,14 +1,10 @@
-﻿@using BetterCms.Module.Blog.Helpers.Extensions
-@using BetterCms.Module.Pages.Helpers.Extensions
-@using BetterCms.Module.Root.Mvc.Helpers
-
-@{
+﻿@{
     Layout = "~/Views/Shared/Layouts/Light/_LightTwoColumnsLayout.cshtml";
 }
 
 @{
-    var authorName = string.Empty;
-    var author = Model.GetBlogPostAuthorModel();
+    string authorName = string.Empty;
+    RenderBlogPostAuthorViewModel author = Model.GetBlogPostAuthorModel();
     if (author != null)
     {
         authorName = author.Name;
@@ -29,6 +25,10 @@
 }
 
 
+@using BetterCms.Module.Blog.Helpers.Extensions
+@using BetterCms.Module.Blog.ViewModels.Author
+@using BetterCms.Module.Pages.Helpers.Extensions
+@using BetterCms.Module.Root.Mvc.Helpers
 @model BetterCms.Module.Root.ViewModels.Cms.RenderPageViewModel
 
 @section CMSMainContent {
@@ -41,11 +41,11 @@
         }
         @if (tags != null && tags.Count > 0)
         {
-            var blogListUrl = Model.GetOptionValue<string>("Blogs List Page URL");
+            string blogListUrl = Model.GetOptionValue<string>("Blogs List Page URL");
             if (!string.IsNullOrEmpty(blogListUrl))
             {
                 <span>
-                    @foreach (var tag in tags)
+                    @foreach (string tag in tags)
                     {
                         <a href="@blogListUrl?tagName=@tag" class="single-tag">@tag</a>
                     }

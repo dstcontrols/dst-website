@@ -1,9 +1,10 @@
-﻿@model IList<dst_website.Models.MenuItemViewModel>
+﻿@using dst_website.Models
+@model IList<dst_website.Models.MenuItemViewModel>
 
 <div class="submenu">
-    @foreach (var item in Model)
+    @foreach (MenuItemViewModel item in Model)
     {
-        <a href="@item.Url" class="@(Request.Path == item.Url ? "submenu-active": null)">@item.Caption</a>
+        <a href="@item.Url" class="@(Request.Path == item.Url ? "submenu-active" : null)">@item.Caption</a>
     }
 </div>
 

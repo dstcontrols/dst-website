@@ -1,8 +1,12 @@
 ﻿namespace dst_website.Models
 {
+    #region Namespace import directives
+
     using System.ComponentModel.DataAnnotations;
     using BetterCms.Module.Root.ViewModels.Cms;
     using dst_website.Infrastructure;
+
+    #endregion
 
     public class ContactFormViewModel : RenderWidgetViewModel
     {

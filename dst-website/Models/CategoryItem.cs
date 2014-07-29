@@ -1,6 +1,10 @@
 ﻿namespace dst_website.Models
 {
+    #region Namespace import directives
+
     using System;
+
+    #endregion
 
     public class CategoryItem
     {
