@@ -280,7 +280,7 @@
     <Content Include="404.aspx" />
     <Content Include="500.aspx" />
     <Content Include="betterCms.license.txt" />
-    <Content Include="Content\images\logo.png" />
+    <Content Include="Content\images\dst-logo-500px-transparent.png" />
     <Content Include="Content\images\revolution\arrow-down.png" />
     <Content Include="Content\images\revolution\arrow-up.png" />
     <Content Include="Content\images\revolution\avatar.png" />
@@ -433,7 +433,6 @@
     <Content Include="Content\Styles\bcms.light.layout.css" />
     <Content Include="Content\Styles\images\bg-active-menu.png" />
     <Content Include="Content\Styles\images\bg-header.png" />
-    <Content Include="Content\Styles\images\dst-logo-500px-transparent.png" />
     <Content Include="Content\Styles\images\icn-author.png" />
     <Content Include="Content\Styles\images\icn-banner-arrow.png" />
     <Content Include="Content\Styles\images\icn-btn-arrow.png" />
