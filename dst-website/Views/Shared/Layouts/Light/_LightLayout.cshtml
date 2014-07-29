@@ -2,6 +2,20 @@
 @model BetterCms.Module.Root.ViewModels.Cms.RenderPageViewModel
 @using BetterCms.Module.Root.Mvc.Helpers
 
+@section BodyAttributes
+{
+    class="boxed fixed-header"
+}
+@section BodyTag {
+    <!--[if lte IE 8]>
+    <body class="ie8 fixed-nav faded"@Html.RenderBodyAttributes()><![endif]-->
+    <!--[if IE 9]>
+    <body class="ie9 fixed-nav faded"@Html.RenderBodyAttributes()><![endif]-->
+    <!--[if !IE]><!-->
+    <body class="fixed-nav faded" @Html.RenderBodyAttributes()>
+        <!--<![endif]-->
+}
+
 @section HeadScripts {
     <meta charset="utf-8" />
     <link href="/Content/Styles/bcms.light.layout.css" rel="stylesheet" />
@@ -47,20 +61,6 @@
         <link rel='stylesheet' href="/Content/Styles/Revolution/ie/ie8.css">
     <![endif]-->
     @RenderSection("HeadScripts", false)
-}
-
-@section BodyAttributes
-{
-    class="boxed fixed-header"
-}
-@section BodyTag {
-    <!--[if lte IE 8]>
-    <body class="ie8 fixed-nav faded"@Html.RenderBodyAttributes()><![endif]-->
-    <!--[if IE 9]>
-    <body class="ie9 fixed-nav faded"@Html.RenderBodyAttributes()><![endif]-->
-    <!--[if !IE]><!-->
-    <body class="fixed-nav faded" @Html.RenderBodyAttributes()>
-        <!--<![endif]-->
 }
 
 @section Scripts {
