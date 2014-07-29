@@ -1,6 +1,6 @@
 ﻿@{ Layout = "~/Areas/bcms-Root/Views/Shared/BaseLayout.cshtml"; }
-@model BetterCms.Module.Root.ViewModels.Cms.RenderPageViewModel
 @using BetterCms.Module.Root.Mvc.Helpers
+@model BetterCms.Module.Root.ViewModels.Cms.RenderPageViewModel
 
 @section HeadScripts {
     <meta charset="utf-8" />
@@ -66,7 +66,7 @@
 
 @section BodyTag {
 
-    <body class="fixed-nav faded" @Html.RenderBodyAttributes()>
+    <body id="boxed-bg" class="boxed fixed-header" @Html.RenderBodyAttributes()>
 
 }
 
