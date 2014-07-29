@@ -49,7 +49,6 @@ namespace dst_website.Controllers
                     message.Subject = string.Format("[BetterCmsDemo.com] Message from {0}", viewModel.Name);
                     message.IsBodyHtml = true;
                     message.Body = EmailHelper.FormatMessage(viewModel);
-
                     try
                     {
                         SmtpClient client = new SmtpClient();
