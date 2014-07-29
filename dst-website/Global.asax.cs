@@ -6,6 +6,8 @@
     using System.Web;
     using BetterCms.Core;
     using BetterCms.Core.Environment.Host;
+    using System.Web.Http;
+    using System.Web.Mvc;
 
     #endregion
 
@@ -13,20 +15,17 @@
     // visit http://go.microsoft.com/?LinkId=9394801
     public class MvcApplication : HttpApplication
     {
-        //protected void Application_Start()
-        //{
-        //    AreaRegistration.RegisterAllAreas();
-
-        //    WebApiConfig.Register(GlobalConfiguration.Configuration);
-        //    FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
-        //    RouteConfig.RegisterRoutes(RouteTable.Routes);
-        //}
-
         private static ICmsHost cmsHost;
 
         protected void Application_Start()
         {
             cmsHost = CmsContext.RegisterHost();
+            //    AreaRegistration.RegisterAllAreas();
+
+            WebApiConfig.Register(GlobalConfiguration.Configuration);
+            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            //    RouteConfig.RegisterRoutes(RouteTable.Routes);
+
 
             /* DO NOT FORGET TO REMOVE DEFAULT ROUTE REGISTRATION! 
                FOLLOWING SOURCE CODE SHOULD BE REMOVED: 
