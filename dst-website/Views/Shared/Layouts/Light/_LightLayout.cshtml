@@ -1,14 +1,49 @@
 ﻿@{ Layout = "~/Areas/bcms-Root/Views/Shared/BaseLayout.cshtml"; }
 
-
 @section HeadScripts {
     <meta charset="utf-8" />
     <link href="/Content/Styles/bcms.light.layout.css" rel="stylesheet" />
     <link href="/Content/Styles/bcms.light.content.css" rel="stylesheet" />
+
+    <!-- Font -->
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Arimo:400,700,400italic,700italic'>
+
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="/Content/Styles/Revolution/buttons/buttons.css">
+    <link rel="stylesheet" href="/Content/Styles/Revolution/buttons/social-icons.css">
+    <link rel="stylesheet" href="/Content/Styles/Revolution/font-awesome.min.css">
+    <link rel="stylesheet" href="/Content/Styles/Revolution/bootstrap.min.css">
+    <link rel="stylesheet" href="/Content/Styles/Revolution/jslider.css">
+    <link rel="stylesheet" href="/Content/Styles/Revolution/settings.css">
+    <link rel="stylesheet" href="/Content/Styles/Revolution/jquery.fancybox.css">
+    <link rel="stylesheet" href="/Content/Styles/Revolution/animate.css">
+    <link rel="stylesheet" href="/Content/Styles/Revolution/video-js.min.css">
+    <link rel="stylesheet" href="/Content/Styles/Revolution/morris.css">
+    <link rel="stylesheet" href="/Content/Styles/Revolution/royalslider/royalslider.css">
+    <link rel="stylesheet" href="/Content/Styles/Revolution/royalslider/skins/minimal-white/rs-minimal-white.css">
+    <link rel="stylesheet" href="/Content/Styles/Revolution/layerslider/layerslider.css">
+    <link rel="stylesheet" href="/Content/Styles/Revolution/ladda.min.css">
+    <link rel="stylesheet" href="/Content/Styles/Revolution/datepicker.css">
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="/Content/Styles/Revolution/style.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="/Content/Styles/Revolution/responsive.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/Content/Styles/Revolution/customizer/pages.css">
+    <link rel="stylesheet" href="/Content/Styles/Revolution/customizer/home-pages-customizer.css">
+
+    <!-- IE Styles-->
+    <link rel='stylesheet' href="/Content/Styles/Revolution/ie/ie.css">
+
     <!--[if lt IE 9]>
         <script src="@Url.Content("~/Scripts/modernizr.js")"></script>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <link rel='stylesheet' href="/Content/Styles/Revolution/ie/ie8.css">
     <![endif]-->
-
     @RenderSection("HeadScripts", false)
 }
 
@@ -60,7 +95,6 @@
             @RenderBody()
         </div>
     </div>
-
 </div>
 
 <footer class="page-footer">
