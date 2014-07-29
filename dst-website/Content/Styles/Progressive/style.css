@@ -3095,7 +3095,7 @@ blockquote small {
 }
 .header .logo {
   display: table-cell;
-  height: 100px;
+  /*height: 100px;*/
   max-width: 100%;
   vertical-align: middle;
   /*width: 100%;*/
@@ -3106,7 +3106,7 @@ blockquote small {
 }
 .header .logo img,
 .header .logo .logo-img {
-  max-height: 100px;
+  /*max-height: 100px;*/
 }
 .header .logo-box.auto-height {
   display: block;

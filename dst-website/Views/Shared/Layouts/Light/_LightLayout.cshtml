@@ -164,8 +164,10 @@
                     </ul>
                 </div>
             </div>
-            <!-- .breadcrumb-box -->
-        }  
+            <!-- .breadcrumb-box -->    
+            
+        }                     
+        <div class="clearfix"></div>
         <section id="main">
             @if (Model.Title.ToLower() != "home")
             {
@@ -178,36 +180,28 @@
                     </div>
                 </header>
             }
-            <article class="container">
-                <div class="row">
-                    <div class="content col-sm-12 col-md-12">
-                        <div class="row">
-
-
-                            <div class="page-block">
-
-                                <div class="default-messages-container">
-                                    <div class="error-user-message-container">
-                                        <ins class="icon-static"></ins>
-                                        <div class="error user-message">
-                                        </div>
-                                    </div>
-                                    <div class="success-user-message-container">
-                                        <ins class="icon-static"></ins>
-                                        <div class="success user-message">
-                                        </div>
-                                    </div>
+            <div class="container">
+                <article class="content">
+                    <div class="row">
+                        <div class="default-messages-container">
+                            <div class="error-user-message-container">
+                                <ins class="icon-static"></ins>
+                                <div class="error user-message">
                                 </div>
-
-                                @*<div class="page-frame clearfix">*@
-                                @RenderSection("MainContent", false)
-                                @RenderBody()
-
+                            </div>
+                            <div class="success-user-message-container">
+                                <ins class="icon-static"></ins>
+                                <div class="success user-message">
+                                </div>
                             </div>
                         </div>
+                        <div class="clearfix"></div>
+                        @RenderSection("MainContent", false)
+                        @RenderBody()
                     </div>
-                </div>
-            </article><!-- .container -->
+
+                </article>
+            </div><!-- .container -->
         </section><!-- #main -->
     </div><!-- .page-box-content -->
 </div><!-- .page-box -->
