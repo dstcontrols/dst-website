@@ -250,6 +250,7 @@
   <ItemGroup>
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\DSTSitemapController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -477,8 +478,8 @@
     <Content Include="Views\Shared\Layouts\Light\_LightOneColumnLayout.cshtml" />
     <Content Include="Views\Shared\Layouts\Light\_LightThreeColumnsLayout.cshtml" />
     <Content Include="Views\Shared\Layouts\Light\_LightTwoColumnsLayout.cshtml" />
-    <Content Include="Views\SiteMap\Index.cshtml" />
-    <Content Include="Views\SiteMap\SubMenu.cshtml" />
+    <Content Include="Views\DSTSiteMap\Index.cshtml" />
+    <Content Include="Views\DSTSiteMap\SubMenu.cshtml" />
     <Content Include="Views\Widgets\BlogFeedWidget.cshtml" />
     <Content Include="Views\Widgets\CategoriesMenuWdiget.cshtml" />
     <Content Include="Views\Widgets\ContactFormWidget.cshtml" />
