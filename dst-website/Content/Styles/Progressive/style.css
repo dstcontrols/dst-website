@@ -3098,7 +3098,7 @@ blockquote small {
   height: 100px;
   max-width: 100%;
   vertical-align: middle;
-  width: 100%;
+  /*width: 100%;*/
 }
 .header .logo a {
   display: inline-block;
