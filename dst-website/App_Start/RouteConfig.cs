@@ -16,9 +16,9 @@
             routes.MapRoute("contacts-form", "contacts/submit-form",
                             new {area = string.Empty, controller = "Contact", action = "ContactForm"},
                             new[] {"dst_website.Controllers"});
-            routes.MapRoute("menu-top", "menu/top", 
-                            new {area = string.Empty, controller = "SiteMap", action = "Index"},
-                            new[] {"dst_website.Controllers"});
+            //routes.MapRoute("menu-top", "menu/top", 
+            //                new {area = string.Empty, controller = "SiteMap", action = "Index"},
+            //                new[] {"dst_website.Controllers"});
             routes.MapRoute("menu-sub", "menu/submenu/{parentUrl}",
                             new {area = string.Empty, controller = "SiteMap", action = "SubMenu"},
                             new[] {"dst_website.Controllers"});
