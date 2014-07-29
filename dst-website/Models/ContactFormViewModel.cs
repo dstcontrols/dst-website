@@ -1,10 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-using BetterCms.Demo.Web.Infrastructure;
-using BetterCms.Module.Root.ViewModels.Cms;
-
-namespace BetterCms.Demo.Web.Models
+﻿namespace dst_website.Models
 {
+    using System.ComponentModel.DataAnnotations;
+    using BetterCms.Module.Root.ViewModels.Cms;
+    using dst_website.Infrastructure;
+
     public class ContactFormViewModel : RenderWidgetViewModel
     {
         [Required]
@@ -21,7 +20,7 @@ namespace BetterCms.Demo.Web.Models
 
         public override string ToString()
         {
-            return string.Format("Name: {0}, Email: {1}, Phone: {2}, Message: {3}", Name, Email, Message);
+            return string.Format("Name: {0}, Email: {1}, Phone: {2}, Message: {3}", this.Name, this.Email, this.Message);
         }
     }
 }

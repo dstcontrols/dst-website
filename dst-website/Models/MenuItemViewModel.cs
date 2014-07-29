@@ -1,4 +1,4 @@
-﻿namespace BetterCms.Demo.Web.Models
+﻿namespace dst_website.Models
 {
     public class MenuItemViewModel
     {
@@ -8,7 +8,7 @@
 
         public override string ToString()
         {
-            return string.Format("Caption: {0}, Url: {1}", Caption, Url);
+            return string.Format("Caption: {0}, Url: {1}", this.Caption, this.Url);
         }
     }
 }

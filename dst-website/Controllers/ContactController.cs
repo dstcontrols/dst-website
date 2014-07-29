@@ -1,19 +1,18 @@
-﻿using System;
-using System.Net.Mail;
-using System.Web.Mvc;
-
-using BetterCms.Demo.Web.Helpers;
-using BetterCms.Demo.Web.Models;
-
-namespace BetterCms.Demo.Web.Controllers
+﻿namespace dst_website.Controllers
 {
+    using System;
+    using System.Net.Mail;
+    using System.Web.Mvc;
+    using dst_website.Helpers;
+    using dst_website.Models;
+
     public class ContactController : Controller
     {
         [HttpPost]
         public virtual ActionResult ContactForm(ContactFormViewModel viewModel)
         {
             bool success;
-            if (ModelState.IsValid)
+            if (this.ModelState.IsValid)
             {
                 using (var message = new MailMessage())
                 {

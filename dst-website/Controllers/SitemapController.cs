@@ -1,20 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Mvc;
-
-using BetterCms.Demo.Web.Models;
-
-using BetterCms.Module.Api;
-using BetterCms.Module.Api.Infrastructure;
-using BetterCms.Module.Api.Infrastructure.Enums;
-using BetterCms.Module.Api.Operations.Pages.Pages.Page.Exists;
-using BetterCms.Module.Api.Operations.Pages.Sitemap;
-using BetterCms.Module.Api.Operations.Pages.Sitemap.Nodes;
-using BetterCms.Module.Api.Operations.Pages.Sitemap.Tree;
-
-namespace BetterCms.Demo.Web.Controllers
+﻿namespace dst_website.Controllers
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Web.Mvc;
+    using BetterCms.Module.Api;
+    using BetterCms.Module.Api.Infrastructure;
+    using BetterCms.Module.Api.Infrastructure.Enums;
+    using BetterCms.Module.Api.Operations.Pages.Pages.Page.Exists;
+    using BetterCms.Module.Api.Operations.Pages.Sitemap;
+    using BetterCms.Module.Api.Operations.Pages.Sitemap.Nodes;
+    using BetterCms.Module.Api.Operations.Pages.Sitemap.Tree;
+    using dst_website.Models;
+
     public class SiteMapController : Controller
     {
         private static Guid defaultSitemapId = new Guid("17ABFEE9-5AE6-470C-92E1-C2905036574B");
@@ -25,7 +23,7 @@ namespace BetterCms.Demo.Web.Controllers
 
             using (var api = ApiFactory.Create())
             {
-                var sitemapId = GetSitemapId(api);
+                var sitemapId = this.GetSitemapId(api);
                 if (sitemapId.HasValue)
                 {
                     var request = new GetSitemapTreeRequest { SitemapId = sitemapId.Value };
@@ -38,7 +36,7 @@ namespace BetterCms.Demo.Web.Controllers
                 }
             }
 
-            return View(menuItems);
+            return this.View(menuItems);
         }
 
         public virtual ActionResult SubMenu(string parentUrl)
@@ -50,7 +48,7 @@ namespace BetterCms.Demo.Web.Controllers
                 var pageRequest = new PageExistsRequest { PageUrl = parentUrl };
                 var pageResponse = api.Pages.Page.Exists(pageRequest);
 
-                var sitemapId = GetSitemapId(api);
+                var sitemapId = this.GetSitemapId(api);
                 if (sitemapId.HasValue)
                 {
                     var parentRequest = new GetSitemapNodesRequest();
@@ -82,7 +80,7 @@ namespace BetterCms.Demo.Web.Controllers
                 }
             }
 
-            return View(menuItems);            
+            return this.View(menuItems);            
         }
 
         private Guid? GetSitemapId(IApiFacade api)

@@ -1,10 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-
-using BetterCms.Core.DataContracts;
-
-namespace BetterCms.Demo.Web.Helpers
+﻿namespace dst_website.Helpers
 {
+    using System.Collections.Generic;
+    using System.Linq;
+    using BetterCms.Core.DataContracts;
+
     public static class OptionsHelper
     {
         public static string GetValue(IList<IOptionValue> options, string key)

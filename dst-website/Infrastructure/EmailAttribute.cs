@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Web.Mvc;
-
-namespace BetterCms.Demo.Web.Infrastructure
+﻿namespace dst_website.Infrastructure
 {
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.Web.Mvc;
+
     public class EmailAttribute : RegularExpressionAttribute, IClientValidatable
     {
         public EmailAttribute()
@@ -16,7 +16,7 @@ namespace BetterCms.Demo.Web.Infrastructure
             yield return 
                 new ModelClientValidationRule
                 {
-                    ErrorMessage = FormatErrorMessage(metadata.GetDisplayName()),
+                    ErrorMessage = this.FormatErrorMessage(metadata.GetDisplayName()),
                     ValidationType = "customemail"
                 };
         }

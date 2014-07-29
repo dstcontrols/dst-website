@@ -1,10 +1,9 @@
-﻿using System;
-using System.Web.Mvc;
-
-using BetterCms.Module.Root.ViewModels.Cms;
-
-namespace BetterCms.Demo.Web.Helpers
+﻿namespace dst_website.Helpers
 {
+    using System;
+    using System.Web.Mvc;
+    using BetterCms.Module.Root.ViewModels.Cms;
+
     public static class SocialHelper
     {
         public static MvcHtmlString TitleForSocial(this HtmlHelper<RenderWidgetViewModel> htmlHelper)

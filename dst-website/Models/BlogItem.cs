@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace BetterCms.Demo.Web.Models
+﻿namespace dst_website.Models
 {
+    using System;
+    using System.Collections.Generic;
+
     public class BlogItem
     {
         public string Title { get; set; }
@@ -22,7 +22,7 @@ namespace BetterCms.Demo.Web.Models
         public override string ToString()
         {
             return string.Format(
-                "Title: {0}, IntroText: {1}, PublishedOn: {2}, Url: {3}, Author: {4}, ImageUrl: {5}", Title, IntroText, PublishedOn, Url, Author, ImageUrl);
+                "Title: {0}, IntroText: {1}, PublishedOn: {2}, Url: {3}, Author: {4}, ImageUrl: {5}", this.Title, this.IntroText, this.PublishedOn, this.Url, this.Author, this.ImageUrl);
         }
     }
 }

@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace BetterCms.Demo.Web.Models
+﻿namespace dst_website.Models
 {
+    using System;
+
     public class CategoryItem
     {
         public Guid Id { get; set; }
@@ -10,7 +10,7 @@ namespace BetterCms.Demo.Web.Models
 
         public override string ToString()
         {
-            return string.Format("Name: {0}, Id: {1}", Name, Id);
+            return string.Format("Name: {0}, Id: {1}", this.Name, this.Id);
         }
     }
 }

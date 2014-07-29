@@ -1,18 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Mvc;
-
-using BetterCms.Demo.Web.Models;
-
-using BetterCms.Module.Api;
-using BetterCms.Module.Api.Infrastructure;
-using BetterCms.Module.Api.Infrastructure.Enums;
-using BetterCms.Module.Api.Operations.Blog.BlogPosts;
-using BetterCms.Module.Api.Operations.Root.Categories;
-
-namespace BetterCms.Demo.Web.Controllers
+﻿namespace dst_website.Controllers
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Web.Mvc;
+    using BetterCms.Module.Api;
+    using BetterCms.Module.Api.Infrastructure;
+    using BetterCms.Module.Api.Infrastructure.Enums;
+    using BetterCms.Module.Api.Operations.Blog.BlogPosts;
+    using BetterCms.Module.Api.Operations.Root.Categories;
+    using dst_website.Models;
+
     public class BlogController : Controller
     {
         public virtual ActionResult Index(Guid? categoryId, string tagName)
@@ -55,7 +53,7 @@ namespace BetterCms.Demo.Web.Controllers
                         }).ToList();
             }
             
-            return View(posts);
+            return this.View(posts);
         }
 
         public virtual ActionResult Last()
@@ -93,7 +91,7 @@ namespace BetterCms.Demo.Web.Controllers
                         }).SingleOrDefault();
             }
 
-            return View(post);            
+            return this.View(post);            
         }
 
         public virtual ActionResult GetCategories()
@@ -115,7 +113,7 @@ namespace BetterCms.Demo.Web.Controllers
                         }).ToList();
             }
 
-            return View(categories);
+            return this.View(categories);
         }
 
         public virtual ActionResult Feed()
@@ -149,7 +147,7 @@ namespace BetterCms.Demo.Web.Controllers
                         }).ToList();
             }
 
-            return View(posts);
+            return this.View(posts);
         }
     }
 }

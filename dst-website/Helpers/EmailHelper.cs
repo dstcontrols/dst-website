@@ -1,9 +1,8 @@
-﻿using System.Text;
-
-using BetterCms.Demo.Web.Models;
-
-namespace BetterCms.Demo.Web.Helpers
+﻿namespace dst_website.Helpers
 {
+    using System.Text;
+    using dst_website.Models;
+
     public static class EmailHelper
     {
         public static string FormatMessage(ContactFormViewModel contactForm)
