@@ -2,26 +2,26 @@
     Layout = "~/Views/Shared/Layouts/Light/_LightOneColumnLayout.cshtml";
 }
 
-@section MainContent {
-    <div class="contact-info clearfix">
-        <div class="clearfix">
-            <div class="contact-address">
+@section MainContent {        
+<div class="row">
+    <div class="col-sm-6 col-md-6 contact-info bottom-padding">
+        <div class="row">
+            <address class="col-sm-6 col-md-6">
                 @RenderSection("Address", false)
-            </div>
-
-            <div class="contact-social">
-                @RenderSection("Social", false)                
-            </div>
-        </div>
-
-        <div class="contact-map">
-            @RenderSection("Map", false)
-        </div>
+            </address>
+            <address class="col-sm-6 col-md-6">
+                @RenderSection("Social", false)
+            </address>
+        </div>     
     </div>
-
-    <div class="contact-form">
+     <div class="col-sm-6 col-md-6 bottom-padding">
         @RenderSection("Form", false)
-    </div>
+    </div>   
+</div>
+<div class="map-box col-sm-12 col-md-12">
+    @RenderSection("Map", false)
+</div>
+
 }
 
 @RenderBody()
