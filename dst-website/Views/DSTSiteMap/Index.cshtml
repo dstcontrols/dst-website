@@ -3,5 +3,10 @@
 
 @foreach (MenuItemViewModel item in Model)
 {
-    <a href="@item.Url">@item.Caption<span class="active-border"><span></span></span></a>
+    <li>
+        <a href="@item.Url">@item.Caption</a>
+    </li>
 }
+
+
+@*<a href="@item.Url">@item.Caption<span class="active-border"><span></span></span></a>*@
