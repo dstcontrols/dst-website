@@ -34,7 +34,8 @@
                 <img src="/Content/images/logo.png" alt="BetterCMS" />
             </a>
             <nav class="page-navigation" id="site-nav">
-                @{ Html.RenderAction("Index", "SiteMap", new {area = ""}); }
+                @*@{ Html.RenderAction("Index", "SiteMap", new { area = "" }); }*@
+                @{ Html.RenderAction("Index", "SiteMap", string.Empty); }
             </nav>
         </div>
     </header>
