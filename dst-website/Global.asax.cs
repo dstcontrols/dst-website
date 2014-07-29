@@ -20,7 +20,7 @@
         protected void Application_Start()
         {
             cmsHost = CmsContext.RegisterHost();
-            //    AreaRegistration.RegisterAllAreas();
+            AreaRegistration.RegisterAllAreas();
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
