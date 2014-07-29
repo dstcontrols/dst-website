@@ -1,4 +1,6 @@
 ﻿@{ Layout = "~/Areas/bcms-Root/Views/Shared/BaseLayout.cshtml"; }
+@model BetterCms.Module.Root.ViewModels.Cms.RenderPageViewModel
+@using BetterCms.Module.Root.Mvc.Helpers
 
 @section HeadScripts {
     <meta charset="utf-8" />
@@ -47,6 +49,20 @@
     @RenderSection("HeadScripts", false)
 }
 
+@section BodyAttributes
+{
+    class="boxed fixed-header"
+}
+@section BodyTag {
+    <!--[if lte IE 8]>
+    <body class="ie8 fixed-nav faded"@Html.RenderBodyAttributes()><![endif]-->
+    <!--[if IE 9]>
+    <body class="ie9 fixed-nav faded"@Html.RenderBodyAttributes()><![endif]-->
+    <!--[if !IE]><!-->
+    <body class="fixed-nav faded" @Html.RenderBodyAttributes()>
+        <!--<![endif]-->
+}
+
 @section Scripts {
     <script src="//codeorigin.jquery.com/jquery-1.8.3.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
@@ -66,7 +82,7 @@
     <header class="page-header">
         <div class="page-frame clearfix">
             <a href="/" class="logo">
-                <img src="/Content/images/logo.png" alt="BetterCMS" />
+                <img src="/Content/images/logo.png" alt="DST Controls" />
             </a>
             <nav class="page-navigation" id="site-nav">
                 @*@{ Html.RenderAction("Index", "SiteMap", new { area = "" }); }*@
