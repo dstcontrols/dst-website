@@ -433,6 +433,7 @@
     <Content Include="Content\Styles\bcms.light.layout.css" />
     <Content Include="Content\Styles\images\bg-active-menu.png" />
     <Content Include="Content\Styles\images\bg-header.png" />
+    <Content Include="Content\Styles\images\dst-logo-500px-transparent.png" />
     <Content Include="Content\Styles\images\icn-author.png" />
     <Content Include="Content\Styles\images\icn-banner-arrow.png" />
     <Content Include="Content\Styles\images\icn-btn-arrow.png" />
