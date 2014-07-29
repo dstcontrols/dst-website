@@ -3,9 +3,30 @@
 
 @foreach (MenuItemViewModel item in Model)
 {
-    <li class="btn btn-lg btn-info">
+    <li class="parent">
         <a href="@item.Url">@item.Caption</a>
     </li>
+    <ul class="sub">
+        <li><a href="index.html">Creative</a></li>
+        <li><a href="home-2.html">Paralax</a></li>
+        <li><a href="home-3.html">Simple (Boxed)</a></li>
+        <li><a href="home-4.html">Business</a></li>
+        <li><a href="home-5.html">Animation</a></li>
+        <li class="parent">
+            <a href="shop.html">Shop<span class="item-new">New</span></a>
+            <ul class="sub">
+                <li><a href="shop.html">Shop 1</a></li>
+                <li><a href="shop-2.html">Shop 2</a></li>
+                <li><a href="shop-3.html">Shop 3</a></li>
+                <li><a href="shop-4.html">Shop 4</a></li>
+                <li><a href="shop-5.html">Shop 5</a></li>
+                <li><a href="shop-6.html">Shop 6</a></li>
+                <li><a href="shop-7.html">Shop 7</a></li>
+                <li><a href="shop-8.html">Shop 8</a></li>
+            </ul>
+        </li>
+        <li><a href="index-one-page.html">One Page Site<span class="item-new">New</span></a></li>
+    </ul>
 }
 
 
