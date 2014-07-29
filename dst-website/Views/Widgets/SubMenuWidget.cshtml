@@ -3,6 +3,6 @@
     dynamic parentUrl = OptionsHelper.GetValue(Model.Options, "parentUrl");
     if (parentUrl != null)
     {
-        Html.RenderAction("SubMenu", "Sitemap", new {area = string.Empty, parentUrl});
+        Html.RenderAction("SubMenu", "DSTSitemap", new {area = string.Empty, parentUrl});
     }
 }
