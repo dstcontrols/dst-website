@@ -138,7 +138,7 @@
   margin-bottom: 2px;
 }
 #boxed-bg {
-  background-image: url('../../img/content/band-2.jpg');
+  background-image: url(../../images/Progressive/content/band-2.jpg);
   background-position: 50% 0;
   background-attachment: fixed;
   background-size: cover;
