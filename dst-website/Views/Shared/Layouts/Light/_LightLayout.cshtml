@@ -81,7 +81,7 @@
                         <div class="col-xs-6 col-md-2 col-lg-3 logo-box">
                             <div class="logo">
                                 <a href="index.html">
-                                    <img src="/Content/images/dst-logo-500px-transparent.png" class="logo-img" alt="DST Controls">
+                                    <img src="/Content/images/dst-logo-100px-transparent.png" class="logo-img" alt="DST Controls">
                                 </a>
                             </div>
                         </div><!-- .logo-box -->
@@ -152,8 +152,8 @@
                 </div>
             </div><!-- .header-wrapper -->
         </header><!-- .header -->
-        @if (Model.Title != "index")
-        {
+@if (Model.Title.ToLower() != "home")
+{
             <div class="breadcrumb-box">
                 <div class="container">
                     <ul class="breadcrumb">
@@ -166,15 +166,16 @@
             </div><!-- .breadcrumb-box -->
         }  
         <section id="main">
-            <header class="page-header">
-                <div class="container">
-                    @if (Model.Title != "index")
-                    {
-                        <h1 class="title">@Model.Title</h1>
-                    }
+            @if (Model.Title.ToLower() != "home")
+                  {
+                      <header class="page-header">
+                          <div class="container">
 
-                </div>
-            </header>
+                              <h1 class="title">@Model.Title</h1>
+
+
+                          </div>
+                      </header>                     }
             <article class="container">
                 <div class="row">
                     <div class="content col-sm-12 col-md-12">
