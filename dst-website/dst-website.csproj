@@ -1054,6 +1054,7 @@
     <Content Include="Views\Shared\Layouts\old\DST\_HeadScripts.cshtml" />
     <Content Include="Views\Shared\Layouts\old\DST\_Layout.cshtml" />
     <Content Include="Views\Shared\Layouts\old\DST\_Scripts.cshtml" />
+    <Content Include="Views\Shared\Layouts\DST\_CleanStartTriangles.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
