@@ -280,8 +280,10 @@
     <Content Include="404.aspx" />
     <Content Include="500.aspx" />
     <Content Include="betterCms.license.txt" />
+    <Content Include="Content\images\datacenter.jpg" />
     <Content Include="Content\images\dst-logo-100px-transparent.png" />
     <Content Include="Content\images\dst-logo-500px-transparent.png" />
+    <Content Include="Content\images\noise.png" />
     <Content Include="Content\images\Progressive\arrow-down.png" />
     <Content Include="Content\images\Progressive\arrow-up.png" />
     <Content Include="Content\images\Progressive\avatar.png" />
@@ -469,6 +471,7 @@
     <Content Include="Content\images\Progressive\svg\trash-icon.svg" />
     <Content Include="Content\images\Progressive\svg\wishlist-icon.svg" />
     <Content Include="Content\images\Progressive\up.png" />
+    <Content Include="Content\scripts\bootstrap.min.js" />
     <Content Include="Content\styles\bcms.light.content.css" />
     <Content Include="Content\styles\bcms.light.gallery.css" />
     <Content Include="Content\styles\bcms.light.messages.css" />
@@ -478,6 +481,12 @@
     </Content>
     <Content Include="Content\styles\bootstrap-3.2.0\bootstrap.min.css">
       <DependentUpon>bootstrap.css</DependentUpon>
+    </Content>
+    <Content Include="Content\styles\bootstrap-3.2.0\variables.css">
+      <DependentUpon>variables.less</DependentUpon>
+    </Content>
+    <Content Include="Content\styles\bootstrap-3.2.0\variables.min.css">
+      <DependentUpon>variables.css</DependentUpon>
     </Content>
     <Content Include="Content\styles\colorOverride.css">
       <DependentUpon>colorOverride.less</DependentUpon>
