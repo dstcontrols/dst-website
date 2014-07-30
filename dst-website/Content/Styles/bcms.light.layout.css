@@ -513,7 +513,7 @@ a.action-arrow {
      width: 9px; 
      height: 9px; 
      overflow: hidden; 
-     background: url("images/icon-close.png") no-repeat center; 
+     /*background: url("images/icon-close.png") no-repeat center;*/ 
      background-size: contain; 
      text-indent: 9999px;
 }
