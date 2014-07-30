@@ -292,6 +292,14 @@
     <Content Include="Content\images\progressive\arrow-down.png" />
     <Content Include="Content\images\progressive\arrow-up.png" />
     <Content Include="Content\images\progressive\avatar.png" />
+    <Content Include="Content\images\progressive\banner\banner1.jpg" />
+    <Content Include="Content\images\progressive\banner\banner2.jpg" />
+    <Content Include="Content\images\progressive\banner\banner3.jpg" />
+    <Content Include="Content\images\progressive\banner\banner4.jpg" />
+    <Content Include="Content\images\progressive\banner\banner5.jpg" />
+    <Content Include="Content\images\progressive\banner\banner6.jpg" />
+    <Content Include="Content\images\progressive\banner\banner7.jpg" />
+    <Content Include="Content\images\progressive\banner\banner8.jpg" />
     <Content Include="Content\images\progressive\coming-soon.jpg" />
     <Content Include="Content\images\progressive\under-construction.jpg" />
     <Content Include="Content\images\progressive\fancybox\blank.gif" />
