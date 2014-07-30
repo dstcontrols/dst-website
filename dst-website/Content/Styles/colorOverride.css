@@ -1,4 +1,9 @@
-﻿#top-box,
+﻿.header-wrapper,
+.page-box {
+  background-color: #1a1e24;
+  color: #b3d4fc;
+}
+#top-box,
 .carousel-box .next:hover,
 .carousel-box .prev:hover,
 .product .product-hover,
