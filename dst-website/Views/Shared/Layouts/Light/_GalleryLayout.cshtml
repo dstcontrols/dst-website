@@ -18,7 +18,7 @@
 
 @section Scripts {
     @RenderSection("Scripts", false)
-    @Html.Partial("~/Views/Shared/Layouts/Light/Partial/_GalleryScripts.cshtml")
-    <script src="@Url.Content("~/Content/scripts/gallery.gallery.js")"></script>
-    <script src="@Url.Content("~/Content/scripts/jquery.lightbox_me.js")"></script>
+    @Html.Partial("Layouts/Light/Partial/_GalleryScripts")
+    <script src="~/Content/scripts/gallery.gallery.js"></script>
+    <script src="~/Content/scripts/jquery.lightbox_me.js"></script>
 }

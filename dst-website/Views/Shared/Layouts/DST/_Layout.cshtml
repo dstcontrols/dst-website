@@ -5,7 +5,9 @@
 @model BetterCms.Module.Root.ViewModels.Cms.RenderPageViewModel
 
 @section HeadScripts {
-    @Html.Partial("~/Views/Shared/Layouts/DST/_HeadScripts.cshtml")
+    @Html.Partial("Layouts/DST/_HeadScripts")
+
+
     @RenderSection("HeadScripts", false)
 }
 
@@ -15,7 +17,7 @@
 }
 <div class="page-box">
     <div class="page-box-content">
-        @Html.Partial("~/Views/Shared/Layouts/DST/_Header.cshtml")
+        @Html.Partial("Layouts/DST/_Header")
         <section id="main">
             @if (Model.Title.ToLower() != "home")
             {
@@ -51,9 +53,9 @@
         </section><!-- #main -->
     </div><!-- .page-box-content -->
 </div><!-- .page-box -->
-@Html.Partial("~/Views/Shared/Layouts/DST/_Footer.cshtml")
+@Html.Partial("Layouts/DST/_Footer")
 
 @section Scripts {
-    @Html.Partial("~/Views/Shared/Layouts/DST/_Scripts.cshtml")
+    @Html.Partial("Layouts/DST/_Scripts")
     @RenderSection("Scripts", false)
 }
