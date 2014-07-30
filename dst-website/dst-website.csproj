@@ -471,6 +471,7 @@
     <Content Include="Content\images\Progressive\up.png" />
     <Content Include="Content\styles\bcms.light.content.css" />
     <Content Include="Content\styles\bcms.light.gallery.css" />
+    <Content Include="Content\styles\bcms.light.messages.css" />
     <Content Include="Content\styles\bcms.light.layout.css" />
     <Content Include="Content\styles\CoverOverride.css" />
     <Content Include="Content\styles\Progressive\animate.css" />
