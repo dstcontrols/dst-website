@@ -473,7 +473,18 @@
     <Content Include="Content\styles\bcms.light.gallery.css" />
     <Content Include="Content\styles\bcms.light.messages.css" />
     <Content Include="Content\styles\bcms.light.layout.css" />
-    <Content Include="Content\styles\CoverOverride.css" />
+    <Content Include="Content\styles\bootstrap-3.2.0\bootstrap.css">
+      <DependentUpon>bootstrap.less</DependentUpon>
+    </Content>
+    <Content Include="Content\styles\bootstrap-3.2.0\bootstrap.min.css">
+      <DependentUpon>bootstrap.css</DependentUpon>
+    </Content>
+    <Content Include="Content\styles\colorOverride.css">
+      <DependentUpon>colorOverride.less</DependentUpon>
+    </Content>
+    <Content Include="Content\styles\colorOverride.min.css">
+      <DependentUpon>colorOverride.css</DependentUpon>
+    </Content>
     <Content Include="Content\styles\Progressive\animate.css" />
     <Content Include="Content\styles\Progressive\bootstrap.min.css" />
     <Content Include="Content\styles\Progressive\buttons\buttons.css" />
@@ -738,6 +749,85 @@
     <Content Include="Content\fonts\vjs.eot" />
     <Content Include="Content\fonts\vjs.ttf" />
     <Content Include="Content\fonts\vjs.woff" />
+    <Content Include="Content\styles\colorOverride.less" />
+    <Content Include="Content\styles\colorOverride.css.map">
+      <DependentUpon>colorOverride.css</DependentUpon>
+    </Content>
+    <Content Include="Content\styles\bootstrap-3.2.0\.csscomb.json" />
+    <Content Include="Content\styles\bootstrap-3.2.0\.csslintrc" />
+    <Content Include="Content\styles\bootstrap-3.2.0\alerts.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\badges.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\bootstrap.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\breadcrumbs.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\button-groups.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\buttons.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\carousel.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\close.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\code.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\component-animations.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\dropdowns.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\forms.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\glyphicons.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\grid.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\input-groups.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\jumbotron.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\labels.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\list-group.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\media.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\mixins.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\mixins\alerts.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\mixins\background-variant.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\mixins\border-radius.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\mixins\buttons.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\mixins\center-block.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\mixins\clearfix.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\mixins\forms.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\mixins\gradients.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\mixins\grid-framework.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\mixins\grid.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\mixins\hide-text.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\mixins\image.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\mixins\labels.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\mixins\list-group.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\mixins\nav-divider.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\mixins\nav-vertical-align.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\mixins\opacity.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\mixins\pagination.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\mixins\panels.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\mixins\progress-bar.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\mixins\reset-filter.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\mixins\resize.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\mixins\responsive-visibility.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\mixins\size.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\mixins\tab-focus.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\mixins\table-row.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\mixins\text-emphasis.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\mixins\text-overflow.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\mixins\vendor-prefixes.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\modals.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\navbar.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\navs.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\normalize.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\pager.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\pagination.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\panels.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\popovers.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\print.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\progress-bars.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\responsive-embed.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\responsive-utilities.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\scaffolding.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\tables.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\theme.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\thumbnails.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\tooltip.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\type.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\utilities.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\variables.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\wells.less" />
+    <Content Include="Content\styles\bootstrap-3.2.0\bootstrap.css.map">
+      <DependentUpon>bootstrap.css</DependentUpon>
+    </Content>
     <None Include="newrelic\newrelic.xsd">
       <SubType>Designer</SubType>
     </None>
