@@ -1534,75 +1534,75 @@ h1[id] {
 }
 
 .fwb-bg.band-1 {
-    background-image: url('~/content/images/progressive/band/band-1.jpg');
+    background-image: url('~/Content/images/progressive/band/band-1.jpg');
 }
 
 .fwb-bg.band-2 {
-    background-image: url('~/content/images/progressive/band/band-2.jpg');
+    background-image: url('~/Content/images/progressive/band/band-2.jpg');
 }
 
 .fwb-bg.band-3 {
-    background-image: url('~/content/images/progressive/band/band-3.jpg');
+    background-image: url('~/Content/images/progressive/band/band-3.jpg');
 }
 
 .fwb-bg.band-4 {
-    background-image: url('~/content/images/progressive/band/band-4.jpg');
+    background-image: url('~/Content/images/progressive/band/band-4.jpg');
 }
 
 .fwb-bg.band-5 {
-    background-image: url('~/content/images/progressive/band/band-5.jpg');
+    background-image: url('~/Content/images/progressive/band/band-5.jpg');
 }
 
 .fwb-bg.band-6 {
-    background-image: url('~/content/images/progressive/band/band-6.jpg');
+    background-image: url('~/Content/images/progressive/band/band-6.jpg');
 }
 
 .fwb-bg.band-7 {
-    background-image: url('~/content/images/progressive/band/band-7.jpg');
+    background-image: url('~/Content/images/progressive/band/band-7.jpg');
 }
 
 .fwb-bg.band-8 {
-    background-image: url('~/content/images/progressive/band/band-8.jpg');
+    background-image: url('~/Content/images/progressive/band/band-8.jpg');
 }
 
 .fwb-bg.band-9 {
-    background-image: url('~/content/images/progressive/band/band-9.jpg');
+    background-image: url('~/Content/images/progressive/band/band-9.jpg');
 }
 
 .fwb-bg.band-10 {
-    background-image: url('~/content/images/progressive/band/band-10.jpg');
+    background-image: url('~/Content/images/progressive/band/band-10.jpg');
 }
 
 .fwb-bg.band-11 {
-    background-image: url('~/content/images/progressive/band/band-11.jpg');
+    background-image: url('~/Content/images/progressive/band/band-11.jpg');
 }
 
 .fwb-bg.band-12 {
-    background-image: url('~/content/images/progressive/band/band-12.jpg');
+    background-image: url('~/Content/images/progressive/band/band-12.jpg');
 }
 
 .fwb-bg.band-13 {
-    background-image: url('~/content/images/progressive/band/band-13.jpg');
+    background-image: url('~/Content/images/progressive/band/band-13.jpg');
 }
 
 .fwb-bg.band-14 {
-    background-image: url('~/content/images/progressive/band/band-14.jpg');
+    background-image: url('~/Content/images/progressive/band/band-14.jpg');
 }
 
 .fwb-bg.band-15 {
-    background-image: url('~/content/images/progressive/band/band-15.jpg');
+    background-image: url('~/Content/images/progressive/band/band-15.jpg');
 }
 
 .fwb-bg.band-16 {
-    background-image: url('~/content/images/progressive/band/band-16.jpg');
+    background-image: url('~/Content/images/progressive/band/band-16.jpg');
 }
 
 .fwb-bg.band-17 {
-    background-image: url('~/content/images/progressive/band/band-17.jpg');
+    background-image: url('~/Content/images/progressive/band/band-17.jpg');
 }
 
 .fwb-bg.band-18 {
-    background-image: url('~/content/images/progressive/band/band-18.jpg');
+    background-image: url('~/Content/images/progressive/band/band-18.jpg');
 }
 
 .overlay.zero {
@@ -1648,15 +1648,15 @@ h1[id] {
 }
 
 #bg-steps-apart1 {
-    background-image: url('~/content/images/progressive/portfolio/portfolio-2.jpg');
+    background-image: url('~/Content/images/progressive/portfolio/portfolio-2.jpg');
 }
 
 #bg-steps-apart2 {
-    background-image: url('~/content/images/progressive/portfolio/portfolio-3.jpg');
+    background-image: url('~/Content/images/progressive/portfolio/portfolio-3.jpg');
 }
 
 #bg-steps-apart3 {
-    background-image: url('~/content/images/progressive/portfolio/portfolio-4.jpg');
+    background-image: url('~/Content/images/progressive/portfolio/portfolio-4.jpg');
 }
 
 .livicons-content .list-inline > li, #flatbuttons .btn, .livicons-content .button-margin .btn, #promo3 .col-md-4, .bs-docs-example-images .img-thumbnail, .bs-docs-example-images > img {
@@ -1753,7 +1753,7 @@ h1[id] {
 
 #modal-2 .modal-content {
     -webkit-background-size: cover;
-    background: url('~/content/images/progressive/modal.jpg') 0 0 no-repeat;
+    background: url('~/Content/images/progressive/modal.jpg') 0 0 no-repeat;
     background-size: cover;
 }
 
@@ -1768,7 +1768,7 @@ h1[id] {
 
 .cm-shop-2-slider {
     -webkit-background-size: cover;
-    background: url('~/content/images/progressive/bg-slider.jpg') 0 0 no-repeat;
+    background: url('~/Content/images/progressive/bg-slider.jpg') 0 0 no-repeat;
     background-size: cover;
 }
 
@@ -1790,11 +1790,11 @@ h1[id] {
 }
 
 .cm-shop-7 {
-    background-image: url('~/content/images/progressive/bg-shop-7.jpg');
+    background-image: url('~/Content/images/progressive/bg-shop-7.jpg');
 }
 
 .cm-shop-8 {
-    background-image: url('~/content/images/progressive/bg-shop-8.jpg');
+    background-image: url('~/Content/images/progressive/bg-shop-8.jpg');
 }
 
 @media (max-width: 979px) {

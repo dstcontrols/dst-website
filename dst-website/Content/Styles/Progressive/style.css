@@ -438,7 +438,7 @@ nav ul {
 }
 
 .rating-box {
-    background-image: url('~/Content/Images/Progressive/svg/rating.svg'), none;
+    background-image: url('~/Content/images/progressive/svg/rating.svg'), none;
     background-position: 0 0;
     background-repeat: no-repeat;
     height: 12px;
@@ -1058,7 +1058,7 @@ textarea.form-control {
 .selectBox-arrow {
     -khtml-border-radius: 0 3px 3px 0;
     -moz-border-radius: 0 3px 3px 0;
-    background: url('~/Content/Images/Progressive/svg/select.svg') 50% 50% no-repeat;
+    background: url('~/Content/images/progressive/svg/select.svg') 50% 50% no-repeat;
     border-radius: 0 3px 3px 0;
     height: 100%;
     left: auto;
@@ -4808,7 +4808,7 @@ blockquote small {
 
 .slider.rs-slider .tp-loader {
     background-color: inherit;
-    background-image: url('~/Content/Images/Progressive/svg/loader.svg'), none;
+    background-image: url('~/Content/images/progressive/svg/loader.svg'), none;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: 40px;
@@ -4876,7 +4876,7 @@ blockquote small {
 
 .royal-slider.load {
     background-color: inherit;
-    background-image: url('~/Content/Images/Progressive/svg/loader.svg'), none;
+    background-image: url('~/Content/images/progressive/svg/loader.svg'), none;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: 40px;
@@ -5287,7 +5287,7 @@ blockquote small {
 }
 
 .sidebar .section .selected li {
-    background: url('~/Content/Images/Progressive/point.png') right 13px repeat-x #fff;
+    background: url('~/Content/images/progressive/point.png') right 13px repeat-x #fff;
     margin: 0 0 8px;
     padding: 0 16px 0 0;
     position: relative;
@@ -5408,7 +5408,7 @@ blockquote small {
 }
 
 .sidebar .compare-products li {
-    background: url('~/Content/Images/Progressive/point.png') right 13px repeat-x #fff;
+    background: url('~/Content/images/progressive/point.png') right 13px repeat-x #fff;
     margin: 0 0 8px;
     padding: 0 16px 0 0;
     position: relative;
@@ -5712,7 +5712,7 @@ blockquote small {
 }
 
 .load.banner-set .container {
-    background-image: url('~/Content/Images/Progressive/svg/loader.svg'), none;
+    background-image: url('~/Content/images/progressive/svg/loader.svg'), none;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: 40px;
@@ -6474,7 +6474,7 @@ a.big-icon:hover {
 }
 
 .load.carousel-box {
-    background-image: url('~/Content/Images/Progressive/svg/loader.svg'), none;
+    background-image: url('~/Content/images/progressive/svg/loader.svg'), none;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: 40px;
@@ -6884,7 +6884,7 @@ a.big-icon:hover {
 }
 
 .product .product-hover ul li {
-    background-image: url('~/Content/Images/Progressive/svg/check-icon.svg'), none;
+    background-image: url('~/Content/images/progressive/svg/check-icon.svg'), none;
     background-position: 0 5px;
     background-repeat: no-repeat;
     line-height: 20px;
@@ -7440,7 +7440,7 @@ a.big-icon:hover {
     -webkit-box-shadow: none;
     background-color: #1e1e1e;
     background-color: rgba(30, 30, 30, .7);
-    background-image: url('~/Content/Images/Progressive/up.png');
+    background-image: url('~/Content/images/progressive/up.png');
     background-position: 50% 50%;
     background-repeat: no-repeat;
     box-shadow: none;
@@ -7454,7 +7454,7 @@ a.big-icon:hover {
 .toolbar .up-down.active {
     background-color: #1e1e1e;
     background-color: rgba(30, 30, 30, .7);
-    background-image: url('~/Content/Images/Progressive/down.png');
+    background-image: url('~/Content/images/progressive/down.png');
     background-position: 50% 50%;
     background-repeat: no-repeat;
 }
@@ -7709,7 +7709,7 @@ a.big-icon:hover {
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
     -webkit-transition: background-color .2s linear;
-    background: url('~/Content/Images/Progressive/arrow-up.png') 50% 50% no-repeat #ccc;
+    background: url('~/Content/images/progressive/arrow-up.png') 50% 50% no-repeat #ccc;
     border-radius: 2px;
     display: block;
     height: 24px;
@@ -7718,7 +7718,7 @@ a.big-icon:hover {
 }
 
 .product-page .add-cart-form .number .regulator .number-down {
-    background: url('~/Content/Images/Progressive/arrow-down.png') 50% 50% no-repeat #ccc;
+    background: url('~/Content/images/progressive/arrow-down.png') 50% 50% no-repeat #ccc;
     margin: 6px 0 0 0;
 }
 
@@ -9109,7 +9109,7 @@ a.big-icon:hover {
 
 .post .entry-meta .comments-link {
     -webkit-transition: opacity .2s linear;
-    background: url('~/Content/Images/Progressive/comment-link.png') 0 50% no-repeat;
+    background: url('~/Content/images/progressive/comment-link.png') 0 50% no-repeat;
     padding: 0 0 0 18px;
     transition: opacity .2s linear;
 }
@@ -9362,7 +9362,7 @@ a.big-icon:hover {
 }
 
 .sitemap li {
-    background: url('~/Content/Images/Progressive/point.png') right 13px repeat-x #fff;
+    background: url('~/Content/images/progressive/point.png') right 13px repeat-x #fff;
 }
 
 .sitemap a {
@@ -10945,7 +10945,7 @@ a.big-icon:hover {
 *******************************************************************************/
 
 .social-feed {
-    background-image: url('~/Content/Images/Progressive/svg/loader.svg'), none;
+    background-image: url('~/Content/images/progressive/svg/loader.svg'), none;
     background-position: 50% 100px;
     background-repeat: no-repeat;
     background-size: 40px;
@@ -11279,7 +11279,7 @@ a.big-icon:hover {
 *******************************************************************************/
 
 .blur-page {
-    background-image: url('~/Content/Images/Progressive/svg/loader.svg'), none;
+    background-image: url('~/Content/images/progressive/svg/loader.svg'), none;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: 40px;
@@ -11436,11 +11436,11 @@ a.big-icon:hover {
 *******************************************************************************/
 
 .body-bg-img {
-    background: url('~/content/images/progressive/coming-soon.jpg') 50% 0 no-repeat;
+    background: url('~/Content/images/progressive/coming-soon.jpg') 50% 0 no-repeat;
 }
 
 .body-bg-img.under-construction {
-    background: url('~/content/images/progressive/under-construction.jpg') 50% 0 no-repeat;
+    background: url('~/Content/images/progressive/under-construction.jpg') 50% 0 no-repeat;
 }
 
 .body-bg-img .page-box {

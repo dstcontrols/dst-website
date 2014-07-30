@@ -838,7 +838,7 @@ website:   	http://www.themepunch.com
 .tp-simpleresponsive .button {
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
-    background: url('~/Content/Images/Progressive/revolution-slider/gradient/g30.png') repeat-x top;
+    background: url('~/Content/images/progressive/revolution-slider/gradient/g30.png') repeat-x top;
     border-radius: 3px;
     color: #fff !important;
     cursor: pointer;
@@ -853,7 +853,7 @@ website:   	http://www.themepunch.com
 }
 
 .tp-simpleresponsive .button.big {
-    background: url('~/Content/Images/Progressive/revolution-slider/gradient/g40.png') repeat-x top;
+    background: url('~/Content/images/progressive/revolution-slider/gradient/g40.png') repeat-x top;
     color: #fff;
     font-size: 19px;
     font-weight: bold;
@@ -1016,7 +1016,7 @@ website:   	http://www.themepunch.com
 }
 
 .tp-bannershadow.tp-shadow1 {
-    background: url('~/Content/Images/Progressive/royal-slider/shadow1.png') no-repeat;
+    background: url('~/Content/images/progressive/royal-slider/shadow1.png') no-repeat;
     background-size: 100% 100%;
     bottom: -60px;
     height: 60px;
@@ -1024,7 +1024,7 @@ website:   	http://www.themepunch.com
 }
 
 .tp-bannershadow.tp-shadow2 {
-    background: url('~/Content/Images/Progressive/royal-slider/shadow2.png') no-repeat;
+    background: url('~/Content/images/progressive/royal-slider/shadow2.png') no-repeat;
     background-size: 100% 100%;
     bottom: -60px;
     height: 60px;
@@ -1032,7 +1032,7 @@ website:   	http://www.themepunch.com
 }
 
 .tp-bannershadow.tp-shadow3 {
-    background: url('~/Content/Images/Progressive/royal-slider/shadow3.png') no-repeat;
+    background: url('~/Content/images/progressive/royal-slider/shadow3.png') no-repeat;
     background-size: 100% 100%;
     bottom: -60px;
     height: 60px;
@@ -1115,19 +1115,19 @@ website:   	http://www.themepunch.com
 }
 
 .tp-dottedoverlay.twoxtwo {
-    background: url('~/Content/Images/Progressive/royal-slider/gridtile.png')
+    background: url('~/Content/images/progressive/royal-slider/gridtile.png')
 }
 
 .tp-dottedoverlay.twoxtwowhite {
-    background: url('~/Content/Images/Progressive/royal-slider/gridtile_white.png')
+    background: url('~/Content/images/progressive/royal-slider/gridtile_white.png')
 }
 
 .tp-dottedoverlay.threexthree {
-    background: url('~/Content/Images/Progressive/royal-slider/gridtile_3x3.png')
+    background: url('~/Content/images/progressive/royal-slider/gridtile_3x3.png')
 }
 
 .tp-dottedoverlay.threexthreewhite {
-    background: url('~/Content/Images/Progressive/royal-slider/gridtile_3x3_white.png')
+    background: url('~/Content/images/progressive/royal-slider/gridtile_3x3_white.png')
 }
 
 /********************************
@@ -1168,7 +1168,7 @@ website:   	http://www.themepunch.com
 .tp-bullets.simplebullets.navbar {
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
-    background: url('~/Content/Images/Progressive/royal-slider/boxed_bgtile.png');
+    background: url('~/Content/images/progressive/royal-slider/boxed_bgtile.png');
     border: 1px solid #666;
     border-bottom: 1px solid #444;
     border-radius: 5px;
@@ -1179,14 +1179,14 @@ website:   	http://www.themepunch.com
 .tp-bullets.simplebullets.navbar-old {
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
-    background: url('~/Content/Images/Progressive/royal-slider/navigdots_bgtile.png');
+    background: url('~/Content/images/progressive/royal-slider/navigdots_bgtile.png');
     border-radius: 5px;
     height: 35px;
     padding: 0px 10px;
 }
 
 .tp-bullets.simplebullets.round .bullet {
-    background: url('~/Content/Images/Progressive/royal-slider/bullet.png') no-Repeat top left;
+    background: url('~/Content/images/progressive/royal-slider/bullet.png') no-Repeat top left;
     cursor: pointer;
     float: left;
     height: 20px;
@@ -1202,7 +1202,7 @@ website:   	http://www.themepunch.com
 }
 
 .tp-bullets.simplebullets.round-old .bullet {
-    background: url('~/Content/Images/Progressive/royal-slider/bullets.png') no-Repeat bottom left;
+    background: url('~/Content/images/progressive/royal-slider/bullets.png') no-Repeat bottom left;
     cursor: pointer;
     float: left;
     height: 23px;
@@ -1219,7 +1219,7 @@ website:   	http://www.themepunch.com
 /**	SQUARE BULLETS **/
 
 .tp-bullets.simplebullets.square .bullet {
-    background: url('~/Content/Images/Progressive/royal-slider/bullets2.png') no-Repeat bottom left;
+    background: url('~/Content/images/progressive/royal-slider/bullets2.png') no-Repeat bottom left;
     cursor: pointer;
     float: left;
     height: 19px;
@@ -1236,7 +1236,7 @@ website:   	http://www.themepunch.com
 /**	SQUARE BULLETS **/
 
 .tp-bullets.simplebullets.square-old .bullet {
-    background: url('~/Content/Images/Progressive/royal-slider/bullets2.png') no-Repeat bottom left;
+    background: url('~/Content/images/progressive/royal-slider/bullets2.png') no-Repeat bottom left;
     cursor: pointer;
     float: left;
     height: 19px;
@@ -1253,7 +1253,7 @@ website:   	http://www.themepunch.com
 /** navbar NAVIGATION VERSION **/
 
 .tp-bullets.simplebullets.navbar .bullet {
-    background: url('~/Content/Images/Progressive/royal-slider/bullet_boxed.png') no-Repeat top left;
+    background: url('~/Content/images/progressive/royal-slider/bullet_boxed.png') no-Repeat top left;
     cursor: pointer;
     float: left;
     height: 19px;
@@ -1274,7 +1274,7 @@ website:   	http://www.themepunch.com
 /** navbar NAVIGATION VERSION **/
 
 .tp-bullets.simplebullets.navbar-old .bullet {
-    background: url('~/Content/Images/Progressive/royal-slider/navigdots.png') no-Repeat bottom left;
+    background: url('~/Content/images/progressive/royal-slider/navigdots.png') no-Repeat bottom left;
     cursor: pointer;
     float: left;
     height: 15px;
@@ -1325,7 +1325,7 @@ website:   	http://www.themepunch.com
 }
 
 .tp-leftarrow {
-    background: url('~/Content/Images/Progressive/royal-slider/large_left.png') no-Repeat top left;
+    background: url('~/Content/images/progressive/royal-slider/large_left.png') no-Repeat top left;
     cursor: pointer;
     height: 40px;
     position: relative;
@@ -1334,7 +1334,7 @@ website:   	http://www.themepunch.com
 }
 
 .tp-rightarrow {
-    background: url('~/Content/Images/Progressive/royal-slider/large_right.png') no-Repeat top left;
+    background: url('~/Content/images/progressive/royal-slider/large_right.png') no-Repeat top left;
     cursor: pointer;
     height: 40px;
     position: relative;
@@ -1343,7 +1343,7 @@ website:   	http://www.themepunch.com
 }
 
 .tp-leftarrow.round {
-    background: url('~/Content/Images/Progressive/royal-slider/small_left.png') no-Repeat top left;
+    background: url('~/Content/images/progressive/royal-slider/small_left.png') no-Repeat top left;
     cursor: pointer;
     float: left;
     height: 14px;
@@ -1355,7 +1355,7 @@ website:   	http://www.themepunch.com
 }
 
 .tp-rightarrow.round {
-    background: url('~/Content/Images/Progressive/royal-slider/small_right.png') no-Repeat top left;
+    background: url('~/Content/images/progressive/royal-slider/small_right.png') no-Repeat top left;
     cursor: pointer;
     float: left;
     height: 14px;
@@ -1367,7 +1367,7 @@ website:   	http://www.themepunch.com
 }
 
 .tp-leftarrow.round-old {
-    background: url('~/Content/Images/Progressive/royal-slider/arrow_left.png') no-Repeat top left;
+    background: url('~/Content/images/progressive/royal-slider/arrow_left.png') no-Repeat top left;
     cursor: pointer;
     float: left;
     height: 26px;
@@ -1379,7 +1379,7 @@ website:   	http://www.themepunch.com
 }
 
 .tp-rightarrow.round-old {
-    background: url('~/Content/Images/Progressive/royal-slider/arrow_right.png') no-Repeat top left;
+    background: url('~/Content/images/progressive/royal-slider/arrow_right.png') no-Repeat top left;
     cursor: pointer;
     float: left;
     height: 26px;
@@ -1391,7 +1391,7 @@ website:   	http://www.themepunch.com
 }
 
 .tp-leftarrow.navbar {
-    background: url('~/Content/Images/Progressive/royal-slider/small_left_boxed.png') no-Repeat top left;
+    background: url('~/Content/images/progressive/royal-slider/small_left_boxed.png') no-Repeat top left;
     cursor: pointer;
     float: left;
     height: 15px;
@@ -1403,7 +1403,7 @@ website:   	http://www.themepunch.com
 }
 
 .tp-rightarrow.navbar {
-    background: url('~/Content/Images/Progressive/royal-slider/small_right_boxed.png') no-Repeat top left;
+    background: url('~/Content/images/progressive/royal-slider/small_right_boxed.png') no-Repeat top left;
     cursor: pointer;
     float: left;
     height: 15px;
@@ -1415,7 +1415,7 @@ website:   	http://www.themepunch.com
 }
 
 .tp-leftarrow.navbar-old {
-    background: url('~/Content/Images/Progressive/royal-slider/arrowleft.png') no-Repeat top left;
+    background: url('~/Content/images/progressive/royal-slider/arrowleft.png') no-Repeat top left;
     cursor: pointer;
     float: left;
     height: 16px;
@@ -1427,7 +1427,7 @@ website:   	http://www.themepunch.com
 }
 
 .tp-rightarrow.navbar-old {
-    background: url('~/Content/Images/Progressive/royal-slider/arrowright.png') no-Repeat top left;
+    background: url('~/Content/images/progressive/royal-slider/arrowright.png') no-Repeat top left;
     cursor: pointer;
     float: left;
     height: 16px;
@@ -1447,7 +1447,7 @@ website:   	http://www.themepunch.com
 }
 
 .tp-leftarrow.square {
-    background: url('~/Content/Images/Progressive/royal-slider/arrow_left2.png') no-Repeat top left;
+    background: url('~/Content/images/progressive/royal-slider/arrow_left2.png') no-Repeat top left;
     cursor: pointer;
     float: left;
     height: 17px;
@@ -1459,7 +1459,7 @@ website:   	http://www.themepunch.com
 }
 
 .tp-rightarrow.square {
-    background: url('~/Content/Images/Progressive/royal-slider/arrow_right2.png') no-Repeat top left;
+    background: url('~/Content/images/progressive/royal-slider/arrow_right2.png') no-Repeat top left;
     cursor: pointer;
     float: left;
     height: 17px;
@@ -1471,7 +1471,7 @@ website:   	http://www.themepunch.com
 }
 
 .tp-leftarrow.square-old {
-    background: url('~/Content/Images/Progressive/royal-slider/arrow_left2.png') no-Repeat top left;
+    background: url('~/Content/images/progressive/royal-slider/arrow_left2.png') no-Repeat top left;
     cursor: pointer;
     float: left;
     height: 17px;
@@ -1483,7 +1483,7 @@ website:   	http://www.themepunch.com
 }
 
 .tp-rightarrow.square-old {
-    background: url('~/Content/Images/Progressive/royal-slider/arrow_right2.png') no-Repeat top left;
+    background: url('~/Content/images/progressive/royal-slider/arrow_right2.png') no-Repeat top left;
     cursor: pointer;
     float: left;
     height: 17px;
@@ -1495,7 +1495,7 @@ website:   	http://www.themepunch.com
 }
 
 .tp-leftarrow.default {
-    background: url('~/Content/Images/Progressive/royal-slider/large_left.png') no-Repeat 0 0;
+    background: url('~/Content/images/progressive/royal-slider/large_left.png') no-Repeat 0 0;
     cursor: pointer;
     height: 40px;
     position: relative;
@@ -1504,7 +1504,7 @@ website:   	http://www.themepunch.com
 }
 
 .tp-rightarrow.default {
-    background: url('~/Content/Images/Progressive/royal-slider/large_right.png') no-Repeat 0 0;
+    background: url('~/Content/images/progressive/royal-slider/large_right.png') no-Repeat 0 0;
     cursor: pointer;
     height: 40px;
     position: relative;
@@ -1586,7 +1586,7 @@ website:   	http://www.themepunch.com
 *************************************/
 
 .tp-bannertimer {
-    background: url('~/Content/Images/Progressive/royal-slider/timer.png');
+    background: url('~/Content/images/progressive/royal-slider/timer.png');
     height: 10px;
     position: absolute;
     top: 0px;
@@ -1687,7 +1687,7 @@ website:   	http://www.themepunch.com
 /*  CAPTION SLIDELINK   **/
 
 .caption.slidelink a div, .tp-caption.slidelink a div {
-    background: url('~/Content/Images/Progressive/royal-slider/coloredbg.png') repeat;
+    background: url('~/Content/images/progressive/royal-slider/coloredbg.png') repeat;
     height: 1500px;
     width: 3000px;
 }
@@ -1695,7 +1695,7 @@ website:   	http://www.themepunch.com
 .tp-loader {
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
-    background: url('~/Content/Images/Progressive/royal-slider/loader.gif') no-repeat 10px 10px;
+    background: url('~/Content/images/progressive/royal-slider/loader.gif') no-repeat 10px 10px;
     background-color: #fff;
     border-radius: 3px;
     height: 44px;
@@ -1708,7 +1708,7 @@ website:   	http://www.themepunch.com
 }
 
 .tp-transparentimg {
-    content: "url('~/Content/Images/Progressive/royal-slider/transparent.png')"
+    content: "url('~/Content/images/progressive/royal-slider/transparent.png')"
 }
 
 .tp-3d {

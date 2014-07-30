@@ -48,47 +48,47 @@
 }
 
 .carousel-box .prev {
-    background-image: url("~/Content/Images/Progressive/png-icons/arrow-left-icon.png");
+    background-image: url("~/Content/images/progressive/png-icons/arrow-left-icon.png");
     background-position: 50% 50%;
     background-repeat: no-repeat;
 }
 
 .carousel-box .next {
-    background-image: url("~/Content/Images/Progressive/png-icons/arrow-right-icon.png");
+    background-image: url("~/Content/images/progressive/png-icons/arrow-right-icon.png");
     background-position: 50% 50%;
     background-repeat: no-repeat;
 }
 
 .header .cart-header .dropdown-toggle .icon {
-    background-image: url("~/Content/Images/Progressive/png-icons/cart-icon.png");
+    background-image: url("~/Content/images/progressive/png-icons/cart-icon.png");
     background-position: 50% 50%;
     background-repeat: no-repeat;
 }
 
 .header .cart-header .dropdown-menu .product-remove {
-    background-image: url("~/Content/Images/Progressive/png-icons/trash-icon.png");
+    background-image: url("~/Content/images/progressive/png-icons/trash-icon.png");
     background-position: 50% 50%;
     background-repeat: no-repeat;
 }
 
 .jslider .jslider-pointer {
-    background-image: url("~/Content/Images/Progressive/png-icons/pointer.png");
+    background-image: url("~/Content/images/progressive/png-icons/pointer.png");
     background-position: 50% 50%;
     background-repeat: no-repeat;
 }
 
 .product .actions .add-cart, .product .actions .add-cart:hover, .list .product .actions a, .list .product .actions a:hover, .product .actions .add-wishlist, .product .actions .add-compare, .product-page .col-md-7 .actions .add-wishlist, .product-page .col-md-7 .actions .add-wishlist:hover, .product-page .col-md-7 .actions .add-compare, .product-page .col-md-7 .actions .add-compare:hover {
-    background-image: url("~/Content/Images/Progressive/png-icons/cart-icon.png");
+    background-image: url("~/Content/images/progressive/png-icons/cart-icon.png");
     background-position: 50% 50%;
     background-repeat: no-repeat;
 }
 
 .product .actions .add-wishlist, .product .actions .add-wishlist:hover, .list .product .actions .add-wishlist, .list .product .actions .add-wishlist:hover, .product-page .col-md-7 .actions .add-wishlist, .product-page .col-md-7 .actions .add-wishlist:hover {
-    background-image: url("~/Content/Images/Progressive/png-icons/wishlist-icon.png");
+    background-image: url("~/Content/images/progressive/png-icons/wishlist-icon.png");
 }
 
 .product .actions .add-compare, .product .actions .add-compare:hover, .list .product .actions .add-compare, .list .product .actions .add-compare:hover, .product-page .col-md-7 .actions .add-compare, .product-page .col-md-7 .actions .add-compare:hover {
-    background-image: url("~/Content/Images/Progressive/png-icons/compare-icon.png");
+    background-image: url("~/Content/images/progressive/png-icons/compare-icon.png");
 }
 
 .page-box-content {
