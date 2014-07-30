@@ -743,9 +743,9 @@
     </None>
     <Content Include="Views\Shared\Layouts\DST\_Header.cshtml" />
     <Content Include="Views\Shared\Layouts\DST\_Footer.cshtml" />
-    <Content Include="Views\Shared\Layouts\DST\_postScripts.cshtml" />
+    <Content Include="Views\Shared\Layouts\DST\_Scripts.cshtml" />
     <Content Include="Views\Shared\Layouts\DST\_Layout.cshtml" />
-    <Content Include="Views\Shared\Layouts\DST\_preScripts.cshtml" />
+    <None Include="Views\Shared\Layouts\DST\_HeadScripts.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
