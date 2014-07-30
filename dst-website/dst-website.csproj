@@ -740,11 +740,11 @@
     <None Include="newrelic\newrelic.xsd">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="Views\Shared\Layouts\Light\dst_header.cshtml" />
-    <Content Include="Views\Shared\Layouts\Light\dst_body.cshtml" />
-    <Content Include="Views\Shared\Layouts\Light\dst_footer.cshtml" />
-    <Content Include="Views\Shared\Layouts\Light\dst_scripts.cshtml" />
-    <Content Include="Views\Shared\Layouts\Light\dst_layout.cshtml" />
+    <Content Include="Views\Shared\Layouts\DST\_Header.cshtml" />
+    <Content Include="Views\Shared\Layouts\DST\_Footer.cshtml" />
+    <Content Include="Views\Shared\Layouts\DST\_postScripts.cshtml" />
+    <Content Include="Views\Shared\Layouts\DST\_Layout.cshtml" />
+    <Content Include="Views\Shared\Layouts\DST\_preScripts.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
