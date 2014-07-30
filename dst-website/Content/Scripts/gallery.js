@@ -8,7 +8,7 @@ function GalleryModel(opts) {
             coverWidth: '500px',
             imagesSelector: '.page-frame .bcms-gallery-image-holder > img',
             imagesContainerSelector: '.page-frame section:has(>.bcms-gallery-image-holder)',
-            onOpenImage: function (model) {
+            onOpenImage: function(model) {
                 var container = $($('#gallery-image-modal-template').html()),
                     image = container.find('img'),
                     imageWidth = $(window).width() - 100,
@@ -59,7 +59,7 @@ function GalleryModel(opts) {
 
     function collectImages() {
         var i = 0;
-        $(selectors.images).each(function () {
+        $(selectors.images).each(function() {
             var imgSrc = $(this).attr('src'),
                 imgUrl = options.getImageUrl.call(this, $(this)),
                 imgCaption = $(this).attr('alt'),
@@ -82,8 +82,8 @@ function GalleryModel(opts) {
     function setupThumbnails() {
         if (options.renderThumbnails) {
             var thumbnailContainer = $(selectors.thumbnailsContainer);
-            
-            $(images).each(function (index) {
+
+            $(images).each(function(index) {
                 // Setup thumbnail
                 var thumbnail = $($(selectors.galleryThumbnailTemplate).html()),
                     image;
@@ -99,7 +99,7 @@ function GalleryModel(opts) {
 
                 thumbnailContainer.append(thumbnail);
 
-                thumbnail.on('click', function () {
+                thumbnail.on('click', function() {
                     var dom = $(this),
                         model = dom.data('model');
 
@@ -131,11 +131,11 @@ function GalleryModel(opts) {
                 gallerySlider.css('width', sliderWidth);
             }
             sliderStep = galleryScrollbar.width() / sliderSteps;
-            
+
             $(gallerySlider).draggable({
                 axis: "x",
                 containment: "parent"
-            }).on('drag', function (event, ui) {
+            }).on('drag', function(event, ui) {
                 var left = ui.position.left + sliderWidth / 2,
                     currentStep = Math.ceil(left / sliderStep),
                     index = currentStep > sliderSteps ? sliderSteps - 1 : currentStep - 1;
@@ -154,7 +154,7 @@ function GalleryModel(opts) {
         $.each(images, function() {
             var model = this,
                 imgDom = $('<img />');
-            
+
             imgDom.attr('src', model.image);
             imgDom.css('max-height', options.coverHeight);
             imgDom.css('max-width', options.coverWidth);
@@ -165,18 +165,19 @@ function GalleryModel(opts) {
 
         $(selectors.galleryContainer).coverflow({
             index: 0,
-            select: function (cover, imgDom) {
+            select: function(cover, imgDom) {
                 var image = $(imgDom),
                     maxLength = 150,
                     model,
-                    title, description;
-                
+                    title,
+                    description;
+
                 if (image.hasClass(classes.currentImage)) {
                     model = image.data('model');
-                    
+
                     if (model) {
                         if (options.renderThumbnails) {
-                            $(selectors.allThumbnails).each(function () {
+                            $(selectors.allThumbnails).each(function() {
                                 var $this = $(this);
 
                                 if ($this.data('model') == model) {
@@ -204,11 +205,11 @@ function GalleryModel(opts) {
                     }
                 }
             },
-            confirm: function (cover, imgDom) {
+            confirm: function(cover, imgDom) {
                 console.log(cover);
 
                 var model = $(imgDom).data('model');
-                
+
                 if (model && model.link) {
                     options.onOpenImage(model);
                 }
@@ -216,7 +217,7 @@ function GalleryModel(opts) {
         });
     }
 
-    self.initialize = function () {
+    self.initialize = function() {
         var galleryDiv;
 
         // Collects images
@@ -233,14 +234,14 @@ function GalleryModel(opts) {
             setupThumbnails();
             setupSlider();
             setupCoverflow();
-            
+
             // Chrome fix: refreshing after setup - sometimes on first load images are loaded distorted
-            setTimeout(function () {
+            setTimeout(function() {
                 $(selectors.galleryContainer).coverflow('refresh', 0);
                 $(selectors.galleryContent).css('visibility', 'visible');
             }, 200);
         }
-        
+
         // Hide back button if there is no history
         if (history.length <= 1) {
             $(selectors.backButton).hide();

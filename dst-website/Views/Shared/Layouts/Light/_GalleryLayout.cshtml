@@ -3,7 +3,7 @@
 }
 
 @section HeadScripts {
-    <link href="/Content/Styles/bcms.light.gallery.css" rel="stylesheet" />
+    <link href="~/Content/Styles/bcms.light.gallery.css" rel="stylesheet" />
     
     @RenderSection("HeadScripts", false)
 }
@@ -14,11 +14,11 @@
     </div>
 }
 
-@RenderBody()
+@RenderBody()             
 
 @section Scripts {
     @RenderSection("Scripts", false)
-    @Html.Partial("Layouts/Light/Partial/_GalleryScripts")
-    <script src="@Url.Content("~/Scripts/gallery.gallery.js")"></script>
-    <script src="@Url.Content("~/Scripts/jquery.lightbox_me.js")"></script>
+    @Html.Partial("~/Views/Shared/Layouts/Light/Partial/_GalleryScripts.cshtml")
+    <script src="@Url.Content("~/Content/scripts/gallery.gallery.js")"></script>
+    <script src="@Url.Content("~/Content/scripts/jquery.lightbox_me.js")"></script>
 }

@@ -1,13 +1,13 @@
-(function ($) {
+(function($) {
 
     // If the UI scope is not available, add it
     $.ui = $.ui || {};
 
     $.fn.extend({
-        accordion: function (options, data) {
+        accordion: function(options, data) {
             var args = Array.prototype.slice.call(arguments, 1);
 
-            return this.each(function () {
+            return this.each(function() {
                 if (typeof options == "string") {
                     var accordion = $.data(this, "ui-accordion");
                     accordion[options].apply(accordion, args);
@@ -17,12 +17,12 @@
             });
         },
         // deprecated, use accordion("activate", index) instead
-        activate: function (index) {
+        activate: function(index) {
             return this.accordion("activate", index);
         }
     });
 
-    $.ui.accordion = function (container, options) {
+    $.ui.accordion = function(container, options) {
 
         // setup configuration
         this.options = options = $.extend({}, $.ui.accordion.defaults, options);
@@ -48,16 +48,16 @@
 
         if (options.fillSpace) {
             var maxHeight = $(container).parent().height();
-            options.headers.each(function () {
+            options.headers.each(function() {
                 maxHeight -= $(this).outerHeight();
             });
             var maxPadding = 0;
-            options.headers.next().each(function () {
+            options.headers.next().each(function() {
                 maxPadding = Math.max(maxPadding, $(this).innerHeight() - $(this).height());
             }).height(maxHeight - maxPadding);
         } else if (options.autoheight) {
             var maxHeight = 0;
-            options.headers.next().each(function () {
+            options.headers.next().each(function() {
                 maxHeight = Math.max(maxHeight, $(this).outerHeight());
             }).height(maxHeight);
         }
@@ -73,20 +73,20 @@
     };
 
     $.ui.accordion.prototype = {
-        activate: function (index) {
+        activate: function(index) {
             // call clickHandler with custom event
             clickHandler.call(this.element, {
                 target: findActive(this.options.headers, index)[0]
             });
         },
 
-        enable: function () {
+        enable: function() {
             this.options.disabled = false;
         },
-        disable: function () {
+        disable: function() {
             this.options.disabled = true;
         },
-        destroy: function () {
+        destroy: function() {
             this.options.headers.next().css("display", "");
             if (this.options.fillSpace || this.options.autoheight) {
                 this.options.headers.next().css("height", "");
@@ -94,10 +94,10 @@
             $.removeData(this.element, "ui-accordion");
             $(this.element).removeClass("ui-accordion").unbind(".ui-accordion");
         }
-    }
+    };
 
     function scopeCallback(callback, scope) {
-        return function () {
+        return function() {
             return callback.apply(scope, arguments);
         };
     }
@@ -226,11 +226,11 @@
     function findActive(headers, selector) {
         return selector != undefined
             ? typeof selector == "number"
-                ? headers.filter(":eq(" + selector + ")")
-                : headers.not(headers.not(selector))
+            ? headers.filter(":eq(" + selector + ")")
+            : headers.not(headers.not(selector))
             : selector === false
-                ? $([])
-                : headers.filter(":eq(0)");
+            ? $([])
+            : headers.filter(":eq(0)");
     }
 
     $.extend($.ui.accordion, {
@@ -242,12 +242,12 @@
             header: "a",
             autoheight: true,
             running: 0,
-            navigationFilter: function () {
+            navigationFilter: function() {
                 return this.href.toLowerCase() == location.href.toLowerCase();
             }
         },
         animations: {
-            slide: function (options, additions) {
+            slide: function(options, additions) {
                 options = $.extend({
                     easing: "swing",
                     duration: 300
@@ -261,13 +261,13 @@
                     difference = showHeight / hideHeight;
                 options.toShow.css({ height: 0, overflow: 'hidden' }).show();
                 options.toHide.filter(":hidden").each(options.complete).end().filter(":visible").animate({ height: "hide" }, {
-                    step: function (now) {
+                    step: function(now) {
                         var current = (hideHeight - now) * difference;
                         options.toShow.height(current);
                     },
                     duration: options.duration,
                     easing: options.easing,
-                    complete: function () {
+                    complete: function() {
                         if (!options.autoheight) {
                             options.toShow.css("height", "auto");
                         }
@@ -275,20 +275,19 @@
                     }
                 });
             },
-            bounceslide: function (options) {
+            bounceslide: function(options) {
                 this.slide(options, {
                     easing: options.down ? "bounceout" : "swing",
                     duration: options.down ? 1000 : 200
                 });
             },
-            easeslide: function (options) {
+            easeslide: function(options) {
                 this.slide(options, {
                     easing: "easeinout",
                     duration: 700
-                })
+                });
             }
         }
     });
 
 })(jQuery);
-

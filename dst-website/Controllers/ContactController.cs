@@ -3,8 +3,8 @@
 // ************************************************************************************************************************
 // dst-website/dst-website/ContactController.cs
 // 
-// Creation Time     : 2014-07-29 9:24 AM
-// Time Last Updated : 2014-07-29 11:45 AM
+// Creation Time     : 2014-07-28 10:35 PM
+// Time Last Updated : 2014-07-29 8:08 PM
 // Copyright         : (C) 2014 Devbridge Group LLC
 // Contributions By  : (C) 2014 DST Controls
 // License           : Better CMS License Agreement
@@ -41,7 +41,7 @@ namespace dst_website.Controllers
             bool success;
             if (this.ModelState.IsValid)
             {
-                using (MailMessage message = new MailMessage())
+                using (var message = new MailMessage())
                 {
                     message.From = new MailAddress("info@BetterCmsDemo.com");
                     message.ReplyToList.Add(new MailAddress(viewModel.Email));
@@ -51,7 +51,7 @@ namespace dst_website.Controllers
                     message.Body = EmailHelper.FormatMessage(viewModel);
                     try
                     {
-                        SmtpClient client = new SmtpClient();
+                        var client = new SmtpClient();
                         client.Send(message);
                         success = true;
                     }

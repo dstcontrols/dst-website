@@ -1,5 +1,5 @@
-﻿(function () {
-    $(function () {
+﻿(function() {
+    $(function() {
 
         $.validator.setDefaults({
             ignore: ''
@@ -12,15 +12,15 @@
             }
         };
 
-        $.validator.unobtrusive.adapters.add('customemail', [], function (options) {
+        $.validator.unobtrusive.adapters.add('customemail', [], function(options) {
             setValidationValues(options, 'customemail', []);
         });
 
-        $.validator.addMethod('customemail', function (value, element) {
+        $.validator.addMethod('customemail', function(value, element) {
             return this.optional(element) || /^([ ])*([a-zA-Z0-9_\-\.\+]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)([ ])*$/.test(value);
         });
 
-        $('form').each(function () {
+        $('form').each(function() {
             var form = $(this);
             form.removeData("validator");
             form.removeData("unobtrusiveValidation");

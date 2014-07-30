@@ -23,8 +23,6 @@
         tags = new List<string>();
     }
 }
-
-
 @using BetterCms.Module.Blog.Helpers.Extensions
 @using BetterCms.Module.Blog.ViewModels.Author
 @using BetterCms.Module.Pages.Helpers.Extensions
@@ -41,7 +39,7 @@
         }
         @if (tags != null && tags.Count > 0)
         {
-            string blogListUrl = Model.GetOptionValue<string>("Blogs List Page URL");
+            var blogListUrl = Model.GetOptionValue<string>("Blogs List Page URL");
             if (!string.IsNullOrEmpty(blogListUrl))
             {
                 <span>

@@ -12,37 +12,36 @@
  * Optionally jQueryUI for color support
  */
 
-;(function($, undefined) {
-	"use strict";
+;
+(function($, undefined) {
+    "use strict";
 
-	/**
+    /**
 	 * .interpolate( propertyName, propertyValue [, blend] [, easing] )
 	 * .interpolate( propertyMap [, blend] [, easing] )
 	 */
-	$.fn.interpolate = function(name, value, blend, easing) {		
-		var _elem = this[0];
-		if ($.isPlainObject(name)) {
-			easing = blend || 'linear';
-			blend = value === undefined ? .5 : value;
-			$.each(name, function(n, v) {
-				$.Tween(_elem, {duration: 1}, n, v, easing).run(blend);
-			});
-		} else {			
-			blend = blend === undefined ? .5 : blend;
-			$.Tween(_elem, {duration: 1}, name, value, easing || 'linear').run(blend);
-		}
-	}
-
-	/**
+    $.fn.interpolate = function(name, value, blend, easing) {
+        var _elem = this[0];
+        if ($.isPlainObject(name)) {
+            easing = blend || 'linear';
+            blend = value === undefined ? .5 : value;
+            $.each(name, function(n, v) {
+                $.Tween(_elem, { duration: 1 }, n, v, easing).run(blend);
+            });
+        } else {
+            blend = blend === undefined ? .5 : blend;
+            $.Tween(_elem, { duration: 1 }, name, value, easing || 'linear').run(blend);
+        }
+    }; /**
 	 * jQuery.interpolate( propertyMapStart, propertyMapEnd [, blend] [, easing] )
 	 */
-	$.interpolate = function(start, end, blend, easing) {
-		var elem = $('<span/>'),
-			state = $.extend({}, start);
-		elem.css(state).interpolate(end, blend, easing);
-		$.each(end, function(name, value) {
-			state[name] = elem.css(name);
-		});
-		return state;
-	}
+    $.interpolate = function(start, end, blend, easing) {
+        var elem = $('<span/>'),
+            state = $.extend({}, start);
+        elem.css(state).interpolate(end, blend, easing);
+        $.each(end, function(name, value) {
+            state[name] = elem.css(name);
+        });
+        return state;
+    };
 }(jQuery));

@@ -1,8 +1,8 @@
-$(function () {
+$(function() {
     var selectors = {
-        imageParent: '.bcms-album-holder:first',
-        imageLink: '.bcms-album-name > h4 > a:first'
-    },
+            imageParent: '.bcms-album-holder:first',
+            imageLink: '.bcms-album-name > h4 > a:first'
+        },
         options = {
             renderThumbnails: false,
             renderSlider: false,
@@ -14,11 +14,11 @@ $(function () {
             onOpenImage: function(imageModel) {
                 window.location.href = imageModel.link;
             },
-            getImageUrl: function (imgElement) {
+            getImageUrl: function(imgElement) {
                 return imgElement.parents(selectors.imageParent).find(selectors.imageLink).attr('href') || imgElement.attr('src');
             }
         },
         model = new GalleryModel(options);
-    
+
     model.initialize();
 });

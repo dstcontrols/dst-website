@@ -1,8 +1,8 @@
-﻿(function ($) {
-    $.fn.county = function (options) {
+﻿(function($) {
+    $.fn.county = function(options) {
         var settings = $.extend({ endDateTime: new Date(), animation: 'fade', reflection: true, reflectionOpacity: 0.2, speed: 500, theme: 'black' }, options);
 
-        return this.each(function () {
+        return this.each(function() {
             var timeoutInterval = null;
             var container = $(this);
             container.addClass('county ' + settings.theme);
@@ -11,17 +11,17 @@
                 container.attr('id', Math.random());
             }
             var w = 0;
-            container.find('>span').each(function () {
+            container.find('* > span').each(function() {
                 if ($(this).hasClass('county-days-wrapper') ||
-                $(this).hasClass('county-hours-wrapper') ||
-                $(this).hasClass('county-minutes-wrapper') ||
-                $(this).hasClass('county-seconds-wrapper'))
+                    $(this).hasClass('county-hours-wrapper') ||
+                    $(this).hasClass('county-minutes-wrapper') ||
+                    $(this).hasClass('county-seconds-wrapper'))
                     w += $(this).outerWidth();
             });
 
             container.css({ width: w });
 
-            container.find('>span>span').each(function () {
+            container.find('* > span > span').each(function() {
 
                 $(this).css({ width: $(this).width(), height: $(this).height() });
                 $(this).parent().css({ width: $(this).width() });
@@ -54,12 +54,13 @@
 
             function getCountDown() {
                 clearTimeout(timeoutInterval);
-                timeoutInterval = setTimeout(function () {
+                timeoutInterval = setTimeout(function() {
 
                     updateCounter();
 
                 }, 1000);
             }
+
             function updateCounter() {
                 var countDown = getCurrentCountDown();
                 var days = container.find('.county-days');
@@ -74,8 +75,7 @@
 
                 if (dayVal == countDown.days) {
                     days.html(countDown.days);
-                }
-                else {
+                } else {
                     if (settings.reflection)
                         aimateObject(days, reflectionContainer.find('.county-days'), dayVal, countDown.days, settings.animation);
                     else
@@ -110,13 +110,13 @@
 
                 getCountDown();
             }
+
             function aimateObject(element, reflectionElement, oldValue, newValue, type) {
                 if (type == 'fade') {
                     element.fadeOut('fast').fadeIn('fast').html(newValue);
                     if (settings.reflection)
                         reflectionElement.fadeOut('fast').fadeIn('fast').html(newValue);
-                }
-                else if (type == 'scroll') {
+                } else if (type == 'scroll') {
                     var copy = element.clone();
                     var reflectionCopy = null;
 
@@ -135,17 +135,18 @@
                         reflectionCopy.prependTo(reflectionElement.parent());
                     }
 
-                    element.animate({ marginTop: marginTop }, settings.speed, function () { $(this).remove(); });
-                    copy.animate({ marginTop: 0 }, settings.speed, function () { });
+                    element.animate({ marginTop: marginTop }, settings.speed, function() { $(this).remove(); });
+                    copy.animate({ marginTop: 0 }, settings.speed, function() {});
 
                     if (settings.reflection) {
-                        reflectionElement.animate({ marginTop: marginTop }, settings.speed, function () { $(this).remove(); });
-                        reflectionCopy.animate({ marginTop: 0 }, settings.speed, function () { });
+                        reflectionElement.animate({ marginTop: marginTop }, settings.speed, function() { $(this).remove(); });
+                        reflectionCopy.animate({ marginTop: 0 }, settings.speed, function() {});
                     }
 
                 }
 
             }
+
             function getCurrentCountDown() {
 
                 //var endDateTime = new Date('2012/12/25 10:00:00');
@@ -181,6 +182,7 @@
                 return { days: formatNumber(Math.max(0, days), true), hours: formatNumber(Math.max(0, hours), false), minutes: formatNumber(Math.max(0, minutes), false), seconds: formatNumber(Math.max(0, seconds), false) };
 
             }
+
             function formatNumber(number, isday) {
                 var strNumber = number.toString();
                 if (!isday) {
@@ -188,8 +190,7 @@
                         return '0' + strNumber;
                     else
                         return strNumber;
-                }
-                else {
+                } else {
                     if (strNumber.length == 1)
                         return '00' + strNumber;
                     else if (strNumber == 2)
@@ -198,6 +199,7 @@
                         return strNumber;
                 }
             }
+
             function getHunderth(number) {
                 var strNumber = '' + number;
 
@@ -206,6 +208,7 @@
                 else
                     return '0';
             }
+
             function getTenth(number) {
 
                 var strNumber = '' + number;
@@ -224,7 +227,8 @@
                 else
                     return '0';
             }
+
             return this;
         });
-    }
+    };
 })(jQuery);
