@@ -1,0 +1,61 @@
+﻿@* ReSharper disable Html.PathError *@
+@{ Layout = "~/Areas/bcms-Root/Views/Shared/BaseLayout.cshtml"; }
+@* ReSharper restore Html.PathError *@
+@using BetterCms.Module.Root.Mvc.Helpers
+@model BetterCms.Module.Root.ViewModels.Cms.RenderPageViewModel
+
+@section HeadScripts {
+    @Html.Partial("~/Views/Shared/Layouts/DST/_HeadScripts.cshtml")
+
+
+    @RenderSection("HeadScripts", false)
+}
+
+@* ReSharper disable once Razor.SectionNotResolved *@
+@section BodyTag {
+    <body id="boxed-bg" class="boxed fixed-header fixed background-opacity" @Html.RenderBodyAttributes()>
+}
+<div class="page-box">
+    <div class="page-box-content">
+        @Html.Partial("~/Views/Shared/Layouts/DST/_Header.cshtml")
+        <section id="main">
+            @if (Model.Title.ToLower() != "home")
+            {
+                <header class="page-header">
+                    <div class="container">
+                        <h1 class="title">@Model.Title</h1>
+                    </div>
+                </header>
+            }
+            <div class="container">
+                <article class="content">
+                    <div class="row">
+                        @* ReSharper disable UnknownCssClass *@
+                        <div class="default-messages-container">
+                            <div class="error-user-message-container">
+                                <ins class="icon-static"></ins>
+                                <div class="error user-message">
+                                </div>
+                            </div>
+                            <div class="success-user-message-container">
+                                <ins class="icon-static"></ins>
+                                <div class="success user-message">
+                                </div>
+                            </div>
+                        </div>   
+                        @* ReSharper restore UnknownCssClass *@
+                        <div class="clearfix"></div>
+                        @RenderSection("MainContent", false)
+                        @RenderBody()
+                    </div>
+                </article>
+            </div><!-- .container -->
+        </section><!-- #main -->
+    </div><!-- .page-box-content -->
+</div><!-- .page-box -->
+@Html.Partial("~/Views/Shared/Layouts/DST/_Footer.cshtml")
+
+@section Scripts {
+    @Html.Partial("~/Views/Shared/Layouts/DST/_Scripts.cshtml")
+    @RenderSection("Scripts", false)
+}

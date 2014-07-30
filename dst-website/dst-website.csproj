@@ -636,9 +636,21 @@
     <Content Include="Content\styles\bootstrap-3.2.0\variables.min.css">
       <DependentUpon>variables.css</DependentUpon>
     </Content>
+    <Content Include="Content\styles\cleanstart-1.0.1\animate.css" />
+    <Content Include="Content\styles\bcmsOverride.css">
+      <DependentUpon>bcmsOverride.less</DependentUpon>
+    </Content>
+    <Content Include="Content\styles\cleanstart-1.0.1\imagelightbox.css" />
+    <Content Include="Content\styles\cleanstart-1.0.1\mainmenu.css">
+      <DependentUpon>mainmenu.less</DependentUpon>
+    </Content>
+    <Content Include="Content\styles\cleanstart-1.0.1\simpletextrotator.css" />
+    <Content Include="Content\styles\cleanstart-1.0.1\style-golden.css" />
+    <Content Include="Content\styles\cleanstart-1.0.1\style-purple.css" />
     <Content Include="Content\styles\cleanstart-1.0.1\style.css">
       <DependentUpon>style.less</DependentUpon>
     </Content>
+    <Content Include="Content\styles\cleanstart-1.0.1\_style_switcher.css" />
     <Content Include="Content\styles\colorOverride.css">
       <DependentUpon>colorOverride.less</DependentUpon>
     </Content>
@@ -1020,6 +1032,13 @@
     <Content Include="Content\scripts\cleanstart-1.0.1\tweetie\README.md" />
     <Content Include="Content\scripts\cleanstart-1.0.1\tweetie\tweetie.jquery.json" />
     <Content Include="Content\scripts\cleanstart-1.0.1\twentytwenty-master\README.md" />
+    <Content Include="Content\styles\cleanstart-1.0.1\mainmenu.css.map">
+      <DependentUpon>mainmenu.css</DependentUpon>
+    </Content>
+    <Content Include="Content\styles\bcmsOverride.less" />
+    <Content Include="Content\styles\bcmsOverride.css.map">
+      <DependentUpon>bcmsOverride.css</DependentUpon>
+    </Content>
     <None Include="newrelic\newrelic.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -1030,6 +1049,11 @@
     <Content Include="Views\Shared\Layouts\DST\_HeadScripts.cshtml">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="Views\Shared\Layouts\old\DST\_Footer.cshtml" />
+    <Content Include="Views\Shared\Layouts\old\DST\_Header.cshtml" />
+    <Content Include="Views\Shared\Layouts\old\DST\_HeadScripts.cshtml" />
+    <Content Include="Views\Shared\Layouts\old\DST\_Layout.cshtml" />
+    <Content Include="Views\Shared\Layouts\old\DST\_Scripts.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">

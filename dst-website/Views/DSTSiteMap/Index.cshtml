@@ -1,31 +1,42 @@
-﻿@using dst_website.Models
+﻿@using dst_website.Models     
+@using dst_website.Helpers        
+@model BetterCms.Module.Root.ViewModels.Cms.RenderPageViewModel
+
+
+
 @model IList<dst_website.Models.MenuItemViewModel>
 
 @foreach (MenuItemViewModel item in Model)
 {
-    <li class="parent">
-        <a href="@item.Url">@item.Caption</a>  
-        <ul class="sub">
-            <li><a href="index.html">Creative</a></li>
-            <li><a href="home-2.html">Paralax</a></li>
-            <li><a href="home-3.html">Simple (Boxed)</a></li>
-            <li><a href="home-4.html">Business</a></li>
-            <li><a href="home-5.html">Animation</a></li>
-            <li class="parent">
-                <a href="shop.html">Shop<span class="item-new">New</span></a>
-                <ul class="sub">
-                    <li><a href="shop.html">Shop 1</a></li>
-                    <li><a href="shop-2.html">Shop 2</a></li>
-                    <li><a href="shop-3.html">Shop 3</a></li>
-                    <li><a href="shop-4.html">Shop 4</a></li>
-                    <li><a href="shop-5.html">Shop 5</a></li>
-                    <li><a href="shop-6.html">Shop 6</a></li>
-                    <li><a href="shop-7.html">Shop 7</a></li>
-                    <li><a href="shop-8.html">Shop 8</a></li>
-                </ul>
-            </li>
-            <li><a href="index-one-page.html">One Page Site<span class="item-new">New</span></a></li>
-        </ul>
+
+    <li>
+        <a href="@item.Url">@item.Caption</a>
+
+        <div class="dmui_dropdown_block full_width" style="background-image: url(images/mega_menu_background.png); background-repeat:no-repeat; background-position:right;">
+            <div class="dmui-container">
+                <div class="dmui-col span3">
+                    <div class="dmui-container">
+                        <ul class="dmui-submenu">
+                            <li>
+
+                                @*@Html.RenderAction("SubMenu", "DSTSiteMap", new { area = string.Empty, item.Url});*@
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dmui-col span3">
+                    <div class="dmui-container">
+                        <ul class="dmui-submenu">
+                            @*<li><a href="single_post.html">Single Post</a></li>
+                            <li><a href="404.html">ERROR 404</a></li>
+                            <li><a href="register.html">Register or Sign in</a></li>
+                            <li><a href="elements.html">Design  Elements</a></li>
+                            <li><a href="documentation/index.html">Documentation <span class="label label-danger">new</span></a></li>*@
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </li>
 }
 
