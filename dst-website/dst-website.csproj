@@ -745,7 +745,9 @@
     <Content Include="Views\Shared\Layouts\DST\_Footer.cshtml" />
     <Content Include="Views\Shared\Layouts\DST\_Scripts.cshtml" />
     <Content Include="Views\Shared\Layouts\DST\_Layout.cshtml" />
-    <None Include="Views\Shared\Layouts\DST\_HeadScripts.cshtml" />
+    <Content Include="Views\Shared\Layouts\DST\_HeadScripts.cshtml">
+      <SubType>Code</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
