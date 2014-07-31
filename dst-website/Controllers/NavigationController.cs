@@ -1,10 +1,10 @@
 ﻿#region FileInformationAndLicensing
 
 // ************************************************************************************************************************
-// dst-website/dst-website/DSTSitemapController.cs
+// dst-website/dst-website/NavigationController.cs
 // 
 // Creation Time     : 2014-07-29 12:07 AM
-// Time Last Updated : 2014-07-29 8:08 PM
+// Time Last Updated : 2014-07-31 12:40 AM
 // Copyright         : (C) 2014 Devbridge Group LLC
 // Contributions By  : (C) 2014 DST Controls
 // License           : Better CMS License Agreement
@@ -27,6 +27,7 @@ namespace dst_website.Controllers
 
     using System;
     using System.Collections.Generic;
+    using System.Diagnostics;
     using System.Linq;
     using System.Web.Mvc;
     using BetterCms.Module.Api;
@@ -40,7 +41,7 @@ namespace dst_website.Controllers
 
     #endregion
 
-    public class DSTSiteMapController : Controller
+    public class NavigationController : Controller
     {
         private static readonly Guid DefaultSitemapId = new Guid("17ABFEE9-5AE6-470C-92E1-C2905036574B");
 
@@ -72,9 +73,14 @@ namespace dst_website.Controllers
         {
             var menuItems = new List<MenuItemViewModel>();
 
+            if (parentUrl == null)
+            {
+                return this.View(menuItems);
+            }
+
             using (IApiFacade api = ApiFactory.Create())
             {
-                var pageRequest = new PageExistsRequest {PageUrl = parentUrl};
+                var pageRequest = new PageExistsRequest { PageUrl = parentUrl };
                 PageExistsResponse pageResponse = api.Pages.Page.Exists(pageRequest);
 
                 Guid? sitemapId = this.GetSitemapId(api);
@@ -82,7 +88,7 @@ namespace dst_website.Controllers
                 {
                     return this.View(menuItems);
                 }
-                var parentRequest = new GetSitemapNodesRequest {SitemapId = sitemapId.Value, Data = {Take = 1}};
+                var parentRequest = new GetSitemapNodesRequest { SitemapId = sitemapId.Value, Data = { Take = 1 } };
                 parentRequest.Data.Filter.Add("ParentId", null);
 
                 var filter = new DataFilter(FilterConnector.Or);
@@ -102,7 +108,7 @@ namespace dst_website.Controllers
                 var request = new GetSitemapTreeRequest
                               {
                                   SitemapId = sitemapId.Value,
-                                  Data = {NodeId = parentResponse.Data.Items[0].Id}
+                                  Data = { NodeId = parentResponse.Data.Items[0].Id }
                               };
                 GetSitemapTreeResponse response = api.Pages.Sitemap.Tree.Get(request);
                 if (response.Data.Count <= 0)
@@ -110,12 +116,20 @@ namespace dst_website.Controllers
                     return this.View(menuItems);
                 }
                 menuItems =
-                    response.Data.Select(mi => new MenuItemViewModel {Caption = mi.Title, Url = mi.Url}).ToList();
-                menuItems.Insert(0, new MenuItemViewModel {Caption = "Main", Url = parentUrl});
+                    response.Data.Select(mi => new MenuItemViewModel { Caption = mi.Title, Url = mi.Url }).ToList();
+                menuItems.Insert(0, new MenuItemViewModel { Caption = "Main", Url = parentUrl });
             }
 
             return this.View(menuItems);
         }
+
+        //public virtual ActionResult SubMenu(string parentUrl)
+        //{
+        //    Debug.Write(parentUrl);
+            
+        //    return null;
+        //}
+
 
         private Guid? GetSitemapId(IApiFacade api)
         {

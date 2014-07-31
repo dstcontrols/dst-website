@@ -1,9 +1,0 @@
-﻿@using dst_website.Models
-@model IList<dst_website.Models.MenuItemViewModel>
-
-<div class="submenu">
-    @foreach (MenuItemViewModel item in Model)
-    {
-        <a href="@item.Url" class="@(Request.Path == item.Url ? "submenu-active" : null)">@item.Caption</a>
-    }
-</div>

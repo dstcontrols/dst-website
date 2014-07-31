@@ -157,6 +157,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\NuGet.Core.2.0.1\lib\net40-Client\NuGet.Core.dll</HintPath>
     </Reference>
+    <Reference Include="RouteDebugger">
+      <HintPath>..\packages\routedebugger.2.1.4.0\lib\net40\RouteDebugger.dll</HintPath>
+    </Reference>
     <Reference Include="ServiceStack">
       <HintPath>..\packages\ServiceStack.3.9.71\lib\net35\ServiceStack.dll</HintPath>
     </Reference>
@@ -253,7 +256,7 @@
   <ItemGroup>
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
-    <Compile Include="Controllers\DSTSitemapController.cs" />
+    <Compile Include="Controllers\NavigationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -276,9 +279,6 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Content Include="403.aspx" />
-    <Content Include="404.aspx" />
-    <Content Include="500.aspx" />
     <Content Include="betterCms.license.txt" />
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
@@ -582,7 +582,7 @@
     <Content Include="Content\images\progressive\svg\trash-icon.svg" />
     <Content Include="Content\images\progressive\svg\wishlist-icon.svg" />
     <Content Include="Content\images\progressive\up.png" />
-    <Content Include="Content\scripts\bootstrap.min.js" />
+    <Content Include="Content\scripts\bootstrap-3.2.0\bootstrap.min.js" />
     <Content Include="Content\scripts\cleanstart-1.0.1\bigvideo.js" />
     <Content Include="Content\scripts\cleanstart-1.0.1\bigvideo_init.js" />
     <Content Include="Content\scripts\cleanstart-1.0.1\cleanstart_theme.js" />
@@ -600,6 +600,7 @@
     <Content Include="Content\scripts\cleanstart-1.0.1\jquery.simple-text-rotator.js" />
     <Content Include="Content\scripts\cleanstart-1.0.1\jquery.ui.totop.js" />
     <Content Include="Content\scripts\cleanstart-1.0.1\modernizr.custom.48287.js" />
+    <Content Include="Content\scripts\cleanstart-1.0.1\modernizr.custom.67629.js" />
     <Content Include="Content\scripts\cleanstart-1.0.1\style_switcher.js" />
     <Content Include="Content\scripts\cleanstart-1.0.1\tweetie\api\config.php" />
     <Content Include="Content\scripts\cleanstart-1.0.1\tweetie\api\tweet.php" />
@@ -620,10 +621,14 @@
     <Content Include="Content\scripts\cleanstart-1.0.1\woothemes-FlexSlider-06b12f8\jquery.flexslider-min.js" />
     <Content Include="Content\scripts\cleanstart-1.0.1\woothemes-FlexSlider-06b12f8\jquery.flexslider.js" />
     <Content Include="Content\scripts\cleanstart-1.0.1\wow.min.js" />
-    <Content Include="Content\styles\bcms.light.content.css" />
-    <Content Include="Content\styles\bcms.light.gallery.css" />
-    <Content Include="Content\styles\bcms.light.messages.css" />
-    <Content Include="Content\styles\bcms.light.layout.css" />
+    <Content Include="Content\scripts\jquery-1.11.1.min.js" />
+    <Content Include="Content\styles\bettercms-1.7.3\bcms.light.content.css" />
+    <Content Include="Content\styles\bettercms-1.7.3\bcms.light.gallery.css" />
+    <Content Include="Content\styles\bettercms-1.7.3\bcms.light.messages.css" />
+    <Content Include="Content\styles\bettercms-1.7.3\bcms.light.layout.css" />
+    <Content Include="Content\styles\bettercms-1.7.3\bcmsOverride.min.css">
+      <DependentUpon>bcmsOverride.css</DependentUpon>
+    </Content>
     <Content Include="Content\styles\bootstrap-3.2.0\bootstrap.css">
       <DependentUpon>bootstrap.less</DependentUpon>
     </Content>
@@ -637,12 +642,15 @@
       <DependentUpon>variables.css</DependentUpon>
     </Content>
     <Content Include="Content\styles\cleanstart-1.0.1\animate.css" />
-    <Content Include="Content\styles\bcmsOverride.css">
+    <Content Include="Content\styles\bettercms-1.7.3\bcmsOverride.css">
       <DependentUpon>bcmsOverride.less</DependentUpon>
     </Content>
     <Content Include="Content\styles\cleanstart-1.0.1\imagelightbox.css" />
     <Content Include="Content\styles\cleanstart-1.0.1\mainmenu.css">
       <DependentUpon>mainmenu.less</DependentUpon>
+    </Content>
+    <Content Include="Content\styles\cleanstart-1.0.1\mainmenu.min.css">
+      <DependentUpon>mainmenu.css</DependentUpon>
     </Content>
     <Content Include="Content\styles\cleanstart-1.0.1\simpletextrotator.css" />
     <Content Include="Content\styles\cleanstart-1.0.1\style-golden.css" />
@@ -650,12 +658,21 @@
     <Content Include="Content\styles\cleanstart-1.0.1\style.css">
       <DependentUpon>style.less</DependentUpon>
     </Content>
+    <Content Include="Content\styles\cleanstart-1.0.1\style.min.css">
+      <DependentUpon>style.css</DependentUpon>
+    </Content>
     <Content Include="Content\styles\cleanstart-1.0.1\_style_switcher.css" />
-    <Content Include="Content\styles\colorOverride.css">
+    <Content Include="Content\styles\progressive-2.2.1\colorOverride.css">
       <DependentUpon>colorOverride.less</DependentUpon>
     </Content>
-    <Content Include="Content\styles\colorOverride.min.css">
+    <Content Include="Content\styles\progressive-2.2.1\colorOverride.min.css">
       <DependentUpon>colorOverride.css</DependentUpon>
+    </Content>
+    <Content Include="Content\styles\dst.css">
+      <DependentUpon>dst.less</DependentUpon>
+    </Content>
+    <Content Include="Content\styles\dst.min.css">
+      <DependentUpon>dst.css</DependentUpon>
     </Content>
     <Content Include="Content\styles\font-awesome-4.1.0\font-awesome.css">
       <DependentUpon>font-awesome.less</DependentUpon>
@@ -669,110 +686,111 @@
     <Content Include="Content\styles\font-awesome-4.1.0\variables.min.css">
       <DependentUpon>variables.css</DependentUpon>
     </Content>
-    <Content Include="Content\styles\Progressive\animate.css" />
-    <Content Include="Content\styles\Progressive\bootstrap.min.css" />
-    <Content Include="Content\styles\Progressive\buttons\buttons.css" />
-    <Content Include="Content\styles\Progressive\buttons\social-icons-codes.css" />
-    <Content Include="Content\styles\Progressive\buttons\social-icons-embedded.css" />
-    <Content Include="Content\styles\Progressive\buttons\social-icons-ie7-codes.css" />
-    <Content Include="Content\styles\Progressive\buttons\social-icons-ie7.css" />
-    <Content Include="Content\styles\Progressive\buttons\social-icons.css" />
-    <Content Include="Content\styles\Progressive\customizer\elements-pages-customizer.css" />
-    <Content Include="Content\styles\Progressive\customizer\home-pages-customizer.css" />
-    <Content Include="Content\styles\Progressive\customizer\pages-pages-customizer.css" />
-    <Content Include="Content\styles\Progressive\customizer\pages.css" />
-    <Content Include="Content\styles\Progressive\customizer\shop-2-pages-customizer.css" />
-    <Content Include="Content\styles\Progressive\customizer\shop-5-pages-customizer.css" />
-    <Content Include="Content\styles\Progressive\customizer\shop-6-pages-customizer.css" />
-    <Content Include="Content\styles\Progressive\customizer\shop-8-pages-customizer.css" />
-    <Content Include="Content\styles\Progressive\customizer\shop-pages-customizer.css" />
-    <Content Include="Content\styles\Progressive\datepicker.css" />
-    <Content Include="Content\styles\Progressive\font-awesome.min.css" />
-    <Content Include="Content\styles\Progressive\ie\ie.css" />
-    <Content Include="Content\styles\Progressive\ie\ie8.css" />
-    <Content Include="Content\styles\Progressive\jquery.fancybox.css" />
-    <Content Include="Content\styles\Progressive\jslider.css" />
-    <Content Include="Content\styles\Progressive\ladda.min.css" />
-    <Content Include="Content\styles\Progressive\layerslider\css\blank.gif" />
-    <Content Include="Content\styles\Progressive\layerslider\layerslider.css" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\borderlessdark3d\loading.gif" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\borderlessdark3d\nothumb.png" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\borderlessdark3d\shadow.png" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\borderlessdark3d\skin.css" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\borderlessdark3d\skin.png" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\borderlessdark\loading.gif" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\borderlessdark\nothumb.png" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\borderlessdark\shadow.png" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\borderlessdark\skin.css" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\borderlessdark\skin.png" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\borderlesslight3d\loading.gif" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\borderlesslight3d\nothumb.png" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\borderlesslight3d\shadow.png" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\borderlesslight3d\skin.css" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\borderlesslight3d\skin.png" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\borderlesslight\loading.gif" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\borderlesslight\nothumb.png" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\borderlesslight\shadow.png" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\borderlesslight\skin.css" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\borderlesslight\skin.png" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\carousel\loading.gif" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\carousel\nothumb.png" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\carousel\skin.css" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\carousel\skin.png" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\darkskin\loading.gif" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\darkskin\nothumb.png" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\darkskin\skin.css" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\darkskin\skin.png" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\defaultskin\loading.gif" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\defaultskin\nothumb.png" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\defaultskin\skin.css" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\defaultskin\skin.png" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\fullwidthdark\loading.gif" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\fullwidthdark\nothumb.png" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\fullwidthdark\skin.css" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\fullwidthdark\skin.png" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\fullwidth\loading.gif" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\fullwidth\nothumb.png" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\fullwidth\skin.css" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\fullwidth\skin.png" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\glass\loading.gif" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\glass\nothumb.png" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\glass\shadow.png" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\glass\skin.css" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\glass\skin.png" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\lightskin\loading.gif" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\lightskin\nothumb.png" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\lightskin\skin.css" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\lightskin\skin.png" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\minimal\loading.gif" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\minimal\nothumb.png" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\minimal\skin.css" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\minimal\skin.png" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\noskin\loading.gif" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\noskin\nothumb.png" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\noskin\skin.css" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\noskin\skin.png" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\v5\loading.gif" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\v5\nothumb.png" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\v5\skin.css" />
-    <Content Include="Content\styles\Progressive\layerslider\skins\v5\skin.png" />
-    <Content Include="Content\styles\Progressive\morris.css" />
-    <Content Include="Content\styles\Progressive\responsive.css" />
-    <Content Include="Content\styles\Progressive\royalslider\royalslider.css" />
-    <Content Include="Content\styles\Progressive\royalslider\skins\default-inverted\rs-default-inverted.css" />
-    <Content Include="Content\styles\Progressive\royalslider\skins\default-inverted\rs-default-inverted.png" />
-    <Content Include="Content\styles\Progressive\royalslider\skins\default\rs-default.css" />
-    <Content Include="Content\styles\Progressive\royalslider\skins\default\rs-default.png" />
-    <Content Include="Content\styles\Progressive\royalslider\skins\minimal-white\rs-minimal-white.css" />
-    <Content Include="Content\styles\Progressive\royalslider\skins\minimal-white\rs-minimal-white.png" />
-    <Content Include="Content\styles\Progressive\royalslider\skins\preloaders\preloader-white.gif" />
-    <Content Include="Content\styles\Progressive\royalslider\skins\preloaders\preloader.gif" />
-    <Content Include="Content\styles\Progressive\royalslider\skins\universal\rs-universal.css" />
-    <Content Include="Content\styles\Progressive\royalslider\skins\universal\rs-universal.png" />
-    <Content Include="Content\styles\Progressive\settings.css" />
-    <Content Include="Content\styles\Progressive\style.css" />
-    <Content Include="Content\styles\Progressive\video-js.min.css" />
+    <Content Include="Content\styles\progressive-2.2.1\animate.css" />
+    <Content Include="Content\styles\progressive-2.2.1\bootstrap.min.css" />
+    <Content Include="Content\styles\progressive-2.2.1\buttons\buttons.css" />
+    <Content Include="Content\styles\progressive-2.2.1\buttons\social-icons-codes.css" />
+    <Content Include="Content\styles\progressive-2.2.1\buttons\social-icons-embedded.css" />
+    <Content Include="Content\styles\progressive-2.2.1\buttons\social-icons-ie7-codes.css" />
+    <Content Include="Content\styles\progressive-2.2.1\buttons\social-icons-ie7.css" />
+    <Content Include="Content\styles\progressive-2.2.1\buttons\social-icons.css" />
+    <Content Include="Content\styles\progressive-2.2.1\customizer\elements-pages-customizer.css" />
+    <Content Include="Content\styles\progressive-2.2.1\customizer\home-pages-customizer.css" />
+    <Content Include="Content\styles\progressive-2.2.1\customizer\pages-pages-customizer.css" />
+    <Content Include="Content\styles\progressive-2.2.1\customizer\pages.css" />
+    <Content Include="Content\styles\progressive-2.2.1\customizer\shop-2-pages-customizer.css" />
+    <Content Include="Content\styles\progressive-2.2.1\customizer\shop-5-pages-customizer.css" />
+    <Content Include="Content\styles\progressive-2.2.1\customizer\shop-6-pages-customizer.css" />
+    <Content Include="Content\styles\progressive-2.2.1\customizer\shop-8-pages-customizer.css" />
+    <Content Include="Content\styles\progressive-2.2.1\customizer\shop-pages-customizer.css" />
+    <Content Include="Content\styles\progressive-2.2.1\datepicker.css" />
+    <Content Include="Content\styles\progressive-2.2.1\font-awesome.min.css" />
+    <Content Include="Content\styles\progressive-2.2.1\ie\ie.css" />
+    <Content Include="Content\styles\progressive-2.2.1\ie\ie8.css" />
+    <Content Include="Content\styles\progressive-2.2.1\jquery.fancybox.css" />
+    <Content Include="Content\styles\progressive-2.2.1\jslider.css" />
+    <Content Include="Content\styles\progressive-2.2.1\ladda.min.css" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\css\blank.gif" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\layerslider.css" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\borderlessdark3d\loading.gif" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\borderlessdark3d\nothumb.png" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\borderlessdark3d\shadow.png" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\borderlessdark3d\skin.css" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\borderlessdark3d\skin.png" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\borderlessdark\loading.gif" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\borderlessdark\nothumb.png" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\borderlessdark\shadow.png" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\borderlessdark\skin.css" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\borderlessdark\skin.png" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\borderlesslight3d\loading.gif" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\borderlesslight3d\nothumb.png" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\borderlesslight3d\shadow.png" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\borderlesslight3d\skin.css" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\borderlesslight3d\skin.png" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\borderlesslight\loading.gif" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\borderlesslight\nothumb.png" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\borderlesslight\shadow.png" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\borderlesslight\skin.css" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\borderlesslight\skin.png" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\carousel\loading.gif" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\carousel\nothumb.png" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\carousel\skin.css" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\carousel\skin.png" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\darkskin\loading.gif" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\darkskin\nothumb.png" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\darkskin\skin.css" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\darkskin\skin.png" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\defaultskin\loading.gif" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\defaultskin\nothumb.png" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\defaultskin\skin.css" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\defaultskin\skin.png" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\fullwidthdark\loading.gif" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\fullwidthdark\nothumb.png" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\fullwidthdark\skin.css" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\fullwidthdark\skin.png" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\fullwidth\loading.gif" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\fullwidth\nothumb.png" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\fullwidth\skin.css" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\fullwidth\skin.png" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\glass\loading.gif" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\glass\nothumb.png" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\glass\shadow.png" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\glass\skin.css" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\glass\skin.png" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\lightskin\loading.gif" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\lightskin\nothumb.png" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\lightskin\skin.css" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\lightskin\skin.png" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\minimal\loading.gif" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\minimal\nothumb.png" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\minimal\skin.css" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\minimal\skin.png" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\noskin\loading.gif" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\noskin\nothumb.png" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\noskin\skin.css" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\noskin\skin.png" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\v5\loading.gif" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\v5\nothumb.png" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\v5\skin.css" />
+    <Content Include="Content\styles\progressive-2.2.1\layerslider\skins\v5\skin.png" />
+    <Content Include="Content\styles\progressive-2.2.1\morris.css" />
+    <Content Include="Content\styles\progressive-2.2.1\responsive.css" />
+    <Content Include="Content\styles\progressive-2.2.1\royalslider\royalslider.css" />
+    <Content Include="Content\styles\progressive-2.2.1\royalslider\skins\default-inverted\rs-default-inverted.css" />
+    <Content Include="Content\styles\progressive-2.2.1\royalslider\skins\default-inverted\rs-default-inverted.png" />
+    <Content Include="Content\styles\progressive-2.2.1\royalslider\skins\default\rs-default.css" />
+    <Content Include="Content\styles\progressive-2.2.1\royalslider\skins\default\rs-default.png" />
+    <Content Include="Content\styles\progressive-2.2.1\royalslider\skins\minimal-white\rs-minimal-white.css" />
+    <Content Include="Content\styles\progressive-2.2.1\royalslider\skins\minimal-white\rs-minimal-white.png" />
+    <Content Include="Content\styles\progressive-2.2.1\royalslider\skins\preloaders\preloader-white.gif" />
+    <Content Include="Content\styles\progressive-2.2.1\royalslider\skins\preloaders\preloader.gif" />
+    <Content Include="Content\styles\progressive-2.2.1\royalslider\skins\universal\rs-universal.css" />
+    <Content Include="Content\styles\progressive-2.2.1\royalslider\skins\universal\rs-universal.png" />
+    <Content Include="Content\styles\progressive-2.2.1\settings.css" />
+    <Content Include="Content\styles\progressive-2.2.1\style.css" />
+    <Content Include="Content\styles\progressive-2.2.1\video-js.min.css" />
     <Content Include="favicon.ico" />
+    <Content Include="favicon.png" />
     <Content Include="Global.asax" />
     <Content Include="newrelic\extensions\CoreInstrumentation.xml" />
     <Content Include="newrelic\extensions\Providers\TransactionContext\Asp\NewRelic.Agent.Extensions.dll" />
@@ -784,63 +802,67 @@
     <Content Include="newrelic\NewRelic.Agent.Core.dll" />
     <Content Include="newrelic\NewRelic.Agent.Extensions.dll" />
     <Content Include="newrelic\NewRelic.Profiler.dll" />
-    <Content Include="Content\scripts\forms.js" />
-    <Content Include="Content\scripts\gallery.gallery.js" />
-    <Content Include="Content\scripts\gallery.home.js" />
-    <Content Include="Content\scripts\gallery.js" />
-    <Content Include="Content\scripts\jquery.accordion.js" />
-    <Content Include="Content\scripts\jquery.coverflow.js" />
-    <Content Include="Content\scripts\jquery.interpolate.js" />
-    <Content Include="Content\scripts\jquery.lightbox_me.js" />
-    <Content Include="Content\scripts\jquery.mousewheel.js" />
-    <Content Include="Content\scripts\jquery.touchSwipe.min.js" />
-    <Content Include="Content\scripts\jquery.validate.js" />
-    <Content Include="Content\scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Content\scripts\messages.js" />
-    <Content Include="Content\scripts\modernizr.js" />
-    <Content Include="Content\scripts\onload.js" />
-    <Content Include="Content\scripts\Progressive\bootstrap-datepicker.js" />
-    <Content Include="Content\scripts\Progressive\bootstrap.min.js" />
-    <Content Include="Content\scripts\Progressive\bootstrapValidator.min.js" />
-    <Content Include="Content\scripts\Progressive\country.js" />
-    <Content Include="Content\scripts\Progressive\isotope.pkgd.min.js" />
-    <Content Include="Content\scripts\Progressive\jquery.appear.js" />
-    <Content Include="Content\scripts\Progressive\jquery.carouFredSel-6.2.1-packed.js" />
-    <Content Include="Content\scripts\Progressive\jquery.easing.1.3.js" />
-    <Content Include="Content\scripts\Progressive\jquery.easypiechart.min.js" />
-    <Content Include="Content\scripts\Progressive\jquery.elevateZoom-3.0.8.min.js" />
-    <Content Include="Content\scripts\Progressive\jquery.fancybox.pack.js" />
-    <Content Include="Content\scripts\Progressive\jquery.imagesloaded.min.js" />
-    <Content Include="Content\scripts\Progressive\jquery.knob.js" />
-    <Content Include="Content\scripts\Progressive\jquery.royalslider.min.js" />
-    <Content Include="Content\scripts\Progressive\jquery.selectBox.min.js" />
-    <Content Include="Content\scripts\Progressive\jquery.sparkline.min.js" />
-    <Content Include="Content\scripts\Progressive\jquery.stellar.min.js" />
-    <Content Include="Content\scripts\Progressive\jquery.touchSwipe.min.js" />
-    <Content Include="Content\scripts\Progressive\jquery.tubular.1.0.js" />
-    <Content Include="Content\scripts\Progressive\ladda.min.js" />
-    <Content Include="Content\scripts\Progressive\layerslider\greensock.js" />
-    <Content Include="Content\scripts\Progressive\layerslider\layerslider.kreaturamedia.jquery.js" />
-    <Content Include="Content\scripts\Progressive\layerslider\layerslider.transitions.js" />
-    <Content Include="Content\scripts\Progressive\livicons-1.3.min.js" />
-    <Content Include="Content\scripts\Progressive\main.js" />
-    <Content Include="Content\scripts\Progressive\masonry.pkgd.min.js" />
-    <Content Include="Content\scripts\Progressive\morris.min.js" />
-    <Content Include="Content\scripts\Progressive\pixastic.custom.js" />
-    <Content Include="Content\scripts\Progressive\price-regulator\draggable-0.1.js" />
-    <Content Include="Content\scripts\Progressive\price-regulator\jquery.dependClass-0.1.js" />
-    <Content Include="Content\scripts\Progressive\price-regulator\jquery.numberformatter-1.2.3.js" />
-    <Content Include="Content\scripts\Progressive\price-regulator\jquery.slider.js" />
-    <Content Include="Content\scripts\Progressive\price-regulator\jshashtable-2.1_src.js" />
-    <Content Include="Content\scripts\Progressive\price-regulator\tmpl.js" />
-    <Content Include="Content\scripts\Progressive\raphael.min.js" />
-    <Content Include="Content\scripts\Progressive\revolution\jquery.themepunch.plugins.min.js" />
-    <Content Include="Content\scripts\Progressive\revolution\jquery.themepunch.revolution.min.js" />
-    <Content Include="Content\scripts\Progressive\SmoothScroll.js" />
-    <Content Include="Content\scripts\Progressive\spin.min.js" />
-    <Content Include="Content\scripts\Progressive\video.js" />
-    <Content Include="Content\scripts\slides.min.jquery.js" />
-    <Content Include="Content\scripts\validation.extenders.js" />
+    <Content Include="Content\scripts\bettercms-1.7.3\forms.js" />
+    <Content Include="Content\scripts\bettercms-1.7.3\gallery.gallery.js" />
+    <Content Include="Content\scripts\bettercms-1.7.3\gallery.home.js" />
+    <Content Include="Content\scripts\bettercms-1.7.3\gallery.js" />
+    <Content Include="Content\scripts\bettercms-1.7.3\jquery.accordion.js" />
+    <Content Include="Content\scripts\bettercms-1.7.3\jquery.coverflow.js" />
+    <Content Include="Content\scripts\bettercms-1.7.3\jquery.interpolate.js" />
+    <Content Include="Content\scripts\bettercms-1.7.3\jquery.lightbox_me.js" />
+    <Content Include="Content\scripts\bettercms-1.7.3\jquery.mousewheel.js" />
+    <Content Include="Content\scripts\bettercms-1.7.3\jquery.touchSwipe.min.js" />
+    <Content Include="Content\scripts\bettercms-1.7.3\jquery.validate.js" />
+    <Content Include="Content\scripts\bettercms-1.7.3\jquery.validate.unobtrusive.js" />
+    <Content Include="Content\scripts\bettercms-1.7.3\messages.js" />
+    <Content Include="Content\scripts\bettercms-1.7.3\modernizr.js" />
+    <Content Include="Content\scripts\bettercms-1.7.3\onload.js" />
+    <Content Include="Content\scripts\progressive-2.2.1\bootstrap-datepicker.js" />
+    <Content Include="Content\scripts\progressive-2.2.1\bootstrap.min.js" />
+    <Content Include="Content\scripts\progressive-2.2.1\bootstrapValidator.min.js" />
+    <Content Include="Content\scripts\progressive-2.2.1\country.js" />
+    <Content Include="Content\scripts\progressive-2.2.1\isotope.pkgd.min.js" />
+    <Content Include="Content\scripts\progressive-2.2.1\jquery.appear.js" />
+    <Content Include="Content\scripts\progressive-2.2.1\jquery.carouFredSel-6.2.1-packed.js" />
+    <Content Include="Content\scripts\progressive-2.2.1\jquery.easing.1.3.js" />
+    <Content Include="Content\scripts\progressive-2.2.1\jquery.easypiechart.min.js" />
+    <Content Include="Content\scripts\progressive-2.2.1\jquery.elevateZoom-3.0.8.min.js" />
+    <Content Include="Content\scripts\progressive-2.2.1\jquery.fancybox.pack.js" />
+    <Content Include="Content\scripts\progressive-2.2.1\jquery.imagesloaded.min.js" />
+    <Content Include="Content\scripts\progressive-2.2.1\jquery.knob.js" />
+    <Content Include="Content\scripts\progressive-2.2.1\jquery.royalslider.min.js" />
+    <Content Include="Content\scripts\progressive-2.2.1\jquery.selectBox.min.js" />
+    <Content Include="Content\scripts\progressive-2.2.1\jquery.sparkline.min.js" />
+    <Content Include="Content\scripts\progressive-2.2.1\jquery.stellar.min.js" />
+    <Content Include="Content\scripts\progressive-2.2.1\jquery.touchSwipe.min.js" />
+    <Content Include="Content\scripts\progressive-2.2.1\jquery.tubular.1.0.js" />
+    <Content Include="Content\scripts\progressive-2.2.1\ladda.min.js" />
+    <Content Include="Content\scripts\progressive-2.2.1\layerslider\greensock.js" />
+    <Content Include="Content\scripts\progressive-2.2.1\layerslider\layerslider.kreaturamedia.jquery.js" />
+    <Content Include="Content\scripts\progressive-2.2.1\layerslider\layerslider.transitions.js" />
+    <Content Include="Content\scripts\progressive-2.2.1\livicons-1.3.min.js" />
+    <Content Include="Content\scripts\progressive-2.2.1\main.js" />
+    <Content Include="Content\scripts\progressive-2.2.1\masonry.pkgd.min.js" />
+    <Content Include="Content\scripts\progressive-2.2.1\morris.min.js" />
+    <Content Include="Content\scripts\progressive-2.2.1\pixastic.custom.js" />
+    <Content Include="Content\scripts\progressive-2.2.1\price-regulator\draggable-0.1.js" />
+    <Content Include="Content\scripts\progressive-2.2.1\price-regulator\jquery.dependClass-0.1.js" />
+    <Content Include="Content\scripts\progressive-2.2.1\price-regulator\jquery.numberformatter-1.2.3.js" />
+    <Content Include="Content\scripts\progressive-2.2.1\price-regulator\jquery.slider.js" />
+    <Content Include="Content\scripts\progressive-2.2.1\price-regulator\jshashtable-2.1_src.js" />
+    <Content Include="Content\scripts\progressive-2.2.1\price-regulator\tmpl.js" />
+    <Content Include="Content\scripts\progressive-2.2.1\raphael.min.js" />
+    <Content Include="Content\scripts\progressive-2.2.1\revolution\jquery.themepunch.plugins.min.js" />
+    <Content Include="Content\scripts\progressive-2.2.1\revolution\jquery.themepunch.revolution.min.js" />
+    <Content Include="Content\scripts\progressive-2.2.1\SmoothScroll.js" />
+    <Content Include="Content\scripts\progressive-2.2.1\spin.min.js" />
+    <Content Include="Content\scripts\progressive-2.2.1\video.js" />
+    <Content Include="Content\scripts\bettercms-1.7.3\slides.min.jquery.js" />
+    <Content Include="Content\scripts\bettercms-1.7.3\validation.extenders.js" />
+    <Content Include="touch-icon-ipad-retina.png" />
+    <Content Include="touch-icon-ipad.png" />
+    <Content Include="touch-icon-iphone-retina.png" />
+    <Content Include="touch-icon-iphone.png" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -869,17 +891,8 @@
     <Content Include="Views\Blog\GetCategories.cshtml" />
     <Content Include="Views\Blog\Index.cshtml" />
     <Content Include="Views\Blog\Last.cshtml" />
-    <Content Include="Views\Shared\Layouts\Light\Partial\_GalleryScripts.cshtml" />
-    <Content Include="Views\Shared\Layouts\Light\_BlogPostLayout.cshtml" />
-    <Content Include="Views\Shared\Layouts\Light\_ContactsLayout.cshtml" />
-    <Content Include="Views\Shared\Layouts\Light\_GalleryLayout.cshtml" />
-    <Content Include="Views\Shared\Layouts\Light\_HomeLayout.cshtml" />
-    <Content Include="Views\Shared\Layouts\Light\_LightLayout.cshtml" />
-    <Content Include="Views\Shared\Layouts\Light\_LightOneColumnLayout.cshtml" />
-    <Content Include="Views\Shared\Layouts\Light\_LightThreeColumnsLayout.cshtml" />
-    <Content Include="Views\Shared\Layouts\Light\_LightTwoColumnsLayout.cshtml" />
-    <Content Include="Views\DSTSiteMap\Index.cshtml" />
-    <Content Include="Views\DSTSiteMap\SubMenu.cshtml" />
+    <Content Include="Views\Navigation\Index.cshtml" />
+    <Content Include="Views\Navigation\SubMenu.cshtml" />
     <Content Include="Views\Widgets\BlogFeedWidget.cshtml" />
     <Content Include="Views\Widgets\CategoriesMenuWdiget.cshtml" />
     <Content Include="Views\Widgets\ContactFormWidget.cshtml" />
@@ -912,8 +925,8 @@
     <Content Include="Content\images\progressive\royal-slider\arrows.psd" />
     <Content Include="Content\images\progressive\royal-slider\bullets.psd" />
     <Content Include="Content\images\progressive\royal-slider\small_arrows.psd" />
-    <Content Include="Content\styles\colorOverride.less" />
-    <Content Include="Content\styles\colorOverride.css.map">
+    <Content Include="Content\styles\progressive-2.2.1\colorOverride.less" />
+    <Content Include="Content\styles\progressive-2.2.1\colorOverride.css.map">
       <DependentUpon>colorOverride.css</DependentUpon>
     </Content>
     <Content Include="Content\styles\bootstrap-3.2.0\.csscomb.json" />
@@ -1035,9 +1048,13 @@
     <Content Include="Content\styles\cleanstart-1.0.1\mainmenu.css.map">
       <DependentUpon>mainmenu.css</DependentUpon>
     </Content>
-    <Content Include="Content\styles\bcmsOverride.less" />
-    <Content Include="Content\styles\bcmsOverride.css.map">
+    <Content Include="Content\styles\bettercms-1.7.3\bcmsOverride.less" />
+    <Content Include="Content\styles\bettercms-1.7.3\bcmsOverride.css.map">
       <DependentUpon>bcmsOverride.css</DependentUpon>
+    </Content>
+    <Content Include="Content\styles\dst.less" />
+    <Content Include="Content\styles\dst.css.map">
+      <DependentUpon>dst.css</DependentUpon>
     </Content>
     <None Include="newrelic\newrelic.xsd">
       <SubType>Designer</SubType>
@@ -1049,12 +1066,17 @@
     <Content Include="Views\Shared\Layouts\DST\_HeadScripts.cshtml">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="Views\Shared\Layouts\old\DST\_Footer.cshtml" />
-    <Content Include="Views\Shared\Layouts\old\DST\_Header.cshtml" />
-    <Content Include="Views\Shared\Layouts\old\DST\_HeadScripts.cshtml" />
-    <Content Include="Views\Shared\Layouts\old\DST\_Layout.cshtml" />
-    <Content Include="Views\Shared\Layouts\old\DST\_Scripts.cshtml" />
     <Content Include="Views\Shared\Layouts\DST\_CleanStartTriangles.cshtml" />
+    <Content Include="Views\Shared\Layouts\Light\dst_headScripts.cshtml" />
+    <Content Include="Views\Shared\Layouts\Light\_BlogPostLayout.cshtml" />
+    <Content Include="Views\Shared\Layouts\Light\_ContactsLayout.cshtml" />
+    <Content Include="Views\Shared\Layouts\Light\_GalleryLayout.cshtml" />
+    <Content Include="Views\Shared\Layouts\Light\_HomeLayout.cshtml" />
+    <Content Include="Views\Shared\Layouts\Light\_LightLayout.cshtml" />
+    <Content Include="Views\Shared\Layouts\Light\_LightOneColumnLayout.cshtml" />
+    <Content Include="Views\Shared\Layouts\Light\_LightThreeColumnsLayout.cshtml" />
+    <Content Include="Views\Shared\Layouts\Light\_LightTwoColumnsLayout.cshtml" />
+    <Content Include="Views\Shared\Layouts\Light\Partial\_GalleryScripts.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">

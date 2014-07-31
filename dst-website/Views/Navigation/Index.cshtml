@@ -1,0 +1,19 @@
+﻿@using dst_website.Models
+@model IList<MenuItemViewModel>
+
+@foreach (MenuItemViewModel item in Model)
+{
+    <li>
+        <a href="@item.Url">@item.Caption</a>
+        <div class="dmui_dropdown_block">
+            <ul class="dmui-submenu">
+                <li>
+                    @{ Html.RenderAction("SubMenu", "Navigation"); }
+                </li>
+            </ul>
+        </div>
+    </li>
+}
+
+
+@*<a href="@item.Url">@item.Caption<span class="active-border"><span></span></span></a>*@      
