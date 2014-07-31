@@ -5,15 +5,6 @@
 {
     <li>
         <a href="@item.Url">@item.Caption</a>
-        <div class="dmui_dropdown_block">
-            <ul class="dmui-submenu">
-                <li>
-                    @{ Html.RenderAction("SubMenu", "Navigation"); }
-                </li>
-            </ul>
-        </div>
+        @{ Html.RenderAction("SubMenu", "Navigation"); }
     </li>
 }
-
-
-@*<a href="@item.Url">@item.Caption<span class="active-border"><span></span></span></a>*@      
