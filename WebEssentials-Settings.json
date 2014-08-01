@@ -22,7 +22,8 @@
     "OutputDirectory": null,
     "ProcessSourceMapsForEditorEnhancements": true,
     "ShowPreviewPane": true,
-    "WrapClosure": true
+    "WrapClosure": true,
+    "StrictMath": false
   },
   "Css": {
     "AdjustRelativePaths": true,
@@ -109,7 +110,8 @@
     "OutputDirectory": null,
     "ProcessSourceMapsForEditorEnhancements": true,
     "ShowPreviewPane": true,
-    "WrapClosure": true
+    "WrapClosure": true,
+    "StrictMath": false
   },
   "Markdown": {
     "AutoHyperlink": false,
@@ -133,7 +135,8 @@
     "OutputDirectory": null,
     "OutputStyle": "Expanded",
     "ProcessSourceMapsForEditorEnhancements": true,
-    "ShowPreviewPane": true
+    "ShowPreviewPane": true,
+    "StrictMath": false
   },
   "Sprite": {
     "CssOutputDirectory": null,
@@ -152,7 +155,8 @@
     "MinifyInPlace": false,
     "OutputDirectory": null,
     "ProcessSourceMapsForEditorEnhancements": true,
-    "ShowPreviewPane": true
+    "ShowPreviewPane": true,
+    "StrictMath": false
   },
   "TypeScript": {
     "LintOnBuild": false,

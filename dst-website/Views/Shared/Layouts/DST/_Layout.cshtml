@@ -93,7 +93,7 @@
     <div class="main" style="@(Model.Title.ToLower() != "home" ? "top: 480px;" : "")">
         @Html.Partial("~/Views/Shared/Layouts/DST/_CleanStartTriangles.cshtml")
 
-        <section>
+        @*<section>
             <div class="default-messages-container">
                 <div class="error-user-message-container">
                     <ins class="icon-static"></ins>
@@ -108,7 +108,7 @@
             </div>
             <div class="clearfix"></div>
 
-        </section>
+        </section>*@
 
         @RenderSection("MainContent", false)
         @RenderBody()
@@ -128,26 +128,6 @@
         @RenderSection("Scripts", false)
     }     
         
-    <div class="style_switcher">
-        <div class="gear"><i class="fa fa-gear"></i></div>
-        <div class="styles">
-            <h6>Style Switcher</h6>
-            <ul>
-                <li class="style-classic"><i class="fa fa-circle"></i> Blue Default</li>
-                <li class="style-golden"><i class="fa fa-circle"></i> Golden</li>
-                <li class="style-purple"><i class="fa fa-circle"></i> Purple</li>
-            </ul>
-            <p></p>
-            <ul>
-                <li class="style-onepage"><a href="onepage.html"><i class="fa fa-desktop"></i> One-Pager</a></li>
-            </ul>
-            <p></p>
-            <ul>
-                <li><a href="Documentation/index.html"><i class="fa fa-flag"></i> Documentation</a></li>
-            </ul>
-        </div>
-    </div>
-    <!--END Style Switcher-->
 
 
 </div><!-- .overflow_wrapper -->

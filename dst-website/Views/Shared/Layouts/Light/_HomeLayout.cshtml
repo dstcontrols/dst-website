@@ -4,21 +4,21 @@
 
 @section MainContent {      
 
-    <div class="content col-sm-12 col-md-12">
         @RenderSection("Content1", false)
-    </div>
 
-    <div class="col-sm-12 col-md-6">
-        @RenderSection("Content2", false)
-    </div>
+    <section style="visibility: collapse;">
+        <div class="col-sm-12 col-md-6">
+            @RenderSection("Content2", false)
+        </div>
 
-    <div class="col-sm-12 col-md-6">
-        @RenderSection("Content3", false)
-    </div>
- 
-    <div class="col-sm-12 col-md-12">
-        @RenderSection("Content4", false)
-    </div> 
+        <div class="col-sm-12 col-md-6">
+            @RenderSection("Content3", false)
+        </div>
+
+        <div class="col-sm-12 col-md-12">
+            @RenderSection("Content4", false)
+        </div>    
+    </section>
 }
 
 @section HeadScripts {

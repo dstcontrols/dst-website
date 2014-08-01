@@ -1074,6 +1074,7 @@
     <Content Include="Views\Shared\Layouts\Light\_LightThreeColumnsLayout.cshtml" />
     <Content Include="Views\Shared\Layouts\Light\_LightTwoColumnsLayout.cshtml" />
     <Content Include="Views\Shared\Layouts\Light\Partial\_GalleryScripts.cshtml" />
+    <Content Include="Views\Shared\Layouts\DST\MainLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
