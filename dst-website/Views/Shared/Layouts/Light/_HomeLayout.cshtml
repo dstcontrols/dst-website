@@ -2,34 +2,27 @@
     Layout = "~/Views/Shared/Layouts/Light/_LightOneColumnLayout.cshtml";
 }
 
-@section MainContent {
-    <div class="row">
-        <div class="content col-sm-12 col-md-12">
-            @RenderSection("Content1", false)
-        </div>
+@section MainContent {      
+
+    <div class="content col-sm-12 col-md-12">
+        @RenderSection("Content1", false)
     </div>
 
-    <div class="row">
-        <div class="col-sm-12 col-md-6">
-            @RenderSection("Content2", false)
-        </div>
+    <div class="col-sm-12 col-md-6">
+        @RenderSection("Content2", false)
+    </div>
 
-        <div class="col-sm-12 col-md-6">
-            @RenderSection("Content3", false)
-        </div> 
+    <div class="col-sm-12 col-md-6">
+        @RenderSection("Content3", false)
     </div>
  
-    <div class="row">
-        <div class="col-sm-12 col-md-12">
-            @RenderSection("Content4", false)
-        </div>
+    <div class="col-sm-12 col-md-12">
+        @RenderSection("Content4", false)
     </div> 
-
-
 }
 
 @section HeadScripts {
-    <link href="~/Content/Styles/bcms.light.gallery.css" rel="stylesheet" />
+    @RenderSection("HeadScripts", false)
 }
 
 @RenderBody()
