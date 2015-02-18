@@ -1,175 +1,161 @@
 @charset "utf-8";
+.indDataButs {
+  Position: absolute;
+  top: 95px;
+  width: 378px;
+  height: 24px;
+  Margin-left: 640px;
+}
+/* IN SOURCE: Build "Collect Data..." Header Box Page Right*/
 
+.collectHeader {
+  position: relative;
+  width: 480px;
+  height: 26px;
+  margin-top: 20px;
+  font-family: "proxima-nova-soft", sans-serif;
+  font-style: normal;
+  font-variant: small-caps;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 1px;
+  padding-bottom: 0px;
+  margin-left: 530px;
+  background-color: #77d4ff;
+}
+.corpHeaderText {
+  width: 850px;
+  table-layout: auto;
+  text-align: center;
+  margin-top: 60px;
+  margin-left: 85px;
+  margin-bottom: 18px;
+}
+/*4 IN SOURCE: Put the Blue Arrow up*/
 
-		.indDataButs {
-		Position:absolute;
-		top:95px;
-		width:378px;
-		height:24px;
-		Margin-left: 640px;
-		}
-		
+.buildArrow {
+  position: relative;
+  width: 260px;
+  height: 54px;
+  float: left;
+  margin-top: 4px;
+  margin-bottom: 2px;
+  background-image: url(../_images/BlueArrow8.gif);
+  background-repeat: no-repeat;
+  background-position: center
+}
+/* CORP DATA: Build Corp Data Intro Box*/
 
+.corpIntroBox {
+  position: relative;
+  width: 325px;
+  height: auto;
+  margin-left: 15px;
+  padding-right: 6px;
+  margin-bottom: 15px;
+  background: #F3F3F3;
+  Float: left;
+}
+/* CORP DATA: Format Intro Box Headline*/
 
-	/* IN SOURCE: Build "Collect Data..." Header Box Page Right*/
-		.collectHeader {
-		position: relative;
-		width: 480px;
-		height: 26px;
-		margin-top: 20px;
-		font-family: "proxima-nova-soft",sans-serif;
-		font-style:normal;
-		font-variant:small-caps;
-		font-weight:700;
-		font-size:20px;
-	 	text-align:center;							
-		padding-top:1px;
-		padding-bottom:0px;
-		margin-left:530px;
-		background-color:#77d4ff;
-    	}
+.corpIntroHead {
+  font-family: "proxima-nova-soft", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  color: #030303;
+  text-align: center;
+  padding-top: 5px;
+}
+/* CORP DATA: Format Intro Box Body Text*/
 
-		.corpHeaderText {
-		width: 850px;
-		table-layout:auto;
-		text-align:center;
-		margin-top:60px;
-		margin-left:85px;
-		margin-bottom:18px;
-		}
-	
-	/*4 IN SOURCE: Put the Blue Arrow up*/
-		.buildArrow {
-		position: relative;
-		width: 260px;
-		height: 54px;
-		float:left;
-		margin-top:4px;
-		margin-bottom:2px;
-		background-image: url(../_images/BlueArrow8.gif);
-		background-repeat: no-repeat;
-		background-position:center
-		}
+.corpBodyText {
+  border: thin;
+  border-top-left-radius: 20px 20px;
+  font-family: "proxima-nova-soft", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: left;
+  padding-top: 5px;
+  padding-left: 12px;
+  padding-bottom: 12px;
+  padding-right: 5px;
+  color: #000;
+}
+/* CORP DATA: Build Expo Box page right*/
 
-	/* CORP DATA: Build Corp Data Intro Box*/
-		.corpIntroBox {
-		position: relative;
-		width: 325px;
-		height: auto;
-		margin-left:15px;
-		padding-right:6px;
-		margin-bottom: 15px;
-		background:#F3F3F3;
-		Float:left;
-		}
-		
-	/* CORP DATA: Format Intro Box Headline*/
-		.corpIntroHead {
-		font-family: "proxima-nova-soft",sans-serif;
-		font-style: normal;
-		font-weight: 500;
-		font-size:20px;
-		color:#030303;
-		text-align:center;
-		padding-top:5px;
-		}
-	
-	/* CORP DATA: Format Intro Box Body Text*/
-		.corpBodyText {
-		border:thin;
-		border-top-left-radius: 20px 20px;
-		font-family: "proxima-nova-soft",sans-serif;
-		font-style: normal;
-		font-weight: 500;
-		font-size:14px;
-	 	text-align:left;
-		padding-top:5px;
-		padding-left:12px;
-		padding-bottom: 12px;
-		padding-right: 5px;
-	  	color:#000;
-		}
-		
-	/* CORP DATA: Build Expo Box page right*/
-		.corpExpoBox {
-		position: relative;
-		width: 590px;
-		height: auto;
-		margin-left:6px;
-		padding-left:0px;
-		padding-right:6px;
-		padding-top:5px;
-		margin-top: 0px;
-		margin-bottom: 15px;
-		background:#F3F3F3;
-		Float:right;
-		}
-		
-	/* CORP DATA: Format Expo Box Headline*/
-		.corpExpoHead {
-		font-family: "proxima-nova-soft",sans-serif;
-		font-style: normal;
-		font-weight: 500;
-		font-size:22px;
-		color:#030303;
-		text-align:center;
-		padding-top:5px;
-		}
-		
-	/* CORP DATA: Format Expo Box Body Text*/
-		.corpExpoText {
-	 	text-align:left;
-		padding-top:10px;
-		padding-left: 12px;
-		padding-right: 2px;
-		padding-bottom: 10px;
-	  	color:#000;
-		}
-				
-	/* IN SOURCE: Position the Turbine pic */
-		.corpPosPic {
-		width: 347px;
-		height: 357px;
-		padding-right:5px;
-		margin-bottom:10px;
-		float:left;
-		}
-	
-		.expoFoot {
-		font-family: "proxima-nova-soft",sans-serif;
-		font-size: 20px;
-		font-style: normal;
-		font-weight: 700;
-		font-variant:small-caps;
-		color:#EBEBEB;
-		background-color:#09F;
-		text-align:center;
-		}
-	
-		.expoFootText {
-		font-family: "proxima-nova-soft",sans-serif;
-		font-size: 14px;
-		font-style: normal;
-		font-weight: 500;
-		background-color:#09F;
-		color:#EBEBEB;
-		text-align:center;
-		padding-left: 10px;
-		border-bottom-left-radius: 16px 16px;
-		border-bottom-right-radius: 16px 16px;
-		}
-	
-		ul {
-		list-style-type:circle;
-		margin: 0px;
-		padding-left:70px;
-		}
-		
-		p {
-		margin: 0px;
-		}
-	
-	
-	
-	
+.corpExpoBox {
+  position: relative;
+  width: 590px;
+  height: auto;
+  margin-left: 6px;
+  padding-left: 0px;
+  padding-right: 6px;
+  padding-top: 5px;
+  margin-top: 0px;
+  margin-bottom: 15px;
+  background: #F3F3F3;
+  Float: right;
+}
+/* CORP DATA: Format Expo Box Headline*/
 
+.corpExpoHead {
+  font-family: "proxima-nova-soft", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  color: #030303;
+  text-align: center;
+  padding-top: 5px;
+}
+/* CORP DATA: Format Expo Box Body Text*/
+
+.corpExpoText {
+  text-align: left;
+  padding-top: 10px;
+  padding-left: 12px;
+  padding-right: 2px;
+  padding-bottom: 10px;
+  color: #000;
+}
+/* IN SOURCE: Position the Turbine pic */
+
+.corpPosPic {
+  width: 347px;
+  height: 357px;
+  padding-right: 5px;
+  margin-bottom: 10px;
+  float: left;
+}
+.expoFoot {
+  font-family: "proxima-nova-soft", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  font-variant: small-caps;
+  color: #EBEBEB;
+  background-color: #09F;
+  text-align: center;
+}
+.expoFootText {
+  font-family: "proxima-nova-soft", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  background-color: #09F;
+  color: #EBEBEB;
+  text-align: center;
+  padding-left: 10px;
+  border-bottom-left-radius: 16px 16px;
+  border-bottom-right-radius: 16px 16px;
+}
+ul {
+  list-style-type: circle;
+  margin: 0px;
+  padding-left: 70px;
+}
+p {
+  margin: 0px;
+}

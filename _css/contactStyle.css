@@ -1,100 +1,85 @@
 @charset "utf-8";
+/* IN SOURCE: Building and Formatting the Contacts List */
 
-
-
-		
-		/* IN SOURCE: Building and Formatting the Contacts List */
-			#contactsTable {
-			display:table;
-			table-layout:relative;
-			width:1000px;
-			height:750px;
-			margin-left:28px; 
-			margin-top:40px;
-			margin-bottom:150px;
-			}
-			
-			#textSubTable {
-			display:table;
-			table-layout:relative;
-			border-collapse:collapse;
-			float:left;
-			width:64%;
-			height:100%;
-			border-style:solid;
-			border-color:#FFF;
-			}
-			
-			#imageSubTable {
-			display:table;
-			table-layout:relative;
-			border-collapse:collapse;
-			width:32%;
-			height:100%;
-			text-align:center;
-			background-color:#2E2E2E;
-			border-top-style:solid;
-			border-top-color:#FFF;
-			border-right-style:solid;
-			border-right-color:#FFF;
-			border-bottom-style:solid;
-			border-bottom-color:#FFF;
-			}
-			
-			.dstPlaza {
-			padding-top:15px;
-			padding-bottom:27px;
-			}
-			
-			.row {
-			display:table-row;
-			height:auto;
-			text-align:center;
-			color:#FFF;
-			background-color:#2E2E2E;
-			}
-			
-			.headTable {
-			font-family: "nimbus-sans-condensed",sans-serif;
-			font-style: normal;
-			font-size: 24px;
-			font-weight: 300;
-			color:#FFF;
-			text-align:center;
-			margin-top:20px;
-			margin-bottom:10px;
-			}
-		
-			.col1 {
-			display:table-cell;
-			vertical-align:middle;
-			width:85px;
-			padding-top:2px;
-			border-bottom-width:2px;
-			border-bottom-style:solid;
-			border-bottom-color:#FFF;
-			}
-			
-			.col2 {
-			display:table-cell;
-			vertical-align:middle;
-			width:200px;
-			padding-top:2px;
-			border-bottom-width:2px;
-			border-bottom-style:solid;
-			border-bottom-color:#FFF;
-			}
-	
-			.col3 {
-	        display:table-cell;
-			vertical-align:middle;
-			width:320px;
-			padding-top:2px;
-			border-bottom-width:2px;
-			border-bottom-style:solid;
-			border-bottom-color:#FFF;
-			
-			}
-	
-		
-	
+#contactsTable {
+  display: table;
+  table-layout: relative;
+  width: 1000px;
+  height: 750px;
+  margin-left: 28px;
+  margin-top: 40px;
+  margin-bottom: 150px;
+}
+#textSubTable {
+  display: table;
+  table-layout: relative;
+  border-collapse: collapse;
+  float: left;
+  width: 64%;
+  height: 100%;
+  border-style: solid;
+  border-color: #FFF;
+}
+#imageSubTable {
+  display: table;
+  table-layout: relative;
+  border-collapse: collapse;
+  width: 32%;
+  height: 100%;
+  text-align: center;
+  background-color: #2E2E2E;
+  border-top-style: solid;
+  border-top-color: #FFF;
+  border-right-style: solid;
+  border-right-color: #FFF;
+  border-bottom-style: solid;
+  border-bottom-color: #FFF;
+}
+.dstPlaza {
+  padding-top: 15px;
+  padding-bottom: 27px;
+}
+.row {
+  display: table-row;
+  height: auto;
+  text-align: center;
+  color: #FFF;
+  background-color: #2E2E2E;
+}
+.headTable {
+  font-family: "nimbus-sans-condensed", sans-serif;
+  font-style: normal;
+  font-size: 24px;
+  font-weight: 300;
+  color: #FFF;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.col1 {
+  display: table-cell;
+  vertical-align: middle;
+  width: 85px;
+  padding-top: 2px;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: #FFF;
+}
+.col2 {
+  display: table-cell;
+  vertical-align: middle;
+  width: 200px;
+  padding-top: 2px;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: #FFF;
+}
+.col3 {
+  display: table-cell;
+  vertical-align: middle;
+  width: 320px;
+  padding-top: 2px;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: #FFF;
+}

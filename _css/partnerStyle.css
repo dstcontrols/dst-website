@@ -1,47 +1,40 @@
 @charset "utf-8";
-
-
-		
-		.tableDef {
-		position: relative;
-		top: 85px;
-		table-layout:auto;
-		display:table;
-		background-color:#030303;
-		width: 920px;
-		Height:auto;
-		border-style:solid;
-		border-width:5px;
-		border-color:#EBEBEB;
-		margin-left:30px;
-		margin-bottom:90px;
-		}
-		
-		.abCaption2 {
-		display:table-caption;
-		text-align:center;
-		height:30px;
-		}
-		
-		
-		.logoCell {
-		width: 940px;
-		height: auto;
-		color:#FFF;
-		border-right:0px;
-		border-bottom:2px;
-		border-left:2px;
-		border-top:2px;
-		border-style:solid;
-		border-color:#EBEBEB;
-		padding-right:5px;
-		}
-
-		.logoShot {
-		padding-top:5px;
-		padding-right:10px;
-		margin-right:20px;
-		float: left;
-		height: auto;
-		background-color:#FFF
-		}
+.tableDef {
+  position: relative;
+  top: 85px;
+  table-layout: auto;
+  display: table;
+  background-color: #030303;
+  width: 920px;
+  Height: auto;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #EBEBEB;
+  margin-left: 30px;
+  margin-bottom: 90px;
+}
+.abCaption2 {
+  display: table-caption;
+  text-align: center;
+  height: 30px;
+}
+.logoCell {
+  width: 940px;
+  height: auto;
+  color: #FFF;
+  border-right: 0px;
+  border-bottom: 2px;
+  border-left: 2px;
+  border-top: 2px;
+  border-style: solid;
+  border-color: #EBEBEB;
+  padding-right: 5px;
+}
+.logoShot {
+  padding-top: 5px;
+  padding-right: 10px;
+  margin-right: 20px;
+  float: left;
+  height: auto;
+  background-color: #FFF
+}
