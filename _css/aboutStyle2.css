@@ -1,0 +1,120 @@
+@charset "utf-8";
+#whoWho {
+  position: relative;
+  top: 15px;
+  table-layout: fixed;
+  display: table;
+  display: table-caption;
+  width: 1016px;
+  height: auto;
+  border-collapse: collapse;
+  font-family: "proxima-nova-soft", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: #F9F9F9;
+  background-color: #2E2E2E;
+  text-align: left;
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+.abCaption {
+  display: table-caption;
+  text-align: center;
+  height: 30px;
+}
+.abrow {
+  display: table-row;
+  width: 100%;
+  Height: 95px;
+}
+.abcell1 {
+  display: table-cell;
+  width: 340px;
+  padding-left: 5px;
+  padding-right: 7px;
+  padding-bottom: 5px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #EBEBEB;
+}
+.abcell2 {
+  display: table-cell;
+  width: 340px;
+  padding-left: 5px;
+  padding-right: 7px;
+  padding-bottom: 5px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #EBEBEB;
+}
+.abcell3 {
+  display: table-cell;
+  width: 340px;
+  padding-left: 5px;
+  padding-right: 7px;
+  padding-bottom: 5px;
+  border-collapse: collapse;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #EBEBEB;
+}
+.headShot {
+  width: 75px;
+  height: 75px;
+  float: left;
+  padding-top: 5px;
+  padding-right: 5px;
+}
+.isaPic {
+  width: 452px;
+  height: 230px;
+  text-align: right;
+  margin-bottom: 5px;
+  margin-top: 0px;
+}
+.introHeadWhite {
+  position: absolute;
+  top: 0px;
+  display: inline-block;
+  vertical-align: top;
+  width: 400px;
+  height: auto;
+  font-family: "proxima-nova-soft", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #FFF;
+  text-align: left;
+}
+.introHeadWhite2 {
+  position: absolute;
+  top: 0px;
+  display: inline-block;
+  vertical-align: top;
+  width: 460px;
+  height: auto;
+  font-family: "proxima-nova-soft", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: #FFF;
+  text-align: left;
+  margin-left: 485px;
+}
+.bsaPic {
+  position: relative;
+  margin-top: 15px;
+  color: #000;
+  background-color: #2E2E2E;
+  padding-top: 10px;
+  padding-left: 8px;
+  padding-right: 4px;
+  padding-bottom: 10px;
+  border-style: ridge;
+  border-color: #EBEBEB;
+  border-width: 4px;
+}
+.qualityLinks {
+  vertical-align: central;
+}

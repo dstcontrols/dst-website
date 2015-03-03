@@ -1,0 +1,129 @@
+@charset "utf-8";
+.MainHeadline {
+  position: absolute;
+  Top: 270px;
+  width: 860px;
+  height: 22px;
+  margin-top: 16px;
+  font-family: "news-gothic-std", sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  font-variant: small-caps;
+  text-align: center;
+  padding-top: 0px;
+  padding-bottom: 6px;
+  margin-left: 83px;
+  background-color: #77d4ff;
+}
+/*Box Header Text*/
+
+.HeaderTweak3 {
+  border-bottom: 1px;
+  border-bottom-color: #030303;
+  border-bottom-style: solid;
+  color: #000080;
+  text-align: center;
+  margin-bottom: 2px;
+}
+/*4 Arrow Boxes	*/
+
+.buildArrow {
+  position: relative;
+  width: 240px;
+  height: 54px;
+  float: left;
+  margin-top: 36px;
+  margin-bottom: 1px;
+  background-image: url(../_images/BlueArrow8.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/*4 Main Boxes */
+
+.buildBox {
+  position: relative;
+  width: 235px;
+  height: 402px;
+  margin-left: 3px;
+  padding-right: 0px;
+  margin-bottom: 12px;
+  background: #F3F3F3;
+  Float: left;
+}
+/* Give box pics some space */
+
+.picSpace {
+  width: 235px;
+  height: 109px;
+  float: left;
+  border: 1px;
+  margin-right: 10px;
+}
+.roundPic {
+  border-top-left-radius: 19px 19px;
+  border-top-right-radius: 15px 15px;
+}
+/*Box Body Text*/
+
+.BodyTweak2 {
+  text-align: left;
+  padding-left: 4px;
+  padding-right: 2px;
+  color: #000;
+}
+.pixHeader {
+  /*font-family: "proxima-nova-soft",sans-serif;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 700;*/
+  
+  font-family: "news-gothic-std", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  font-variant: small-caps;
+  color: #191919;
+  padding-left: 15px;
+  margin-bottom: 2px;
+}
+.picContainer {
+  display: inline-table;
+  width: 1009px;
+  height: 100px;
+  padding-left: 12px;
+  margin-bottom: 0px;
+  background-color: #EAEAEA;
+}
+.picRow {
+  display: inline;
+  float: left;
+  height: 100px;
+  padding-bottom: 10px;
+}
+.blackLink {
+  color: #030303;
+}
+.textRow {
+  font-family: "news-gothic-std", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  vertical-align: central;
+  margin-left: 4px;
+  margin-right: 28px;
+  padding-top: 10px;
+  float: left;
+}
+.MoreHereLink {
+  position: absolute;
+  bottom: 0px;
+  padding-bottom: 4px;
+  margin-left: 52px;
+  font-family: "proxima-nova-soft", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  appearance: hyperlink;
+  color: #F03;
+}

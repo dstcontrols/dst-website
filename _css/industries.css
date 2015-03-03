@@ -1,0 +1,167 @@
+@charset "utf-8";
+.content {
+  position: relative;
+  display: table;
+  width: 1000px;
+  height: auto;
+}
+.industriesHeaderText {
+  width: 850px;
+  table-layout: auto;
+  text-align: left;
+  padding-left: 85px;
+  padding-right: 25px;
+  margin-top: 60px;
+  margin-left: 10px;
+  margin-bottom: 18px;
+}
+#IndustryTable {
+  display: table;
+  table-layout: relative;
+  float: left;
+  height: auto;
+  margin-top: 25px;
+  margin-left: 40px;
+  margin-right: 10px;
+  width: 300px;
+  background-color: #2E2E2E;
+  border: 3px solid #EBEBEB;
+  border-spacing: 2px;
+  margin-bottom: 0px;
+  font-family: "proxima-nova-soft", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+}
+#offerTable {
+  display: table;
+  table-layout: relative;
+  height: auto;
+  float: right;
+  margin-top: 25px;
+  margin-left: 10px;
+  width: 550px;
+  background-color: #2E2E2E;
+  border: 3px solid #EBEBEB;
+  border-spacing: 2px;
+  margin-bottom: 15px;
+  font-family: "proxima-nova-soft", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: #09F;
+}
+.indCaption {
+  display: table-caption;
+  text-align: center;
+  width: auto;
+  padding-bottom: 15px;
+}
+.industryRow {
+  display: table-row;
+  width: 100%;
+  text-align: left;
+  color: #09F;
+  padding-left: 10px;
+  padding-bottom: 40px;
+  border-bottom: 2px dotted #EBEBEB;
+  margin-bottom: 40px;
+}
+.industryOffers {
+  display: table-cell;
+  width: 50%;
+  text-align: left;
+  border-collapse: collapse;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 2px dotted #EBEBEB;
+  margin-bottom: 20px;
+}
+#indText1 {
+  color: #FC6907
+}
+#indText1:hover {
+  color: #EBEBEB
+}
+#indText2 {
+  color: #FC6907
+}
+#indText2:hover {
+  color: #EBEBEB
+}
+#indText3 {
+  color: #FC6907
+}
+#indText3:hover {
+  color: #EBEBEB
+}
+#indText4 {
+  color: #FC6907
+}
+#indText4:hover {
+  color: #EBEBEB
+}
+#indText5 {
+  color: #FC6907
+}
+#indText5:hover {
+  color: #EBEBEB
+}
+#indText6 {
+  color: #FC6907
+}
+#indText6:hover {
+  color: #EBEBEB
+}
+#indText7 {
+  color: #FC6907
+}
+#indText7:hover {
+  color: #EBEBEB
+}
+#indText8 {
+  color: #FC6907
+}
+#indText8:hover {
+  color: #EBEBEB
+}
+#indText9 {
+  color: #FC6907
+}
+#indText9:hover {
+  color: #EBEBEB
+}
+#indText10 {
+  color: #FC6907
+}
+#indText10:hover {
+  color: #EBEBEB
+}
+#indText11 {
+  color: #FC6907
+}
+#indText11:hover {
+  color: #EBEBEB
+}
+#indText12 {
+  color: #FC6907
+}
+#indText12:hover {
+  color: #EBEBEB
+}
+#indText13 {
+  color: #FC6907
+}
+#indText13:hover {
+  color: #EBEBEB
+}
+#indText14 {
+  color: #FC6907
+}
+#indText14:hover {
+  color: #EBEBEB
+}
+.alt {
+  display: none;
+}
