@@ -1,0 +1,239 @@
+//
+// Variables
+// --------------------------------------------------
+
+@slider-height: 580px;
+@full-page-photo-height: 480px;
+
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+
+@gray-darker:            lighten(#000, 13.5%); // #222
+@gray-dark:              lighten(#000, 20%);   // #333
+@gray:                   #666;
+@gray-light:             lighten(#000, 60%);   // #999
+@gray-lighter:           lighten(#000, 93.5%); // #eee
+
+// Uncomment the @brand-primary color you like to make the appropriate SKIN
+
+@brand-primary:         #428bca; //blue
+//@brand-primary:         #A59C78; //gold
+//@brand-primary:         #9E9CA8; //silver
+//@brand-primary:         #997BC6; //purple
+
+//** Background color for `<body>`.
+@body-bg:               #ffffff;
+@body-bg:               #F9F9F9;
+@body-bg:               #EFEFEF;
+
+//** Global text color on `<body>`.
+@text-color:            @gray;
+
+//** Global textual link color.
+@link-color:            @brand-primary;
+@link-color-alt:        yellow;
+
+//** Link hover color set via `darken()` function.
+@link-hover-color:      darken(@link-color, 15%);
+
+
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+@font-family-sans-serif:  "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-serif:       Georgia, "Times New Roman", Times, serif;
+@font-family-alternative: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+
+@font-size-base:          14px;
+@font-size-large:         ceil((@font-size-base * 1.1)); // ~18px
+@font-size-small:         ceil((@font-size-base * 0.8)); // ~12px
+
+
+//** By default, this inherits from the `<body>`.
+@headings-font-family:    @font-family-alternative;
+@headings-font-weight:    normal;
+@headings-line-height:    1.1;
+@headings-color:          inherit;
+
+
+//== Components
+//
+//## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
+
+@border-radius-base:        6px;
+@border-radius-large:       9px;
+@border-radius-small:       3px;
+
+
+//== Tables
+//
+//## Customizes the `.table` component with basic values, each used across all table variations.
+
+//** Padding for `<th>`s and `<td>`s.
+@table-cell-padding:            8px;
+//** Padding for cells in `.table-condensed`.
+@table-condensed-cell-padding:  5px;
+
+//** Default background color used for all tables.
+@table-bg:                      transparent;
+//** Background color used for `.table-striped`.
+@table-bg-accent:               #f9f9f9;
+//** Background color used for `.table-hover`.
+@table-bg-hover:                #f5f5f5;
+@table-bg-active:               @table-bg-hover;
+
+//** Border color for table and cell borders.
+@table-border-color:            #ddd;
+
+
+//== Buttons
+//
+//## For each of Bootstrap's buttons, define text, background and border color.
+
+@btn-font-weight:                700;
+
+@btn-default-color:              #333;
+@btn-default-bg:                 @body-bg;
+@btn-default-border:             #333;
+
+@btn-primary-color:              @body-bg;
+@btn-primary-inv-color:          @brand-primary;
+@btn-primary-bg:                 @brand-primary;
+@btn-primary-inv-bg:             transparent;
+@btn-primary-border:             transparent;
+@btn-primary-inv-border:         @brand-primary;
+
+@btn-success-color:              #fff;
+@btn-success-bg:                 @brand-success;
+@btn-success-border:             darken(@btn-success-bg, 5%);
+
+@btn-info-color:                 #fff;
+@btn-info-bg:                    @brand-info;
+@btn-info-border:                darken(@btn-info-bg, 5%);
+
+@btn-warning-color:              #fff;
+@btn-warning-bg:                 @brand-warning;
+@btn-warning-border:             darken(@btn-warning-bg, 5%);
+
+@btn-danger-color:               #fff;
+@btn-danger-bg:                  @brand-danger;
+@btn-danger-border:              darken(@btn-danger-bg, 5%);
+
+@btn-link-disabled-color:        @gray-light;
+
+//== Forms
+//
+//##
+
+//** `<input>` background color
+@input-bg:                       #fff;
+//** `<input disabled>` background color
+@input-bg-disabled:              @gray-lighter;
+
+//** Text color for `<input>`s
+@input-color:                    @gray;
+//** `<input>` border color
+@input-border:                   #ccc;
+//** `<input>` border radius
+@input-border-radius:            @border-radius-base;
+//** Border color for inputs on focus
+@input-border-focus:             #66afe9;
+
+//** Placeholder text color
+@input-color-placeholder:        @gray-light;
+
+//** Default `.form-control` height
+@input-height-base:              (@line-height-computed + (@padding-base-vertical * 2) + 2);
+//** Large `.form-control` height
+@input-height-large:             (ceil(@font-size-large * @line-height-large) + (@padding-large-vertical * 2) + 2);
+//** Small `.form-control` height
+@input-height-small:             (floor(@font-size-small * @line-height-small) + (@padding-small-vertical * 2) + 2);
+
+@legend-color:                   @gray-dark;
+@legend-border-color:            #e5e5e5;
+
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+// Note: Deprecated @screen-xs and @screen-phone as of v3.0.1
+@screen-xs:                  480px;
+@screen-xs-min:              @screen-xs;
+@screen-phone:               @screen-xs-min;
+
+// Small screen / tablet
+// Note: Deprecated @screen-sm and @screen-tablet as of v3.0.1
+@screen-sm:                  768px;
+@screen-sm-min:              @screen-sm;
+@screen-tablet:              @screen-sm-min;
+
+// Medium screen / desktop
+// Note: Deprecated @screen-md and @screen-desktop as of v3.0.1
+@screen-md:                  992px;
+@screen-md-min:              @screen-md;
+@screen-desktop:             @screen-md-min;
+
+// Large screen / wide desktop
+// Note: Deprecated @screen-lg and @screen-lg-desktop as of v3.0.1
+@screen-lg:                  1200px;
+@screen-lg-min:              @screen-lg;
+@screen-lg-desktop:          @screen-lg-min;
+
+
+
+//== Alerts
+//
+//## Define alert colors, border radius, and padding.
+
+@alert-padding:               15px;
+@alert-border-radius:         @border-radius-base;
+@alert-link-font-weight:      bold;
+
+@alert-success-bg:            @state-success-bg;
+@alert-success-text:          @state-success-text;
+@alert-success-border:        @state-success-border;
+
+@alert-info-bg:               @state-info-bg;
+@alert-info-text:             @state-info-text;
+@alert-info-border:           @state-info-border;
+
+@alert-warning-bg:            @state-warning-bg;
+@alert-warning-text:          @state-warning-text;
+@alert-warning-border:        @state-warning-border;
+
+@alert-danger-bg:             @state-danger-bg;
+@alert-danger-text:           @state-danger-text;
+@alert-danger-border:         @state-danger-border;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

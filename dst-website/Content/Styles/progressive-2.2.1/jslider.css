@@ -1,0 +1,156 @@
+.jslider .jslider-bg i, .jslider .jslider-pointer {
+    background: url(~\Content\Images\Progressive\jslider\jslider.png) no-repeat 0 0;
+}
+
+.jslider {
+    display: block;
+    font-family: Arial, sans-serif;
+    height: 1em;
+    position: relative;
+    top: 0.6em;
+    width: 100%;
+}
+
+.jslider table {
+    border: 0;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.jslider td, .jslider th {
+    border: 0;
+    padding: 0;
+    text-align: left;
+    vertical-align: top;
+}
+
+.jslider table, .jslider table tr, .jslider table tr td {
+    vertical-align: top;
+    width: 100%;
+}
+
+.jslider .jslider-bg {
+    position: relative;
+}
+
+.jslider .jslider-bg i {
+    font-size: 0;
+    height: 5px;
+    position: absolute;
+    top: 0;
+}
+
+.jslider .jslider-bg .l {
+    background-position: 0 0;
+    left: 0;
+    width: 10%;
+}
+
+.jslider .jslider-bg .f {
+    background-position: 0 -20px;
+    background-repeat: repeat-x;
+    left: 10%;
+    width: 80%;
+}
+
+.jslider .jslider-bg .r {
+    background-position: right 0;
+    left: 90%;
+    width: 10%;
+}
+
+.jslider .jslider-bg .v {
+    background-position: 0 -40px;
+    background-repeat: repeat-x;
+    height: 5px;
+    left: 20%;
+    position: absolute;
+    top: 0;
+    width: 60%;
+}
+
+.jslider .jslider-pointer {
+    background-position: 0 -60px;
+    cursor: pointer;
+    cursor: hand;
+    height: 15px;
+    left: 20%;
+    margin-left: -6px;
+    position: absolute;
+    top: -4px;
+    width: 13px;
+}
+
+.jslider .jslider-pointer-hover {
+    background-position: -20px -60px;
+}
+
+.jslider .jslider-pointer-to {
+    left: 80%;
+}
+
+.jslider .jslider-label {
+    color: black;
+    font-size: 9px;
+    left: 0;
+    line-height: 12px;
+    opacity: 0.4;
+    padding: 0 2px;
+    position: absolute;
+    top: -18px;
+    white-space: nowrap;
+}
+
+.jslider .jslider-label-to {
+    left: auto;
+    right: 0;
+}
+
+.jslider .jslider-value {
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    background: white;
+    border-radius: 2px;
+    font-size: 9px;
+    left: 20%;
+    line-height: 12px;
+    padding: 1px 2px 0;
+    position: absolute;
+    top: -19px;
+    white-space: nowrap;
+}
+
+.jslider .jslider-value-to {
+    left: 80%;
+}
+
+.jslider .jslider-label small, .jslider .jslider-value small {
+    position: relative;
+    top: -0.4em;
+}
+
+.jslider .jslider-scale {
+    position: relative;
+    top: 9px;
+}
+
+.jslider .jslider-scale span {
+    border-left: 1px solid #999;
+    font-size: 0;
+    height: 5px;
+    position: absolute;
+}
+
+.jslider .jslider-scale ins {
+    color: #999;
+    font-size: 9px;
+    left: 0;
+    position: absolute;
+    text-decoration: none;
+    top: 5px;
+}
+
+.jslider-single .jslider-pointer-to, .jslider-single .jslider-value-to, .jslider-single .jslider-bg .v, .jslider-limitless .jslider-label {
+    display: none;
+}

@@ -1,0 +1,525 @@
+/******************************
+*
+*  RoyalSlider Default Inverted Skin 
+*
+*    1. Arrows 
+*    2. Bullets
+*    3. Thumbnails
+*    4. Tabs
+*    5. Fullscreen button
+*    6. Play/close video button
+*    7. Preloader
+*    8. Caption
+*    
+*  Sprite: 'rs-default-inverted.png'
+*  Feel free to edit anything
+*  If you don't some part - just delete it
+* 
+******************************/
+
+
+/* Background */
+.rsDefaultInv, .rsDefaultInv .rsOverflow, .rsDefaultInv .rsSlide, .rsDefaultInv .rsVideoFrameHolder, .rsDefaultInv .rsThumbs {
+    background: #EEE;
+    color: #222;
+}
+
+/***************
+*
+*  1. Arrows
+*
+****************/
+
+.rsDefaultInv .rsArrow {
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 44px;
+    z-index: 21;
+}
+
+.rsDefaultInv.rsVer .rsArrow {
+    height: 44px;
+    width: 100%;
+}
+
+.rsDefaultInv.rsVer .rsArrowLeft {
+    left: 0;
+    top: 0;
+}
+
+.rsDefaultInv.rsVer .rsArrowRight {
+    bottom: 0;
+    left: 0;
+}
+
+.rsDefaultInv.rsHor .rsArrowLeft {
+    left: 0;
+    top: 0;
+}
+
+.rsDefaultInv.rsHor .rsArrowRight {
+    right: 0;
+    top: 0;
+}
+
+.rsDefaultInv .rsArrowIcn {
+    background: url('rs-default-inverted.png');
+    background-color: #FFF;
+    background-color: rgba(255, 255, 255, .75);
+    *background-color: #FFF;
+    border-radius: 2px;
+    cursor: pointer;
+    height: 32px;
+    left: 50%;
+    margin-left: -16px;
+    margin-top: -16px;
+    position: absolute;
+    top: 50%;
+    width: 32px;
+}
+
+.rsDefaultInv .rsArrowIcn:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.rsDefaultInv.rsHor .rsArrowLeft .rsArrowIcn {
+    background-position: -64px -32px;
+}
+
+.rsDefaultInv.rsHor .rsArrowRight .rsArrowIcn {
+    background-position: -64px -64px;
+}
+
+.rsDefaultInv.rsVer .rsArrowLeft .rsArrowIcn {
+    background-position: -96px -32px;
+}
+
+.rsDefaultInv.rsVer .rsArrowRight .rsArrowIcn {
+    background-position: -96px -64px;
+}
+
+.rsDefaultInv .rsArrowDisabled .rsArrowIcn {
+    *display: none;
+    filter: alpha(opacity=20);
+    opacity: .2;
+}
+
+/***************
+*
+*  2. Bullets
+*
+****************/
+
+.rsDefaultInv .rsBullets {
+    height: auto;
+    line-height: 5px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-top: 4px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    z-index: 35;
+}
+
+.rsDefaultInv .rsBullet {
+    display: inline-block;
+    *display: inline;
+    height: 5px;
+    padding: 6px;
+    width: 5px;
+    *zoom: 1;
+}
+
+.rsDefaultInv .rsBullet span {
+    background: #BBB;
+    border-radius: 50%;
+    display: block;
+    height: 5px;
+    width: 5px;
+}
+
+.rsDefaultInv .rsBullet.rsNavSelected span {
+    background-color: #000;
+}
+
+/***************
+*
+*  3. Thumbnails
+*
+****************/
+
+.rsDefaultInv .rsThumbsHor {
+    height: 72px;
+    width: 100%;
+}
+
+.rsDefaultInv .rsThumbsVer {
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 96px;
+}
+
+.rsDefaultInv.rsWithThumbsHor .rsThumbsContainer {
+    height: 100%;
+    position: relative;
+}
+
+.rsDefaultInv.rsWithThumbsVer .rsThumbsContainer {
+    position: relative;
+    width: 100%;
+}
+
+.rsDefaultInv .rsThumb {
+    float: left;
+    height: 72px;
+    overflow: hidden;
+    width: 96px;
+}
+
+.rsDefaultInv .rsThumb img {
+    height: 100%;
+    width: 100%;
+}
+
+.rsDefaultInv .rsThumb.rsNavSelected {
+    background: #FFF;
+}
+
+.rsDefaultInv .rsThumb.rsNavSelected img {
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
+
+.rsDefaultInv .rsTmb {
+    display: block;
+}
+
+/* Thumbnails with text */
+
+.rsDefaultInv .rsTmb h5 {
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.rsDefaultInv .rsTmb span {
+    color: #DDD;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Thumbnails arrow icons */
+
+.rsDefaultInv .rsThumbsArrow {
+    background: #FFF;
+    background: rgba(255, 255, 255, 0.75);
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 20px;
+    z-index: 21;
+}
+
+.rsDefaultInv .rsThumbsArrow:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.rsDefaultInv.rsWithThumbsVer .rsThumbsArrow {
+    height: 20px;
+    width: 100%;
+}
+
+.rsDefaultInv.rsWithThumbsVer .rsThumbsArrowLeft {
+    left: 0;
+    top: 0;
+}
+
+.rsDefaultInv.rsWithThumbsVer .rsThumbsArrowRight {
+    bottom: 0;
+    left: 0;
+}
+
+.rsDefaultInv.rsWithThumbsHor .rsThumbsArrowLeft {
+    left: 0;
+    top: 0;
+}
+
+.rsDefaultInv.rsWithThumbsHor .rsThumbsArrowRight {
+    right: 0;
+    top: 0;
+}
+
+.rsDefaultInv .rsThumbsArrowIcn {
+    background: url('rs-default-inverted.png');
+    cursor: pointer;
+    height: 16px;
+    left: 50%;
+    margin-left: -8px;
+    margin-top: -8px;
+    position: absolute;
+    top: 50%;
+    width: 16px;
+}
+
+.rsDefaultInv.rsWithThumbsHor .rsThumbsArrowLeft .rsThumbsArrowIcn {
+    background-position: -128px -32px;
+}
+
+.rsDefaultInv.rsWithThumbsHor .rsThumbsArrowRight .rsThumbsArrowIcn {
+    background-position: -128px -48px;
+}
+
+.rsDefaultInv.rsWithThumbsVer .rsThumbsArrowLeft .rsThumbsArrowIcn {
+    background-position: -144px -32px;
+}
+
+.rsDefaultInv.rsWithThumbsVer .rsThumbsArrowRight .rsThumbsArrowIcn {
+    background-position: -144px -48px;
+}
+
+.rsDefaultInv .rsThumbsArrowDisabled {
+    display: none !important;
+}
+
+/* Thumbnails resizing on smaller screens */
+
+@media screen and (min-width: 0px) and (max-width: 800px) {
+    .rsDefaultInv .rsThumb {
+        height: 44px;
+        width: 59px;
+    }
+
+    .rsDefaultInv .rsThumbsHor {
+        height: 44px;
+    }
+
+    .rsDefaultInv .rsThumbsVer {
+        width: 59px;
+    }
+}
+
+/***************
+*
+*  4. Tabs
+*
+****************/
+
+.rsDefaultInv .rsTabs {
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-top: 12px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.rsDefaultInv .rsTab {
+    -webkit-box-shadow: inset 1px 0 0 #fff;
+    background-color: #FFF;
+    background-image: -webkit-linear-gradient(top, #fefefe, #f4f4f4);
+    background-image: -moz-linear-gradient(top, #fefefe, #f4f4f4);
+    background-image: linear-gradient(to bottom, #fefefe, #f4f4f4);
+    border: 1px solid #D9D9DD;
+    border-right: 1px solid #f5f5f5;
+    box-shadow: inset 1px 0 0 #fff;
+    color: #333;
+    cursor: pointer;
+    display: inline-block;
+    *display: inline;
+    height: auto;
+    min-width: 72px;
+    padding: 5px 13px 6px;
+    text-align: center;
+    text-decoration: none;
+    width: auto;
+    *zoom: 1;
+}
+
+.rsDefaultInv .rsTab:first-child {
+    -webkit-border-bottom-left-radius: 4px;
+    -webkit-border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+.rsDefaultInv .rsTab:last-child {
+    -webkit-border-bottom-right-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-right: 1px solid #cfcfcf;
+    border-top-right-radius: 4px;
+}
+
+.rsDefaultInv .rsTab:active {
+    background-color: #f4f4f4;
+    border: 1px solid #D9D9DD;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2) inset;
+}
+
+.rsDefaultInv .rsTab.rsNavSelected {
+    background: #ACACAC;
+    background-image: -webkit-linear-gradient(top, #ACACAC, #BBB);
+    background-image: -moz-llinear-gradient(top, #ACACAC, #BBB);
+    background-image: linear-gradient(to bottom, #ACACAC, #BBB);
+    border: 1px solid #999;
+    box-shadow: 0 1px 9px rgba(102, 102, 102, 0.65) inset;
+    color: #FFF;
+    text-shadow: 1px 1px #838383;
+}
+
+/***************
+*
+*  5. Fullscreen button
+*
+****************/
+
+.rsDefaultInv .rsFullscreenBtn {
+    cursor: pointer;
+    display: block;
+    height: 44px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 44px;
+    z-index: 22;
+}
+
+.rsDefaultInv .rsFullscreenIcn {
+    background: url('rs-default-inverted.png') 0 0;
+    background-color: #FFF;
+    background-color: rgba(255, 255, 255, 0.75);
+    *background-color: #FFF;
+    border-radius: 2px;
+    display: block;
+    height: 32px;
+    margin: 6px;
+    width: 32px;
+}
+
+.rsDefaultInv .rsFullscreenIcn:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.rsDefaultInv.rsFullscreen .rsFullscreenIcn {
+    background-position: -32px 0;
+}
+
+/***************
+*
+*  6. Play/close video button
+*
+****************/
+
+.rsDefaultInv .rsPlayBtn {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    height: 64px;
+    margin-left: -32px;
+    margin-top: -32px;
+    width: 64px;
+}
+
+.rsDefaultInv .rsPlayBtnIcon {
+    -moz-transition: .3s;
+    -webkit-border-radius: 4px;
+    -webkit-transition: .3s;
+    background: url(rs-default-inverted.png) no-repeat 0 -32px;
+    background-color: #FFF;
+    background-color: rgba(255, 255, 255, 0.75);
+    *background-color: #FFF;
+    border-radius: 4px;
+    display: block;
+    height: 64px;
+    transition: .3s;
+    width: 64px;
+}
+
+.rsDefaultInv .rsPlayBtn:hover .rsPlayBtnIcon {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.rsDefaultInv .rsBtnCenterer {
+    height: 20px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    width: 20px;
+}
+
+.rsDefaultInv .rsCloseVideoBtn {
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    cursor: pointer;
+    height: 44px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 44px;
+    z-index: 500;
+}
+
+.rsDefaultInv .rsCloseVideoBtn.rsiOSBtn {
+    right: -6px;
+    top: -38px;
+}
+
+.rsDefaultInv .rsCloseVideoIcn {
+    background: url('rs-default-inverted.png') -64px 0;
+    background-color: #FFF;
+    background-color: rgba(255, 255, 255, 0.75);
+    *background-color: #FFF;
+    height: 32px;
+    margin: 6px;
+    width: 32px;
+}
+
+.rsDefaultInv .rsCloseVideoIcn:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/***************
+*
+*  7. Preloader
+*
+****************/
+
+.rsDefaultInv .rsPreloader {
+    background-image: url(../preloaders/preloader.gif);
+    height: 20px;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    top: 50%;
+    width: 20px;
+}
+
+/***************
+*
+*  8. Global caption
+*
+****************/
+
+.rsDefaultInv .rsGCaption {
+    background: #FFF;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 2px;
+    bottom: 6px;
+    color: #000;
+    float: none;
+    font-size: 12px;
+    left: 6px;
+    padding: 2px 8px;
+    position: absolute;
+    text-align: left;
+    width: auto;
+}

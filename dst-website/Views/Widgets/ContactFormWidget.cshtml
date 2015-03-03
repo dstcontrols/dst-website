@@ -1,0 +1,31 @@
+﻿@using dst_website.Helpers
+@model dst_website.Models.ContactFormViewModel
+
+@{ Model.EmailTo = OptionsHelper.GetValue(Model.Options, "EmailToAddress"); }
+
+@using (Html.BeginForm("ContactForm", "Contact", FormMethod.Post, new {@id = "contactform", @class = "form-box register-form contact-form autobind"}))
+{
+    <h3>Contact Us</h3>
+    <div id="success"></div>
+    <div class="field-holder">
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name, new {@class = "form-control"})
+        @Html.ValidationMessageFor(m => m.Name)
+    </div>
+
+    <div class="field-holder">
+        @Html.LabelFor(m => m.Email)
+        @Html.TextBoxFor(m => m.Email, new {@class = "form-control"})
+        @Html.ValidationMessageFor(m => m.Email)
+    </div>
+
+    <div class="field-holder">
+        @Html.LabelFor(m => m.Message)
+        @Html.TextAreaFor(m => m.Message, new {@class = "form-control", style = "height:232px;"})
+        @Html.ValidationMessageFor(m => m.Message)
+    </div>
+    <div class="buttons-box clearfix">
+        @Html.HiddenFor(m => m.EmailTo)
+        <a class="btn btn-default" data-url="/contacts/submit-form">Send</a>
+    </div>
+}
