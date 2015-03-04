@@ -29,7 +29,7 @@ namespace dst_website_cms
 
             /* DO NOT FORGET TO REMOVE DEFAULT ROUTE REGISTRATION! 
                FOLLOWING SOURCE CODE SHOULD BE REMOVED: 
-
+ dst_website_cms.Controllers
                routes.MapRoute(
                         name: "Default",
                         url: "{controller}/{action}/{id}",

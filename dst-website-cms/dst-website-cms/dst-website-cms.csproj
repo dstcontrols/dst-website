@@ -335,6 +335,23 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\Layouts\DST\MainLayout.cshtml" />
+    <Content Include="Views\Shared\Layouts\DST\_CleanStartTriangles.cshtml" />
+    <Content Include="Views\Shared\Layouts\DST\_Footer.cshtml" />
+    <Content Include="Views\Shared\Layouts\DST\_Header.cshtml" />
+    <Content Include="Views\Shared\Layouts\DST\_HeadScripts.cshtml" />
+    <Content Include="Views\Shared\Layouts\DST\_Layout.cshtml" />
+    <Content Include="Views\Shared\Layouts\DST\_Scripts.cshtml" />
+    <Content Include="Views\Shared\Layouts\Light\dst_headScripts.cshtml" />
+    <Content Include="Views\Shared\Layouts\Light\Partial\_GalleryScripts.cshtml" />
+    <Content Include="Views\Shared\Layouts\Light\_BlogPostLayout.cshtml" />
+    <Content Include="Views\Shared\Layouts\Light\_ContactsLayout.cshtml" />
+    <Content Include="Views\Shared\Layouts\Light\_GalleryLayout.cshtml" />
+    <Content Include="Views\Shared\Layouts\Light\_HomeLayout.cshtml" />
+    <Content Include="Views\Shared\Layouts\Light\_LightLayout.cshtml" />
+    <Content Include="Views\Shared\Layouts\Light\_LightOneColumnLayout.cshtml" />
+    <Content Include="Views\Shared\Layouts\Light\_LightThreeColumnsLayout.cshtml" />
+    <Content Include="Views\Shared\Layouts\Light\_LightTwoColumnsLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

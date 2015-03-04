@@ -1,0 +1,24 @@
+﻿@{
+    Layout = "~/Views/Shared/Layouts/Light/_LightOneColumnLayout.cshtml";
+}
+
+@section HeadScripts {
+    <link href="~/Content/Styles/bcms.light.gallery.css" rel="stylesheet" />
+    
+    @RenderSection("HeadScripts", false)
+}
+
+@section MainContent {
+    <div id="gallery-main-content" style="visibility: hidden;">
+        @RenderSection("MainContent", false)
+    </div>
+}
+
+@RenderBody()             
+
+@section Scripts {
+    @RenderSection("Scripts", false)
+    @Html.Partial("Layouts/Light/Partial/_GalleryScripts")
+    <script src="~/Content/scripts/gallery.gallery.js"></script>
+    <script src="~/Content/scripts/jquery.lightbox_me.js"></script>
+}
