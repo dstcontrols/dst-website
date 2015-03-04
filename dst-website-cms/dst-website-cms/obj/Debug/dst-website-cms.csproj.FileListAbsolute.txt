@@ -114,3 +114,4 @@ D:\Repositories\dst-website\dst-website-cms\dst-website-cms\bin\Microsoft.Owin.S
 D:\Repositories\dst-website\dst-website-cms\dst-website-cms\obj\Debug\ApplicationInsights.config
 D:\Repositories\dst-website\dst-website-cms\dst-website-cms\obj\Debug\dst-website-cms.dll
 D:\Repositories\dst-website\dst-website-cms\dst-website-cms\obj\Debug\dst-website-cms.pdb
+D:\Repositories\dst-website\dst-website-cms\dst-website-cms\obj\Debug\dst-website-cms.csprojResolveAssemblyReference.cache
