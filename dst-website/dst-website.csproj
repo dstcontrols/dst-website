@@ -20,6 +20,12 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <MvcProjectUpgradeChecked>true</MvcProjectUpgradeChecked>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>12.0</OldToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -125,9 +131,6 @@
     </Reference>
     <Reference Include="MvcContrib">
       <HintPath>..\packages\MvcContrib.Mvc3-ci.3.0.100.0\lib\MvcContrib.dll</HintPath>
-    </Reference>
-    <Reference Include="NewRelic.Api.Agent">
-      <HintPath>..\packages\NewRelic.Azure.WebSites.3.4.24.0\lib\NewRelic.Api.Agent.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.5.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -780,16 +783,6 @@
     <Content Include="favicon.ico" />
     <Content Include="favicon.png" />
     <Content Include="Global.asax" />
-    <Content Include="newrelic\extensions\CoreInstrumentation.xml" />
-    <Content Include="newrelic\extensions\Providers\TransactionContext\Asp\NewRelic.Agent.Extensions.dll" />
-    <Content Include="newrelic\extensions\Providers\TransactionContext\Asp\NewRelic.Providers.TransactionContext.Asp.Repacked.dll" />
-    <Content Include="newrelic\extensions\Providers\TransactionContext\Default\NewRelic.Agent.Extensions.dll" />
-    <Content Include="newrelic\extensions\Providers\TransactionContext\Default\NewRelic.Providers.TransactionContext.Default.Repacked.dll" />
-    <Content Include="newrelic\extensions\Providers\TransactionContext\Wcf3\NewRelic.Agent.Extensions.dll" />
-    <Content Include="newrelic\extensions\Providers\TransactionContext\Wcf3\NewRelic.Providers.TransactionContext.Wcf3.Repacked.dll" />
-    <Content Include="newrelic\NewRelic.Agent.Core.dll" />
-    <Content Include="newrelic\NewRelic.Agent.Extensions.dll" />
-    <Content Include="newrelic\NewRelic.Profiler.dll" />
     <Content Include="Content\scripts\bettercms-1.7.3\forms.js" />
     <Content Include="Content\scripts\bettercms-1.7.3\gallery.gallery.js" />
     <Content Include="Content\scripts\bettercms-1.7.3\gallery.home.js" />
@@ -903,10 +896,6 @@
     <Content Include="Views\Widgets\LatestBlogPostsWidget.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="newrelic\newrelic.config" />
-    <Content Include="newrelic\extensions\extension.xsd">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="Content\images\progressive\royal-slider\arrows.psd" />
     <Content Include="Content\images\progressive\royal-slider\bullets.psd" />
     <Content Include="Content\images\progressive\royal-slider\small_arrows.psd" />
@@ -1042,9 +1031,6 @@
       <DependentUpon>dst.css</DependentUpon>
     </Content>
     <Content Include="Config\cms.config" />
-    <None Include="newrelic\newrelic.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <Content Include="Views\Shared\Layouts\DST\_Header.cshtml" />
     <Content Include="Views\Shared\Layouts\DST\_Footer.cshtml" />
     <Content Include="Views\Shared\Layouts\DST\_Scripts.cshtml" />
