@@ -88,7 +88,12 @@
     <Content Include="images\dst-logo-100px-transparent.png" />
     <Content Include="images\dst-logo-100px.png" />
     <Content Include="images\dst-logo.svg" />
+    <Content Include="images\orginal\pic01.jpg" />
     <Content Include="images\pic01.jpg" />
+    <Content Include="images\orginal\pic02.jpg" />
+    <Content Include="images\orginal\pic03.jpg" />
+    <Content Include="images\orginal\pic04.jpg" />
+    <Content Include="images\orginal\pic05.jpg" />
     <Content Include="images\pic02.jpg" />
     <Content Include="images\pic03.jpg" />
     <Content Include="images\pic04.jpg" />
