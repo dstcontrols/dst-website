@@ -57,6 +57,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="maufacturing.html" />
+    <Content Include="controls.html" />
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.woff" />
@@ -123,6 +125,7 @@
     <Content Include="js\skel-layers.min.js" />
     <Content Include="js\skel.min.js" />
     <Content Include="left-sidebar.html" />
+    <Content Include="data.html" />
     <Content Include="no-sidebar.html" />
     <Content Include="right-sidebar.html" />
     <Content Include="Web.config" />
