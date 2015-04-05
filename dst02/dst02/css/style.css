@@ -73,6 +73,13 @@
 			-webkit-box-sizing: border-box;
 			box-sizing: border-box;
 		}
+
+        form input.text{
+            width:100%;
+        }
+        #message {
+            width:100%
+        }
 		
 		form input.button
 		{
@@ -381,3 +388,7 @@
 			-webkit-font-smoothing:antialiased;
 			-moz-osx-font-smoothing:grayscale;
 		}
+
+        .fa-chevron-circle-right{
+             color: #00a6eb;
+        }
