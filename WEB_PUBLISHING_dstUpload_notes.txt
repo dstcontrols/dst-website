@@ -1,0 +1,4 @@
+dst: uploading files:
+
+when uploading, place files in www directory, it will automatically load files into the public_html directory...
+

@@ -1,0 +1,26 @@
+@charset "UTF-8";
+body {
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	background-color: #53524D;
+	background-image: url(../bckgrnd_1.jpg);
+}
+.pageCombiners #container {
+	width: 940px;
+	text-align: left;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	background-image: url(../DSTSolar_bckgrnd_2.jpg);
+	background-repeat: no-repeat;
+	height: 1090px;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+}

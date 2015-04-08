@@ -1,0 +1,277 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<script language="JavaScript1.4" SRC="lib.js" TYPE="text/javascript"></script>
+<title>DST Controls</title>
+<link rel="stylesheet" href="dststyle.css" TYPE="text/css">
+</head>
+<body bgcolor="#FFFFFF" bottommargin="0" rightmargin="20" topmargin="0" marginwidth="0" marginheight="0" leftmargin="20">
+<div align="center">
+
+<!--- NAV 3 Is ARTICLES --->
+<script language="JavaScript" type="text/javascript">makeNav(3,false);</script>
+<table width="760" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+
+<table width="760" bgcolor="#0000a0" border="0" cellpadding="4" cellspacing="0"><tr>
+<td class="feature">
+July 2001 Control Engineering
+</td>
+</tr>
+<tr><td class="feaTitle"><b>FEATURE ARTICLE</b></td></tr>
+</table>
+
+<table border="0" cellspacing="0" cellpadding="0"><tr><td>
+<br><br>
+<div class="art">"PILOTING" NATURAL GAS PIPELINE</div><br>
+
+<div class="f1a">
+<b>George Gaebler, PG&amp;E, Read Hayward and Eric Unger, DST Controls</b>
+</div>
+<br>
+<table border="1" borderColor="#cccccc" cellPadding="4" cellSpacing="0" width="100%">
+  <tr>
+    <td>
+    <font face="Arial" size="2"><b>Keywords:</b> Process control and instrumentation 
+    |&nbsp;Supervisory control and data acquisition |&nbsp;Personal digital assistants 
+    |&nbsp;Hand-held computers</font></td>
+  </tr>
+</table>
+<br><br>
+
+<img border="0" src="images/a_Delevan.jpg" alt="PG&amp;E's Delevan Gas Compressor Station" align="left" width="300" height="201"><font face="Arial" size="2"><b>Portable 
+digital assistants </b>are helping with natural gas pipeline data collection at 
+Pacific Gas and Electric (PG&amp;E, San Francisco, Calif.), one of the largest 
+utility companies in the free world.</font></p>
+<p><font face="Arial" size="2">PG&amp;E pipelines transmit natural gas from source 
+wells in Canada to the San Francisco Bay area for retail consumption. Over such 
+long distances pressure drops due to friction losses require compressor 
+stations, approximately every hundred miles, organized around multiple 10,000 
+hp, gas-fired turbines and maintained by PG&amp;E. Typical pipeline throughput can 
+exceed 800 million standard cubic feet per day.</font></p>
+<p><font face="Arial" size="2">To keep things safe and running, prudent 
+compressor station management can require over 500 instrument readings per day 
+at each station. Many of the functions monitored are so critical that problems 
+with same, if unattended to, could truly light-up the night sky, and make the 
+utility's current public-relations problems look like "good publicity." Although 
+not "nuke-grade-dangerous," natural gas is methane a lethally noxious gas and a 
+high-energy explosive.</font></p>
+<p><font face="Arial" size="2"><b>Low cost, safety go hand in hand</b></font></p>
+<p><font face="Arial" size="2">
+<img border="0" src="images/a_Internal_20Eng.jpg" alt="Too old and costly to hang sensors" align="left" width="300" height="423">PG&amp;E opted out of fully automating its data 
+acquisition system because it would have been cost prohibitive, and more 
+importantly, not entirely safe. </font></p>
+<p><font face="Arial" size="2">Much of PG&amp;E's compressor station instrumentation 
+is just too far-flung to be hard-wired cost effectively. Furthermore, many of 
+the thousands of gauges and meters that must be read daily, throughout the 
+utility's archipelago of pipeline compressor stations, are old, mechanical, or 
+otherwise too costly to match up with transducers or hang on a local area 
+network.</font></p>
+<p><font face="Arial" size="2">As noted, some compressor station instrumentation 
+monitors process parameters so critical, that despite advances in (and PG&amp;E's 
+use of) remote SCADA technology, PG&amp;E also employs hand-held data acquisition to 
+ensure that a human will always "absolutely positively" be right there to verify 
+proper functions of life-safety systems. </font></p>
+<p><font face="Arial" size="2">The utility recently chose to use data collection 
+devices that might have been previously dismissed by traditional plant-floor 
+thinking as "cheap commercial-grade," but PG&amp;E recognized that much of this 
+equipment is now reliable enough for many industrial situations. This is largely 
+due to advances in semiconductor manufacturing that create more robust IC 
+components. Additionally, advances in industrial ruggedization (shock-proofing 
+and liquid-proofing) with low-cost molded rubber coatings and impact resistant 
+plastic packaging offer even more protection to the increasingly tougher 
+electronics inside. </font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><font face="Arial" size="2"><b>Need for data</b></font></p>
+<p><font face="Arial" size="2">Critical data that PG&amp;E records and archives at 
+least once daily include:<img border="0" src="images/a_emerg_20shutdn_20sm.JPG" alt="Makes reading non-automation instruments fast and easy" align="right" width="300" height="225"></font></p>
+<ul>
+  <li><font face="Arial" size="2">Number of starts and total hours run by each 
+  compressor</font> </li>
+  <li><font face="Arial" size="2">Compressor engine oil pressure/ temperature</font>
+  </li>
+  <li><font face="Arial" size="2">Oil filter differential pressure</font> </li>
+  <li><font face="Arial" size="2">Lubricating oil level</font> </li>
+  <li><font face="Arial" size="2">Air intake differential pressure</font> </li>
+  <li><font face="Arial" size="2">Compressor-seal oil differential pressure</font>
+  </li>
+  <li><font face="Arial" size="2">Compressor turbine fuel flow rate</font> </li>
+  <li><font face="Arial" size="2">Ambient temperature and relevant weather 
+  conditions</font> </li>
+  <li><font face="Arial" size="2">Fuel gas pressure</font> </li>
+  <li><font face="Arial" size="2">Turbine bearing vibration readings</font> </li>
+  <li><font face="Arial" size="2">Cooling water level, pressure, and 
+  temperature. </font></li>
+</ul>
+<p><font face="Arial" size="2">Although much of the data is redundantly 
+collected by PG&amp;E's local SCADA system, the use of a hand-held system to gather 
+data provides regular human presence and an "eye on things" that can help avoid 
+disasters. Undetected lubricant spills that can cause groundwater contamination, 
+unusual equipment conditions that may be precursors to equipment failure, and 
+other localized anomalies can be observed and reported. Case in point: at one 
+site, an unfortunate cat strayed into the draft of a compressor-cooling fan. 
+Thunk! The fan kept running, so the alarm wasn't triggered, but visual 
+inspection revealed the necessity to shut the fan down for cleaning, repair, and 
+balancing. </font></p>
+<p><font face="Arial" size="2">Finally, even the most automated systems 
+experience "glitches" that interrupt data flow, necessitating manual backup to 
+ensure plant integrity and required regulatory agency data. So, in spite of PG&amp;E 
+compressor stations designed for unattended operation, maintenance technicians 
+still walk inspection routes daily, providing back-up to local SCADA, and the 
+only data collection for process variables not monitored automatically. </font>
+</p>
+<p><font face="Arial" size="2"><b>A look at the problem</b></font></p>
+<p><font face="Arial" size="2">
+<img border="0" src="images/a_1700_20w_20screen.jpg" alt="A database you can hold - dBeHold!" align="left" width="369" height="492">In the past, use of clipboards and proprietary 
+data collection devices kept pipeline equipment working and safe. However, these 
+tools were inefficient, costly, and not always accurate. Clipboards just 
+produced reams of dirty, dog-eared paper, erratically garnished with grease 
+spots and dull-penciled scribbling. These readings then had to be deciphered, 
+sorted, archived, and eventually transcribed via keyboard to PG&amp;E's database. 
+Omissions and transcription errors haunted the system.</font></p>
+<p><font face="Arial" size="2">Proprietary industrial hand-held devices were 
+also tried. They didn't eliminate transcription errors and suffered other 
+drawbacks including limited functionality and high costs to buy and maintain. 
+Single-line displays could not be customized for easy entry of data from gauges 
+and meters with dissimilar data formats. Finally, there was no way to produce 
+alarms for out-of-range entries from human error or meter malfunction. The 
+handhelds tried accepted any data no matter how preposterous. </font></p>
+<p><font face="Arial" size="2"><b>Application challenges</b></font></p>
+<p><font face="Arial" size="2">PG&amp;E engineers in charge of the Delevan 
+compressor station, just north of Sacramento, Calif., brought in DST Controls, a 
+control system integrator from Benicia, Calif., to find a solution. DST's 
+experience with personal digital assistants (PDAs) in a previous project lead it 
+to investigate their use for PG&amp;E's data acquisition problem. The basic idea was 
+to use an "open" handheld computer, in this case a Palm OS device with 
+integrated barcode scanner from Symbol Technologies (Holtsville, N.Y.). e 
+common.</font></p>
+<p><font face="Arial" size="2">Indeed, even with the integrated barcode scanner, 
+a hybrid Palm device would still be a fraction of the size and cost of the WWII 
+walkie-talkie-sized devices previously tried by PG&amp;E. Additionally, Palm OS was, 
+by comparison, an "open" system, allowing almost unlimited customization of the 
+operator interface and data handling process. </font></p>
+<p><font face="Arial" size="2">Major design problems included:</font></p>
+<ul>
+  <li><font face="Arial" size="2">Resolution of the classic ergonomic conundrum 
+  of more data points on fewer screens vs. less data points on more screens, 
+  that is, easy screen navigation vs. easy screen reading. </font></li>
+  <li><font face="Arial" size="2">Development of an intuitive application to 
+  minimize training time. </font></li>
+  <li><font face="Arial" size="2">Ensuring that data could not accidentally be 
+  resubmitted to the database if several users independently read the same 
+  devices on the same day. </font></li>
+  <li><font face="Arial" size="2">Enabling the application to reject mistakenly 
+  entered out-of-range data. </font></li>
+  <li><font face="Arial" size="2">Enabling the PDA to automatically recognize 
+  specific instruments being polled. (One less opportunity for human error.)
+  </font></li>
+  <li><font face="Arial" size="2">Prevention of system conflicts that could 
+  occur if a PDA is removed from its "cradle" during upload. Because data are 
+  deleted from the device after upload to ready it for the next shift, problems 
+  could arise if the deletion process were interrupted, allowing old data to be 
+  resent to the database during the next upload. </font></li>
+</ul>
+<p><font face="Arial, Helvetica, sans-serif" size="2">The system also had to be 
+flexible enough in operation to allow technicians to easily change their 
+inspection routes, or to add or delete data points while on route. In addition, 
+the operating software would have to be "open" enough to allow transfer of data 
+into any of several database programs, including Microsoft Access, SQL Server, 
+Oracle, any ODBC-compliant database, and proprietary HMI databases. The handheld 
+also had to be Class I, Div. II compliant.</font></p>
+<p><font face="Arial" size="2"><b>Filling the gap</b></font></p>
+<p><font face="Arial" size="2">
+<img border="0" src="images/a_ControlPanel1.jpg" alt="Data is brought back to the control room without errors" align="left" width="300" height="200">Because data collection was not fully automated 
+at the compressor stations, DST Controls did not have to spend time dealing with 
+existing esoteric data formats. The system's database was designed from scratch 
+around Microsoft SQL Server. Database programming was accomplished using 
+Microsoft ADO and OLE DB tools. One of the benefits of this approach was that 
+the application ended up being small. However, size varies with how much data 
+PG&amp;E wants to keep on this hand-held computer. The current application enables 
+saving 30-day data histories in the handheld before the need to delete or 
+upload. Screen development and programming takes place in a Visual Basic-like 
+environment. </font></p>
+<p><font face="Arial" size="2">Because the applications (ClearControls dBeHold 
+and ClearControls dB) DST Controls developed do not conflict with standard Palm 
+OS applications, PG&amp;E's handhelds retain all basic Palm OS features.</font></p>
+<p><font face="Arial" size="2">Because upload to the PDA is via an integrated 
+barcode scanner, each piece of monitored equipment is labeled with a unique Code 
+3 of 9 (or Code 39) barcode. Code 39 is easy to print and is used extensively in 
+industrial applications. It is also the easiest to use of alphanumeric barcodes 
+and is designed for character self-checking.</font></p>
+<p><font face="Arial" size="3"><b><font size="2">How it works</font></b></font></p>
+<p><font face="Arial" size="2">
+<img border="0" src="images/a_dBeHold_20Laser_20300.JPG" alt="dBeHold with optional laser bar code scanner" align="left" width="300" height="400">When a technician, armed with the handheld 
+barcode scanner, approaches an instrument to poll, the following takes place:</font></p>
+<p><font face="Arial" size="2">Using the stylus, the user first calls up the 
+Data Entry screen by tapping the "New Reading" button on the PDA. The 
+instrument's identification number is then entered by either scanning the 
+meter's barcode or manually by using "Graffiti" (Palm's calligraphic technology) 
+or on-screen keypad. </font></p>
+<p><font face="Arial" size="2">Once the instrument ID is entered, its 
+description automatically appears, as does the "Last-Read" value for that 
+device. Once the new value is entered, tapping "Enter" saves the record. If the 
+operator makes an entry the system deems "out-of-range," DST's proprietary Palm 
+application, "dBehold," will alarm and prompt for data reentry. This then 
+prompts a visual inspection of the meter by the technician to determine if it 
+was a transcription error or an equipment problem. The parameters of "in range" 
+readings for each instrument are user-configurable.</font></p>
+<p><font face="Arial" size="2">If an equipment fault is discovered, the user can 
+flag it for maintenance using the device's "Maint/Req" box. Mis-entered data are 
+easily corrected manually. All screens have a "Comments" field for additional 
+textual notes on any abnormal conditions, again via Graffiti or keyboard. At the 
+end of the shift, the device is returned to its cradle and the "HotSync" button 
+is pushed. This action initiates upload of the data to the station's database 
+PC, where PG&amp;E's corporate SCADA system later retrieves it.</font></p>
+<p><a target="content" href="../ClearStuff/clear_dBeHold.htm">
+  <img border="0" src="images/a_palmlogo.gif" alt="DST is a Palm Select Alliance Program Member!" align="right" width="78" height="78"></a><font face="Arial" size="2">Gabriel Acosta-Lopez, senior director of platform 
+development services for Palm Inc., is not surprised that Palm OS devices filled 
+PG&amp;E's bill. According to Mr. Acosta-Lopez, 'We are seeing increased 
+appreciation in the plant environment for tough, inexpensive, and versatile 
+handhelds. This trend should continue as more Palm OS partners "morph" hand-held 
+products for industrial use with custom software and hardware add-ons." </font>
+</p>
+<p><font face="Arial" size="2"><b>Software makes it happen </b></font></p>
+<p><font face="Arial" size="2">
+<img border="0" src="images/a_tagedit2.jpg" align="left" alt="Customize your tags using ClearControls dBedit" width="482" height="600">Software components of the PG&amp;E hand-held system 
+include standard bundled Palm OS Desktop software, including HotSync Manager 
+(used to upload Palm devices to a PC) and DST Controls' proprietary 
+ClearControls dB and ClearControls dBeHold applications.</font></p>
+<p><font face="Arial" size="2">ClearControls dB is the Windows application that 
+runs on a PC and transfers data between the hand-held device and PG&amp;E's GE Fanuc 
+Cimplicity database. It also allows supervisors to add/modify/ delete user 
+access and information. For example, the application can be password-protected 
+tying database modifications to predefined user privilege. </font></p>
+<p><font face="Arial" size="2">ClearControls dBeHold is the software that runs 
+on the hand-held device (Palm OS, or WinCE/Pocket PC) for the purpose of 
+managing entries and sending them to ClearControls dB. Use of this software can 
+also be password protected. </font></p>
+<p>
+
+<font face="Arial" size="2">The system is being integrated into each PG&amp;E 
+compressor station's data acquisition system. It will make data files available 
+to staff engineers over PG&amp;E's intranet and interact with PG&amp;E's condition-based 
+maintenance and work management systems. </font></p>
+<p><font face="Arial" size="2">Commercial hand-held computing systems continue 
+to evolve rapidly, driven by the shear volume of demand in that marketplace. 
+Because of this, more and more unnecessarily "bullet-proof" industrial "smart" 
+devices, that are short on functionality and long on price, will be challenged 
+by "rubber-coated" invaders that are long on functionality and very short on 
+price. </font></p>
+
+
+<img border="0" src="images/a_Geo_20Meters_20small.jpg" alt="Author taking reading with dBeHold"  width="300" height="199"><br>
+</i></font></p>
+
+<br><br>
+<p><font face="Arial" size="2"><i>George Gaebler is senior gas engineer for 
+Pacific Gas &amp; Electric(Walnut Creek, Calif.). Eric Unger is project engineer and 
+Read Hayward is vp of sales for DST Controls (Benicia, Calif).
+</td></tr></table>
+
+
+</td></tr></table>
+<script language="JavaScript" TYPE="text/javascript">makeFooter(0);</script>
+</div></body></html>

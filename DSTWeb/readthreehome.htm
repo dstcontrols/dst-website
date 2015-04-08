@@ -1,0 +1,301 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Experience</TITLE>
+<META content="text/html; charset=iso8859-1" http-equiv=Content-Type>
+<STYLE type=text/css>A:link {
+	COLOR: #003399
+}
+A:visited {
+	COLOR: #800080
+}
+A:hover {
+	COLOR: #ff3300
+}
+</STYLE>
+</head>
+
+<BODY>
+
+
+
+<TABLE border=0 cellPadding=0 cellSpacing=0>
+  <TBODY>
+  <TR>
+    <TD colSpan=2>
+      <TABLE border=0 width=100%>
+        <TBODY>
+        <TR>
+          <TD bgColor=#0000a0><FONT color=#ffffff 
+            face=Arial><SMALL><SMALL>April 1997&nbsp; Control 
+            Engineering</SMALL><BR><STRONG>FEATURE 
+            ARTICLE</STRONG></SMALL></FONT></TD></TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD vAlign=top><B>
+      <TABLE border=0>
+        <TBODY>
+        <TR></B>
+          <TD bgColor=#c0c0c0 vAlign=top><STRONG><FONT 
+            face=Arial><BIG><BIG>Protocol conversion saves telemetric SCADA from 
+      multilingual gridlock</BIG></BIG></FONT></STRONG>
+            <BR><BR><BR><BR>
+            <P><STRONG><EM><SMALL><I>Keeping PG&amp;E's California pipeline open requires a 
+      communication system that handles both engineering and operations 
+      data.</I> </SMALL></em></STRONG></P></TD>
+          <TD vAlign=top><STRONG><FONT face=Arial><SMALL>by George Gaebler,<BR>Pacific Gas and Electric 
+      <BR>and<BR>Read Hayward,<BR>DST Controls.</SMALL></FONT></STRONG>
+            <P><IMG alt="pci.gif (1656 bytes)" src="../images/pci.gif" width="50" height="50"><FONT 
+            face=Arial><BR><STRONG><SMALL><U>Keywords</U>:</SMALL></STRONG><BR><SMALL><SMALL>Process 
+            control &amp; instrumentation</SMALL><BR><SMALL>Batch 
+            control</SMALL><BR><SMALL>Programmable logic 
+            controllers</SMALL><BR><SMALL>Level control</SMALL><BR><SMALL>Flow 
+            control</SMALL></SMALL></FONT></P></TD></TR>
+        <TR>
+          <TD bgColor=#0000a0 colSpan=2 height=1 vAlign=top><SPACER 
+            height="1" type="block"></TD></TR></TBODY></TABLE>
+
+
+      <P><B>P</B>acific Gas and Electric (PG&amp;E, SanFrancisco, Calif.) is the largest utility in the United States, and 
+      even after its recent downsizing, still employs over 25,000 people. Its 
+      "Line 400'' pipeline brings natural gas from the Oregon border to the San 
+      Francisco Bay area via four compressor stations stretched along the state. 
+      Each station's primary function is to terminate one section of the 
+      pipeline and recompress the gas with 15,000 hp turbines before sending it 
+      to the next station. This segments the system failure risk and providing 
+      monitoring and safety shutoff points. </P>
+      <P>&nbsp;&nbsp;These four compressor stations are usually unmanned and 
+      must be remotely monitored and controlled by several layers of telemetric 
+      supervisory control and data acquisition (SCADA). Historically, only major 
+      station functions such as station status, pipeline pressure, and gas flow 
+      rates were monitored and controlled by PG&amp;E's corporate-wide gas SCADA 
+      system. But in the early 1990s as available control technology's ability 
+      to monitor an increasing number of components improved, PG&amp;E went in 
+      search of higher station efficiencies through condition-based maintenance
+      (CBM). CBM was intended to replace the often unnecessary and costly 
+      scheduled maintenance of station equipment with "service-as-needed." 
+      Remote access to condition-critical data such as turbine hp output, fuel 
+      consumption, duty cycles, and shaft vibration became a must. </P>
+      <P><B>Defining the problem</B> </P>
+      <P><FONT color=#ffffff>..</FONT>Creating electronic windows on station 
+      equipment using PG&amp;E's corporate-wide SCADA equipment would have 
+      required significant expense in hardware upgrades, software revisions, and 
+      training for the operations department to effectively and safely tap into 
+      its 300-plus remote terminal unit (RTU) control net. After much 
+      discussion, PG&amp;E's engineering and operations departments jointly 
+      decided that a new, smaller telemetric SCADA system should parallel the 
+      corporate system, allowing user-friendly access to CBM data either 
+      remotely or locally. </P>
+      <P>&nbsp;&nbsp;For use with local hosts and human-machine interfaces (HMIs), PG&amp;E chose the Monitor, an Apple Macintosh-based system 
+      produced by Monico Systems (Austin, Tex.). The Mac-based system was chosen 
+      because it allowed field technicians with minimal computer skills to 
+      easily handle both basic programming and a more advanced data trending 
+      program. </P>
+      <P><B>The fun begins</B> </P>
+      <P><FONT color=#ffffff>..</FONT>Because of varying yearly budgets, 
+      evolving technologies, and differing philosophies of PG&amp;E's control 
+      engineers over the years, none of the compressor stations was automated 
+      with exactly the same control architecture. Also, very few of the local 
+      control and monitoring devices at each station spoke the same language or 
+      spoke at the same speed. </P>
+      <P>&nbsp;&nbsp;At the time of installation, the Monitor system could only 
+      communicate with about one-third of the equipment required on the network. 
+      Protocol requirements ranged from Modbus to obscure dialects spoken by GE 
+      Speedtronic (compressor control) and other esoteric control devices 
+      embedded in pipeline-specific equipment. Control "dialects" included 
+      Modbus RTU, Data Highway, Modbus 1.0, GE Data Dump, HART, and some even 
+      less mainstream communication protocols. </P>
+      <P>&nbsp;&nbsp;Additionally, the Monitor system could only handle one 
+      transmission rate at a time. It had to be reconfigured whenever devices 
+      with different rates had to be polled or signaled. Baud requirements also 
+      ran the gamut from 1,2K to 38.4K bits/sec. In addition, there had been 
+      little consistency in device addressing. Even within the same site, 
+      various controllers had been assigned duplicate address codes, which made 
+      networking impossible. </P>
+      <P>&nbsp;&nbsp;The new system only provided 12-bit data resolution that 
+      made floating point applications, requiring 16- or 32-bit resolution, 
+      impossible. The combination of high precision logging requirements and a 
+      hodgepodge of duplicate and uncoordinated device address codes left the 
+      little Macintosh icon's faces on the Monitor's screen with their eyes 
+      crossed and the system jammed. </P>
+      <P>&nbsp;&nbsp;Ultimately, PG&amp;E's controls group had to get this 
+      control-device polyglot integrated into a multilingual, telemetric SCADA 
+      system that would: </P>
+      <UL>
+        <LI>Provide the equipment performance data necessary for long-term 
+        trending and analysis, 
+        <LI>Provide the equipment-status data necessary to keep their equipment 
+        running using CBM, 
+        <LI>Be easy for field technicians to use and maintain, and 
+        <LI>Be remotely accessible by all necessary departments within PG&amp;E. 
+        </LI></UL>
+      <P><B>Developing the solution</B> </P>
+      <P><FONT color=#ffffff>..</FONT>DST Controls, a control systems 
+      integrator,was brought in to identify the controllers and field devices to 
+      be networked, categorize equipment communications requirements, and define 
+      the data-sets to be extracted from each device. DST then handed the 
+      resulting list of driver requirements to Diamond Process Applications (DPA, Santa Cruz, Calif.) for development. </P>
+      <P>&nbsp;&nbsp;The ultimate solution, however, was to take form in a 
+      protocol conversion device that would be easier and more versatile to use 
+      than the port expanders and translators that DST Controls has used 
+      previously. The solution had to allow PG&amp;E's new SCADA system to 
+      communicate with monitoring and control devices, which could not 
+      communicate, because of protocol and/or communication rate 
+      incompatibilities. It would also act as a "data concentrator," downline 
+      from the Mac-based host, that would extract data from the "mix-matched" 
+      field devices and store the data until polled by the host. </P>
+      <P>&nbsp;&nbsp;Initially, DPA took previously developed co-driver code 
+      sets and linked them with core code, creating a standalone system on a 486 
+      single-board computer. While PG&amp;E's custom driver library was being 
+      created, DST Controls defined how the acquired data would be displayed and 
+      archived, made up and installed the custom communications cables, and 
+      produced system documentation and operation and maintenance manuals. </P>
+      <P>&nbsp;&nbsp;An application-mirroring program also was added. This 
+      allowed the new data concentrator/protocol converter to be virtually 
+      superimposed on any PC in the system, via a modem, allowing 
+      troubleshooting and configuring to be done remotely. The turnkey system 
+      was then placed in an industrially hardened 486 PC enclosure and installed 
+      at PG&amp;E's Delevan, Calif. compressor station. </P>
+      <P>&nbsp;&nbsp;The protocol converter/data concentrator that first arrived 
+      at Delevan turned out to bethe prototype for what is now DPA's "plug and 
+      play" IB-8000 Industrial Communications Bridge. The unit is a 
+      multiprotocol converter/data concentrator for a wide range of industrial 
+      communications protocols used by various manufacturers of DCS, SCADA, RTU, 
+      PLC, single-loop controllers, monitoring equipment, andfield I/O devices. 
+      </P>
+      <P>&nbsp;&nbsp;The device allows protocol conversion from an uncommon to a 
+      common one, thereby allowing data transfer to a SCADA system whichdoes not 
+      have a driver for that protocol. When initially installed, the bridge 
+      allowed up to32 RS-232/485 serial ports with two network 
+      adapters--Ethernet and Arcnet--to be supported simultaneously. </P>
+      <P>&nbsp;&nbsp;Other control functions PG&amp;E required included the 
+      ability to concentrate data from multiple devices and have those data 
+      available to the requesting station. In PG&amp;E's case, this meant 
+      interfacing 30 RS-232 connections to a single port on a SCADA system (the 
+      Macintosh computer) and interfacing serial devices to a network using 
+      Ethernet or Arcnet and TCP/IP or Netbus. This capability allows user 
+      programs on a Unix or Microsoft Windows NT node to access plant-floor data 
+      using standard practice (socket calls). </P>
+      <P>&nbsp;&nbsp;PG&amp;E's inventory of controllers includes some "less 
+      than mainstream" equipment that also had to be part of the mini-telemetric 
+      network. Although the original SCADA package arrived at PG&amp;E already 
+      supporting the station's Allen-Bradley, GE Fanuc, and Modicon PLCs, two 
+      additional days were required to get stragglers online. </P>
+      <P>&nbsp;&nbsp;Aspects of the data concentrator that PG&amp;E found 
+      especially attractive were: </P>
+      <UL>
+        <LI>Ability to run on an inexpensive PC 
+        <LI>Data manipulation ability, which allows rescaling of analog data to 
+        meet the Monitor's display limitations 
+        <LI>Support for 50 serial ports 
+        <LI>Ethernet capability for TCP/IP or other protocols 
+        <LI>Ready acceptance of new drivers by the core program 
+        <LI>System scalability </LI></UL>
+      <P>&nbsp;&nbsp;The system has been running for over two years. At one 
+      compressor station it monitors over 500 data points from 11 different 
+      devices on five serial ports. The functions monitored include: </P>
+      <UL>
+        <LI>Turbine speed and hp output 
+        <LI>Gas pressure, temperature, and flow rate 
+        <LI>Control valve positions 
+        <LI>Duty cycles 
+        <LI>Gas detection system status 
+        <LI>Uninterruptible power supply status 
+        <LI>Fuel gas pressure and consumption rate 
+        <LI>Turbine bearing temperatures and gap readings 
+        <LI>Gas cooler inlet/outlet temperatures 
+        <LI>Gas filter differential pressure </LI></UL>
+      <P>&nbsp;&nbsp;Statistical analysis has shown that in the two years of 
+      operation, more than 13 million data transactions (over 1,400 million 
+      bytes) were processed with only 33 errors. </P>
+      <P>&nbsp;&nbsp;The capabilities of this mini-telemetric SCADA system, and 
+      its protocol conversion/data concentration kernel, united the numerous and 
+      disparate devices that bring natural gas to California. They also 
+      demonstrate that the innovative integration of new technology can allow 
+      preparation for the future while providing user-friendly systems necessary 
+      to keep the gas lines flowing now. </P>
+      <P><I>George Gaebler is a Gas Engineer at Pacific Gas and Electric in San 
+      Francisco, Calif.</I> </P>
+      <P><I>Read Hayward is vice president, Sales and Marketing at DST 
+      Controls, Benicia, Calif.</I> </P>
+      <p>&nbsp;</p>
+      <hr>
+      <hr>
+      <h1 align="center"><b>The soft heart of the system</b></h1>
+      <hr>
+      <p><font color="#ffffff">..</font>Software is key to the functionality of
+      the IB-8000 Industrial Communications Bridge, used by PG&amp;E in the
+      enhanced SCADA system. It is written in Microsoft C with low-level OEM
+      libraries purchased with the hardware in certain cases. There is a core
+      program that reads a configuration file on startup. All serial
+      communications from each port are buffered, i.e., all messages coming in
+      are put in a buffer--one per port--by an interrupt-driven I/O routine. All
+      outgoing messages are also placed in the buffer by the driver and are sent
+      by an interrupt-driven output routine.</p>
+      <p>&nbsp;&nbsp;The core program then calls each driver in turn in a tight
+      idle loop at least once every millisecond, and each driver handles as many
+      serial ports as have been allocated to it by the configuration file. Each
+      driver sends and receives messages out of every port simultaneously.</p>
+      <p>&nbsp;&nbsp;Part of the core program's responsibility is to act as an
+      human-machine interface (HMI), allowing the operator to view both
+      performance and error statistics. The IB-8000's software was developed to
+      run on standard 386 or higher PC hardware for several reasons:</p>
+      <ul>
+        <li>Ready availability of communications libraries and related software
+        <li>Availability of PC-oriented communication hardware
+        <li>Low development costs (no embedded debuggers or in-circuit emulators
+          are required)
+        <li>&quot;Open&quot; hardware requirements
+        <li>Ease of troubleshooting</li>
+      </ul>
+      <p><b>Trying something new</b></p>
+      <p><font color="#ffffff">..</font>Modbus port expanders, which were looked
+      at originally, have been around for a long while. Their role is to allow
+      multiple masters to access a single or multiple slave(s). A port expander
+      is required because Modbus (and many other protocols) usually allows only
+      a single master that requests data from all slave devices, so there was no
+      confusion on the network as to which device can talk, and when. Slaves
+      only respond to master requests.</p>
+      <p>&nbsp;&nbsp;This works well except for when two or more masters request
+      data from any PLC almost simultaneously. Since only one transaction can
+      occur on the network at a time, all the other masters are put on hold
+      until the first transaction is complete. This limits the bandwidth to one
+      message at a time (if all the slaves are on a single line). Spreading the
+      slaves over multiple ports eases the situation but does not solve it,
+      since two SCADA systems can still request data from the same PLC
+      simultaneously.</p>
+      <p>&nbsp;&nbsp;This situation degenerates rapidly when one of the slaves
+      fails. Since all requests for that slave are put on hold until various
+      parts of the system time out, there is a chain reaction that backs up all
+      the other SCADA systems. Even worse because of their time-outs, the SCADA
+      systems have a difficult time trying to establish which slave has failed,
+      or they can even be lulled into thinking an off-line slave is still
+      online.</p>
+      <p>&nbsp;&nbsp;The data concentrator approach eliminates this situation.
+      With poll-block caching, when the request from the master arrives, the
+      bridge first checks to see if there are data from the particular slave
+      station already in a buffer. If yes, and the data are &quot;fresh&quot;
+      enough, then the bridge responds immediately with these data. This saves
+      the time delay involved with polling the slave station.</p>
+      <p>&nbsp;&nbsp;If a buffer does not exist, one is automatically created. A
+      poll will take place immediately to bring in data, which is returned to
+      the master station. Data remain in the buffer for possible future
+      requests. Buffers created in this manner are also polled on regular
+      intervals in order to ensure that their data are as recent as possible. If
+      the data in a buffer is too old to be reliable, a poll request is
+      immediately generated. If this fails, then the system does not respond to
+      the master request at all, indicating to the master that the particular
+      slave station has gone off-line.</p>
+      <p>&nbsp;&nbsp;If a buffer is not accessed by a master within a given time
+      interval, then the buffer is removed from the poll list. The bridge
+      becomes a slave to the SCADA system and becomes a master to the PLCs while
+      buffering the data internally and effectively de-coupling the two sides.</p>
+      <p>The accompanying schematic illustrates the Monitor miniSCADA system
+      implemented for data collection that facilitates compressor station
+      monitoring.
+
+     </TD>
+</TR></TBODY></TABLE>
+
+
+
+</BODY>
+</HTML>

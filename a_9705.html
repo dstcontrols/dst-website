@@ -1,0 +1,613 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<script language="JavaScript1.4" SRC="lib.js" TYPE="text/javascript"></script>
+<title>DST Controls</title>
+<link rel="stylesheet" href="dststyle.css" TYPE="text/css">
+</head>
+<body bgcolor="#FFFFFF" bottommargin="0" rightmargin="20" topmargin="0" marginwidth="0" marginheight="0" leftmargin="20">
+<div align="center">
+
+<!--- NAV 3 Is ARTICLES --->
+<script language="JavaScript" type="text/javascript">makeNav(3,false);</script>
+<table width="760" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+
+<table width="760" bgcolor="#0000a0" border="0" cellpadding="4" cellspacing="0"><tr>
+<td class="feature">
+May 1997 Control Engineering
+</td>
+</tr>
+<tr><td class="feaTitle"><b>FEATURE ARTICLE</b></td></tr>
+</table>
+
+
+<table border="0" cellspacing="0" cellpadding="4">
+<tr>
+<td bgcolor="#efefef" valign="top" class="art">
+Wired!<br><br><br><br><br><br>
+<div class="artsub"><i>From schematic design to installation tips, here's how to get control signals from here to there and back again, predictably and reliably</i></div></td>
+<td valign="top" width="220"><b>Dick Johnson and Henry M. Morris, Control Engineering</b>
+<br><br>
+<img src="images/a_pci.gif" width="50" height="50">
+<br>
+<u><b>Keywords</b></u>:
+<div class="f1a">
+Process control & instrumentation<br>
+Batch control<br>
+Programmable logic controllers<br>
+Level control<br>
+Flow control</div>
+</td>
+</tr>
+<tr><td bgcolor="#0000a0" colspan="2" height="1"></td></tr>
+</table>
+
+<table border="0" cellspacing="0" cellpadding="0"><tr><td class="f2a">
+<br><br>
+<B>Question: </B>Team the world's most accurate instrumentation 
+            with the world's most powerful controllers and what do you have? 
+</P>
+            <P><B>Answer: </B>Not much. (Unless, of course, they're properly 
+            connected via a suitably fast, noise-free communication medium.) 
+</P>
+            <P><B>&nbsp;&nbsp;</B>Wire and cable, and more recently, optical 
+            fibers andeven wireless networks are the oft-neglected backbone of 
+            industrial control. And whether the application is discrete, batch, 
+            or process, bus-based or conventional analog, the same basic 
+            questions must be answered, says Neil Maffett,a senior principal 
+            engineer with Babcock and Wilcox,Lynchburg, Va. "A system integrator 
+            must deal with thesame basic wiring techniques," he says. </P>
+            <P><B>&nbsp;&nbsp;</B>The questions start with application 
+            specifics:<B> </B>How fast<B> </B>do signals need to be sent? What 
+            are potential sources of electrical noise? Will physical connections 
+            require insulation with special chemical resistance? Is there 
+            existing wiring that can be reused? </P>
+            <P>&nbsp;&nbsp;Then the chosen media--whether copper, fiber, or 
+            wireless--must be properly installed and maintained. Adherence to 
+            applicable codes and good engineering practice are key, according to 
+            Gary Coleman, production manager for Controllink Inc., an Algonquin, 
+            Ill.-based system integrator. General installation guidelines 
+            include adherence to Joint Industry Council (JIC) standards, the 
+            National Electric Code (NEC), as well as local codes, agrees 
+            B&amp;W's Mr. Maffett. </P>
+            <P>&nbsp;&nbsp;Retrofit applications with existing and perhaps 
+            reusable wiring bring with them both opportunities for cost savings 
+            and potential complications. "Do not trust existing documentation," 
+            Mr. Maffett cautions. "Verify and document the installation before 
+            starting any upgrade or expansion work," he adds. </P>
+            <P>&nbsp;<b>&nbsp;But in many cases, existing wiring--even up to 25 
+            years old---can be retained, says Bill Southard, president of DST 
+            Controls, Benicia, Calif. In these situations, however, good 
+            engineering practice dictates that its integrity (both functional 
+            and physical) be verified. A thorough check of existing wiring can 
+            often eliminate need for removal and replacement. This also helps 
+            eliminate the possibility of introducing an error into a properly 
+            functioning system. "Surprises always cost money," Mr. Southard 
+            says.</b> </P>
+            <P>&nbsp;&nbsp;And while a lot of attention has been lavished (and 
+            media ink spilled) on the use of fieldbuses and device-level 
+            networks, not all users are rushing aboard. "Bus-based control 
+            installations have not been a priority with our customers," says 
+            Controllink's Mr. Coleman. "As a matter of fact, all of our current 
+            projects involve discrete wiring. And, we do not see any bus 
+            projects on the horizon," he states. "The companies we do business 
+            with are going with tried-and-true analog technology at this time." 
+            </P>
+            <P>&nbsp;&nbsp;On the other hand, about 10% of system integrator DST 
+            Controls' installations are embracing bus technology. While there 
+            has been much interest shown by DST's client base, the technology 
+            has proven to be either too new or too unproven for most, Mr. 
+            Southard says. Although many users and system integrators would like 
+            to gain experience in applying device-level networks, short 
+            installation schedules and risk-aversion have been limiting factors. 
+            </P>
+            <P><B>Copper, optics, or no wires at all?</B> </P>
+            <P><FONT color=#ffffff>..</FONT>Which medium is used will depends 
+            directly on the application. Choices include metal wire (usually 
+            copper), fiber optics, and wireless technologies (e.g., infrared 
+            broadcast, radio frequency, and power line carrier transmission--see 
+            sidebar, "Where Wires Fear to Tread"). Each has its virtues and 
+            weaknesses. </P>
+            <P>&nbsp;&nbsp;Although most users and integrators feel at home 
+            using standard wire and cable, fiber optics is becoming more 
+            prevalent. Intrinsic immunity to electrical noise is a key selling 
+            point. Easier and more reliable field splices/termination of 
+            fiber-optic cables is also driving their use in industrial 
+            applications. </P>
+            <P>&nbsp;&nbsp;However, much of the wire and cable available today 
+            competes very well with fiber optics in many areas. Insulation and 
+            shielding are now available to handle a full range of environmental 
+            concerns including temperature extremes, moisture and humidity, 
+            elevated pressures, all manner of radio-frequency and 
+            electromagnetic interference (RFI/EMI), as well as physical abuse 
+            from shock, vibration, and flexure. </P>
+            <P>&nbsp;&nbsp;For wire or fiber, choice of jacket material should 
+            take into account any chemicals likely to be encountered in the 
+            application. Hostile agents can be drawn into the jacketing (causing 
+            it to "balloon," soften, and ultimately disintegrate) or draw 
+            chemicals from the jacketing material, causing it to become brittle. 
+            Specialty jacketing also is available, such as UV-resistant 
+            communication cable or hydrocarbon-resistant insulation for wire 
+            that must share a transfer line with grease. </P>
+            <P><B>Wire alternatives</B> </P>
+            <P><FONT color=#ffffff>..</FONT>Only a few years ago, picking wire 
+            was simple. There was either control or power wiring. Even the line 
+            dividing them was very soft, since in a 115 V ac control 
+            environment, control signals were sometimes strong enough to provide 
+            power. </P>
+            <P>&nbsp;&nbsp;But the needs of industry have changed. The 
+            proliferation of machining centers and robots demanded more flexible 
+            (literally) wires and cables. Also, the move to 24 V dc control 
+            systems required smaller-gage wire and shielded control wires. These 
+            conditions created a new wire product group, electronic wires. </P>
+            <P>&nbsp;&nbsp;Still another group of wire products evolved when 
+            fieldbus technology came into play. "When wiring a plant, it's now 
+            necessary to consider all of the wire categories and how they 
+            interact," says Udo Lutze, president of wire manufacturer Lutze, 
+            Inc. in Charlotte, N.C. Wires, other than those specialized 
+            instrumentation wires (e.g., thermocouple leads) are categorized by 
+            Mr. Lutze into five groups: </P>
+            <UL>
+              <LI>Power wires: High-amperage large gage wires against which 
+              instrumentation and data transmission wires may need to be 
+              shielded; 
+              <LI>Control wires: Medium gage wires used to carry 115 V ac or 24 
+              V dc control signals (possibly shielded); 
+              <LI>Robotic wires: Highly flexible wires designed for constant 
+              motion in C-tracks or wire carriers; 
+              <LI>Electronic wires: Low-voltage wires that normally are 
+              shielded; and, 
+              <LI>Fieldbus wires: Shielded wires and cables designed to protect 
+              and transmit high-bandwidth control signals. </LI></UL>
+            <P><B>Can't keep a good LAN down</B> </P>
+            <P><FONT color=#ffffff>..</FONT>"As the bandwidth requirements 
+            increase, users are looking to fiber technology as the solution." 
+            says engineer Eric Bulington, at Belden Wire &amp; Cable Co., 
+            Richmond, Ind. "Fiber is becoming the choice because of its 
+            versatile construction types and variety of installation 
+            possibilities." </P>
+            <P>&nbsp;&nbsp;There are three popular myths about fiber-optic 
+            cables that traditionally have kept them from wider application: 
+</P>
+            <UL>
+              <LI>Myth: Fiber is fragile. Reality: Today's optical cables offer 
+              greater tensile strength than copper or steel wires of the same 
+              diameter. 
+              <LI>Myth: Fiber is hard to work with. Reality: While not as 
+              straightforward as wire connections, today's fiber connections 
+              require fewer parts, and the tools and techniques have evolved to 
+              make terminating fiber optics easier and less time-consuming. 
+              <LI>Myth: Fiber is expensive. Reality: For the past several years, 
+              fiber-optic cable and related components have been comparably 
+              priced to their copper-wire counterparts. </LI></UL>
+            <P><B>Carrier and conduit alternatives</B> </P>
+            <P><FONT color=#ffffff>..</FONT>When it comes time to actually 
+            install the selected communication medium, adherence to applicable 
+            codes and good engineering practice become primary. Basic techniques 
+            often vary by geographic region, says Controllink's Mr. Coleman. For 
+            example, installations in the Northern U.S. tend to use mostly 
+            conduit wireways, whereas installations in the milder Southern 
+            climates usually combine cable trays with conduit drops. In addition 
+            to carrier selection, segregation of power from instrumentation 
+            wiring and proper grounding must also be considered. </P>
+            <P>&nbsp;&nbsp;Wire and fiber-optic cables are pulled through a 
+            variety of mechanical carriers. These include conduit, cable trays, 
+            raceways, and cable carriers. Also, bus bars are often used to 
+            simplify wiring in enclosures and panels. </P>
+            <P>&nbsp;&nbsp;You can't pull many wires through conduit, so it has 
+            limited applicability in many industrial situations. When pulling 
+            wires in conduit, three different configurations of the wires can 
+            occur--triangular, cradled, and jammed. Certain ratios of cable 
+            diameter to conduit diameter are more likely to cause problems. </P>
+            <P>&nbsp;&nbsp;Cable trays allow many cables to be pulled in the 
+            same general area and at different times. Concerns include: 
+            correctly calculated data and adherence to the design limits of the 
+            cables being installed with respect to tensions, sidewall pressures, 
+            and minimum bending radii. Damage occurs most frequently as a result 
+            of improper handling before or during installation, or inadequate 
+            protection after installation. </P>
+            <P>&nbsp;&nbsp;Raceways are basically covered cable trays. In cable 
+            trays, cables can be piled on top of each other with little or no 
+            concern about stacking height. This is not true with raceways. As in 
+            conduit, there's only so much cross sectional space available. </P>
+            <P>&nbsp;&nbsp;Cable carriers are flexible, and play an important 
+            role in prolonging the life of moving cables. Installing them may 
+            seem straightforward, but follow manufacturers' data sheets or 
+            catalogs carefully. </P>
+            <P>&nbsp;&nbsp;As explained by Greg Binder, senior product marketing 
+            engineer, Rockwell Automation/Allen-Bradley Co. (Milwaukee, Wis.), 
+            bus bars are metal bars that provide structural support and line 
+            side electrical power to motor control components, reducing the 
+            number of wires, holes, and mounting screws. Components can be added 
+            and removed without extensive rewiring, reducing maintenance costs 
+            throughout the life of the control system. </P>
+            <P><B>Shield against noise, ground only once</B> </P>
+            <P><FONT color=#ffffff>..</FONT>Wires and cables should also be 
+            routed in such a way as to minimize EMI/RFI. Potential sources of 
+            data-disrupting noise include electric arc welders, heaters, motors, 
+            power relays/contactors, and high-voltage power lines. Some cables 
+            themselves create electrical noise while others are susceptible to 
+            it. Fieldbus and other control and data carrying cables should be 
+            protected against power cables. Shielding helps, but ideally power 
+            and data cables should be run in different locations; separate 
+            control and power and you're safe. </P>
+            <P>&nbsp;&nbsp;In situations where conductors must cross, they 
+            should be fixed by clamps or cable ties at 90&deg; to each other to 
+            minimize electrical interference caused by the magnetic flux. </P>
+            <P>&nbsp;&nbsp;"Because no shielding is 100% effective, filtering is 
+            becoming commonplace," cautions Bill Mango, national sales manager 
+            of connectors for Richard Hirschmann of America, Inc. (Riverdale, 
+            N.J.). Thus, Mr. Mango explains, Hirschmann is getting more requests 
+            for connector products to include built-in filters. </P>
+            <P>&nbsp;&nbsp;Improper grounding is another potential source of 
+            data transmission problems. "Signal wires have the potential for 
+            being grounded in more than one location," says Dave Brooks, vp of 
+            marketing, Weidm&uuml;ller (Latham, N.Y.). "Typically, signal wires are 
+            grounded at only one location, usually at the input to the bus 
+            system. However, this is not always possible. If the ground at the 
+            transmitter is different from the ground at the bus system, there is 
+            a potential for a 'ground loop.' Because ground is used as a 
+            reference point for the signal, problems with accuracy can develop. 
+            If there are different grounds, there are different reference 
+            points." </P>
+            <P>&nbsp;&nbsp;Separation of different grounds can be achieved with 
+            isolators, which break the continuity of the loop while isolating 
+            the grounds. Signal isolators in the same housing as terminal blocks 
+            provide separation without taking up additional space. </P>
+            <P><B>A careful pull avoids damage</B> </P>
+            <P><FONT color=#ffffff>..</FONT>When it comes time to actually pull 
+            your carefully specified wire or cable, proper handling and planning 
+            can prevent problems. Indeed, many failures of low-voltage cables 
+            have their roots in damage incurred during installation, says 
+            Michael Kopchik, Jr., senior technical consultant, Rome Cable Corp. 
+            (Rome, N.Y.). "This damage is usually attributed to improper 
+            cable-handling procedures or improper design of the conduit or other 
+            raceway system. However, the damage is not always immediately 
+            apparent. Undetected, it could result in cable failure months or 
+            years after installation. At this point, replacement is usually 
+            difficult, prolonged, and quite costly." </P>
+            <P>&nbsp;&nbsp;Some advance preparation also can help. "Make sure 
+            there are no twists, bends, or kinks in the cable," recommends 
+            Gerald Pochurek, director of engineering, Olflex Wire &amp; Cable, 
+            Inc. (Fairfield, N.J.). "Lay the cable out for one to two hours 
+            before installation to dissipate any stress remaining from cable 
+            storage." </P>
+            <P>&nbsp;&nbsp;Although rough and improper handling during the 
+            pull-in process is often attributed to carelessness, much results 
+            from ignorance and inexperience. Adhering to a few basic 
+            installation guidelines greatly reduces the potential for damage 
+            during the pull: </P>
+            <UL>
+              <LI>Follow manufacturer's guidelines regarding allowable sizes and 
+              conductors materials, allowable tension, and number of bends, etc. 
+              <BR>
+              <LI>Let the cable warm up. Insulation and jacketing lose 
+              flexibility and becomebrittle in cold weather. In colder 
+              environments, cables should be stored in awarm location for at 
+              least 24 hrs before installation.<BR>
+              <LI>Clean the conduit/raceway/cable tray before beginning the 
+              pull. Waste materials frequently cause physical damage when cables 
+              are pulled in. Waste removal can be done by pulling a mandrel or 
+              plug through the conduit, while checking at each opening along the 
+              route and removing any foreign matter dislodged at condulets or 
+              pullboxes. Pulling a clean cloth/swab to wipe out any remaining 
+              debris complete the procedure.<BR>
+              <LI>When pulling multiple cables, the pulling eye or basket should 
+              be equipped with a swivel. Free rotation is vital to accommodate 
+              the unequal tensions created by multiple cables.<BR>
+              <LI>Use steel lines only in steel raceways. A stranded steel line 
+              can saw into aluminum or nonmetallic raceways at bends along the 
+              route, leaving sharp edges that can damage the cable. Manila hemp 
+              or a synthetic fiber rope that doesn't stretch is best for pulling 
+              in nonsteel conduit. Don't use materials such as nylon for pull 
+              lines because they stretch, resulting in uneven pulling tension 
+              and erratic cable surges.<BR>
+              <LI>Lubricate, lubricate, lubricate. An approved lubricant should 
+              be applied continuously and liberally throughout the pulling 
+              process to reduce friction between the cable jacket and cable 
+              tray. For long or difficult pulls, lubricant should also be 
+              applied to the in-side of the raceway at all accessible points 
+              throughout the pull, such as con-duit bodies.<BR>
+              <LI>Plan twice, pull once. The pull should be planned so that a 
+              continuous, nonstop pulling rate is maintained. Stopping in 
+              mid-pull should be avoided. On long, difficult pulls, use a 
+              two-way radios to communicate between the feed and pulling points. 
+              </LI></UL>
+            <P>&nbsp;&nbsp;Finally, once the wire or cable pull is complete, 
+            don't neglect the importance of proper connections, cautions Hans 
+            Buhler, P.E., a senior electrical engineer with Power Engineers Inc. 
+            (Hadley, Ida.). "Do not overlook wire and cable termination. 
+            Properly specified provisions for stress relief at the terminations 
+            are important. Most failures on wiring and cabling systems take 
+            place at termination points," he says. Likewise, positive grounding 
+            must be ensured at the termination point. Remember, shielding is 
+            useless if not grounded: a wire that comes loose is no use at all. 
+            </P>
+            <HR width="90%">
+
+            <H2 align=center><A name=Is><B>Is</B></A><B> that old wire up to 
+            fieldbus?</B> </H2>
+            <P><FONT color=#ffffff>..</FONT>Preparing for the day of digital 
+            fieldbus communications, but not sure if your wiring is up to snuff? 
+            Because virtually all versions of the fieldbus concept's physical 
+            layer already are specified in the ISA's SP50 standard, Bob Crowder, 
+            president of Ship Star Associates (Newark, Del.), suggests the 
+            following test to determine the suitability of your old wire: </P>
+            <P>&nbsp;&nbsp;Connect the wires into a "chicken foot" at the 
+            junction box and install terminators (100 {OMEGA} &plusmn;1% resistor in 
+            series with a nonpolarized 2 &micro;F &plusmn;20% 50 V working voltage 
+            capacitor). Direct current leakage through the terminator should be 
+            less than or equal to 100 &micro;A and the terminator should be 
+            nonpolarized. </P>
+            <P>&nbsp;&nbsp;Use an impedance tester to verify 100{OMEGA} &plusmn;20% 
+            over the frequency range from 8 to 50 kHz. (SP50 calls for a maximum 
+            dc resistance of 22 {OMEGA}/km at 25 &deg;C.) </P>
+            <P>&nbsp;&nbsp;If the existing wiring is within the above 
+            specifications, Mr. Crowder is confident that it shouldn't have to 
+            be stripped out and replaced in order to run fieldbus protocols </P>
+            <HR width="90%">
+
+            <H2 align=center><A name=Schematic><B>Schematic</B></A><B> software 
+            jumpstarts design work</B> </H2>
+            <H4 align=center><I>Electrical design packages help improve 
+            productivity, cut down on tedious work, and keep wires from getting 
+            crossed in the process.</I> </H4>
+            <P><FONT color=#ffffff>..</FONT>Still using a mechanical 
+            computer-aided drafting (CAD) package to execute electrical 
+            schematics? Want to have more fun on the job? Deliver more accurate 
+            work in less time? Well, it may be time to go beyond generic CAD in 
+            favor of a software package specifically designed to help streamline 
+            electrical schematic development. </P>
+            <P>&nbsp;&nbsp;"AutoCAD itself is not made for what we do," explains 
+            John Holland, a project engineer for system integrator and panel 
+            builder K&amp;R Automation Corp., Warren, Mich. AutoCAD, from San 
+            Rafael, Calif.-based Autodesk, is the industry standard mechanical 
+            CAD package for PCs. "It's a great drawing package, but it doesn't 
+            help you think," says Mr. Holland. </P>
+            <P>&nbsp;&nbsp;Instead of using AutoCAD alone, K&amp;R uses 
+            Promis-e, anAutoCAD add-on package from ECT International 
+            (Brookfield, Wis.), that customizes AutoCAD's primitive mechanical 
+            drawing strengths (lines, arcs, etc.) to the needs of electrical 
+            controls designers. </P>
+            <P>&nbsp;&nbsp;"It makes our jobs much more interesting," says Mr. 
+            Holland, who once spent an entire year error-checking the schematics 
+            for an automated conveyor system--a task that is now performed 
+            automatically as designs are developed. "The software does the 
+            things that everybody hates to do. Plus, accuracy and consistency go 
+            way up," he remarks. </P>
+            <P><B>Beyond mechanical CAD</B> </P>
+            <P><FONT color=#ffffff>..</FONT>So just what do these packages do 
+            that AutoCAD doesn't? First and most obvious are the built-in tools 
+            designed to make drawing electrical schematics easier. Libraries of 
+            icons represent electrical control entities as well as specific 
+            vendors' parts. "We had to keep log books of parts, but now we just 
+            let the software do that," says Jeff Shellenberger, electrical 
+            designer and system administrator for IPEC/Planar, a Phoenix, 
+            Ariz.-based builder of semiconductor processing machines. 
+            Drag-and-drop, snap-to connections are automatically assumed to be 
+            wires and numbered accordingly. Estimates of savings in drawing time 
+            alone range from 15% for sophisticated AutoCAD users to as high as 
+            70% for the uninitiated. </P>
+            <P>&nbsp;&nbsp;Beyond drawing time, the real payoff comes in taking 
+            advantage of the design data that underlies the schematic. 
+            "Electrical controls design is not about pictures, its about 
+            information," says Steve Bernier, an applications engineer with 
+            EPLAN/Wiechers &amp; Partner, a software developer that markets a 
+            standalone (AutoCAD independent) package from its offices in 
+            Brookfield, Wis. "A circle with a line on each side may represent a 
+            coil, but that coil has a manufacturer, a part number, contactor 
+            cross references, and connecting wire information that CAD packages 
+            do not capture," he says. </P>
+            <P>&nbsp;&nbsp;"The real productivity comes from the extraction of 
+            information from those drawings," adds Jamie Howe, marketing manager 
+            for VIA Development Corp., a schematic software developer based in 
+            Marion, Ind. VIA user Sherry Wolfe, a supervising design engineer at 
+            Armstrong World Industries, Lancaster, Pa., concurs, identifying 
+            "automatic extraction of reports such as a bill of materials" as the 
+            software's key benefit. "We can extract data from any drawing that 
+            has attributes," she says. Underlying information also can be used 
+            to automatically generate wire lists, cable layouts, wire labels, 
+            panel layouts, and even purchase orders for accounting. </P>
+            <P>&nbsp;&nbsp;Automatic cross-referencing and error-checking, 
+            whether performed continuously, upon file-saving, or as a separate 
+            subroutine, also can help schematic software earn its keep. "The 
+            later errors show up, the more expensive they are," says Felicia 
+            Moore, Mayfield Village, Ohio-based program manager for Rockwell 
+            Software's RSWires. (To date, the company's RSWires software is 
+            largely based on a private-label agreement with ECT International, 
+            with Rockwell Automation's extensive global distribution and support 
+            network the key differentiator.) </P>
+            <P><B>What to look for</B> </P>
+            <P><FONT color=#ffffff>..</FONT>In addition to the typical 
+            laundry-list of bells and whistles that stack up slightly 
+            differently from package to package, several overarching issues need 
+            to be considered when selecting an electrical schematic software 
+            package. Primary among these are open hooks for integration with 
+            other software packages and databases, flexibility for individual 
+            customization, and ease of use and implementation. </P>
+            <P>&nbsp;&nbsp;In terms of openness, import and export compatibility 
+            with accepted graphics and database formats are essential. "A 
+            computer-aided engineering package should be able to draw 
+            information into the design through ODBC from your parts library," 
+            says EPAN's Mr. Bernier. "It should also be able to take virtually 
+            any project information and export it to an ASCII file, to feed into 
+            downstream systems such as PLC [programmable logic controller] 
+            programming software or a manufacturing resources planning system 
+            for ordering." </P>
+            <P>&nbsp;&nbsp;Links with PLC programming software are an especially 
+            (ahem) logical synergy for electrical schematic software developers. 
+            "There are overlaps in the information involved and sometimes it's 
+            tough to make sure they match," says Rockwell Software's Ms. Moore. 
+            For example, if the wire list documentation is lost, several 
+            packages can recreate an I/O list from the programming logic itself. 
+            Growing compatibility with PC-based logic engines as well as design 
+            tools tailored to device-level networks are other trends to watch. 
+            </P>
+            <P>&nbsp;&nbsp;Schematic software should also provide sufficient 
+            flexibility so that users don't have to change the way they develop 
+            their documentation. "Few companies appreciate being told that they 
+            must do things a certain way, and standards differ from one company 
+            to another," reports VIA's Mr. Howe. "Flexibility is key," says 
+            Harold Jezierski, president of Aucotec, Buffalo Grove, Ill. "for 
+            example, you need to be able to generate wire lists that match the 
+            user's manufacturing practices." </P>
+            <P>&nbsp; "Inevitably, there are little things they want to 
+            customize," adds Tom Stawicki, TCS president. "For these situations, 
+            it's important to have a high-level, controls-specific language for 
+            developing custom functions." </P>
+            <P>&nbsp;&nbsp;The final major considerations are ease of 
+            implementation and ease of use. Few new ways of doing things are 
+            faster overnight: How long will it take to get back to and exceed a 
+            break-even level of productivity? Drafters and designers who use the 
+            tools everyday are one thing, but for the engineer or other 
+            occasional user who may shift from design to implementation, then 
+            back to design, intuitive use is especially important. </P>
+            <P><B>AutoCAD add-on or standalone?</B> </P>
+            <P><FONT color=#ffffff>..</FONT>The best answer to this question may 
+            well be in the eyes of the beholder. On one side, many users 
+            currently evaluating electrical schematic software are AutoCAD 
+            users. For example, ECT president Arthur Sawall estimates that 90% 
+            of his company's inquiries come from the already AutoCAD-initiated. 
+            "Standalone is a tough sell," he says, "I'm convinced that Autodesk 
+            drives the market." </P>
+            <P>&nbsp;&nbsp;On the other hand, "A big feature that people like is 
+            the true Windows interface,' says EPLAN's Mr. Bernier of his 
+            company's stand-alone offering. </P>
+            <P>&nbsp;&nbsp;"It depends on whether users are engineers or 
+            designer and drafters," admits Rockwell Software's Ms. Moore. 
+            "Designers and drafters are familiar with AutoCAD, but engineers may 
+            be more familiar with Excel--they're more used to the Microsoft 
+            environment," she says. As a result, AutoCAD-based developers such 
+            Rockwell and ECT continue to hone the overall usability of their 
+            software, attempting to balance the best of both worlds. </P>
+            <P>&nbsp;&nbsp;In the not-too-distant future, however, this may 
+            prove a nonissue. After a decidedly late move to Windows from DOS 
+            with its AutoCAD 13 release, Autodesk and Microsoft now appear to 
+            have a much closer working relationship that should be reflected in 
+            AutoCAD 14, currently under development. </P>
+            <P>&nbsp;&nbsp;For most of the electrical schematic software 
+            alternatives, pricing ranges from $5,000-$10,000 for a full-featured 
+            version. Limited functionality, view-only licenses also are 
+            available typically starting at $500. But for most users, pricing is 
+            a distant secondary consideration to features and platform
+            familiarity. With the exception, that is, of companies that are 
+            looking beyond their "core" CAD users to "adjacent" users who could 
+            benefit from technical schematic technology. For those users, who
+            may 
+            outnumber core users 10 to one, a full-blown electrical schematic 
+            package (much less a $3,500 AutoCAD license) simply isn't feasible. 
+            </P>
+            <P>&nbsp;&nbsp;That's where a new breed of mass-market schematic 
+            software tools such as Seattle-based Visio Corp.'s Visio Technical 
+            may be suitable. Not a drawing package, but not an electrical 
+            controls package either, the $399 Visio is designed for a broad 
+            range of design/drafting applications that employ a high degree of 
+            predefined symbol content. </P>
+            <P>&nbsp;&nbsp;Wayne Bandy, an electrical and instrumentation 
+            systems consultant based in Squaw Valley, Calif., has been involved 
+            in an Exxon project where Visio Technical was used to bridge the gap 
+            between the field technicians installing control systems and the 
+            professional engineers who designed and approved them. "Full AutoCAD 
+            wasn't feasible for the field, so we put Visio on industrial 
+            computers; technicians could make as-built changes to the drawings 
+            right there and then." The changes were then reviewed and stamped by 
+            the legally responsible professional engineers. "Visio is good for 
+            keeping separation between the technical and professional sides of 
+            the house," Mr. Bandy says. </P>
+            <P>&nbsp;&nbsp;Generic technical schematic tools like Visio also 
+            hold the promise of becoming a more suitable platform alternative to 
+            AutoCAD for niche products such as electrical controls. "We know the 
+            mass market, but because the technology is so programmable, third 
+            parties have the power and flexibility to do develop their own 
+            custom libraries," says Dirk Meyer, Visio Technical product 
+            marketing manager. </P>
+            <P><B>Objects are cost of entry</B> </P>
+            <P><FONT color=#ffffff>..</FONT>Essentially all of the reasons for 
+            using electrical schematic software instead of a mechanical CAD 
+            package derive from the concept of object orientation. Pictures must 
+            retain the properties of the devices they represent, and connecting 
+            lines must behave like real-world wires. </P>
+            <P>&nbsp;&nbsp;"I need attributes in my CAE tools," summarizes an 
+            engineer working for one of the Big Three car-makers. "Instead of a 
+            dumb drawing, I need objects that have attributes." </P>
+            <P>&nbsp;&nbsp;In part because it already has charted a course 
+            independent of AutoCAD, EPLAN already uses an object-oriented 
+            database engine. But Autodesk (following Microsoft's lead) and all 
+            of the AutoCAD-based electrical controls suppliers (following 
+            Autodesk's lead) will incorporate increasing amounts of object 
+            technology into their next-generation packages. </P>
+            <P>&nbsp;&nbsp;"Currently, users are forced into a top-down approach 
+            to control system design, starting with the schematic," comments 
+            TCS' Mr. Stawicki. "Users now want to be able to attack the design 
+            problem from a number of different angles." For example, to start 
+            with a function chart or parts list and work toward a schematic. 
+            "Object-oriented databases make this possible." </P>
+            <HR width="90%">
+
+            <H2 align=center><A name=Where><B>Where</B></A><B> wires fear to 
+            tread</B> </H2>
+            <P><FONT color=#ffffff>..</FONT>The relentless advance of networking 
+            technology has lead to the emergence of wireless communication 
+            options that can be used to connect remote parts of the process to 
+            the rest of the plant. They're used in those cases where it's 
+            impractical or impossible to connect nodes using wire, cables, or 
+            fiber optics. Radio frequency data links, infrared data links, and 
+            powerline communications techniques are already in use daily in many 
+            industrial applications. </P>
+            <P><B>Radio frequency</B> </P>
+            <P><FONT color=#ffffff>..</FONT>There are several types of radio 
+            frequency (RF) data transmission systems on the market. Some use the 
+            tried-and-true, and well-understood amplitude or frequency 
+            modulation techniques. However, new families of digital techniques 
+            have entered the market. These are commonly grouped under the 
+            heading "spread spectrum." </P>
+            <P>&nbsp;&nbsp;Spread spectrum (SS) RF networks are playing a 
+            growing role in the connection of today's sensors, actuators, and 
+            control systems. Essentially, SS is a technique in which a 
+            transmitted signal is spread over a frequency range that is greater 
+            than the minimum bandwidth normally required for information 
+            transmis-sion. The purpose is to improve the bit error rate in the 
+            presence of noise or interference. Other advantages of the SS 
+            approach include reduced interference with other signals, resistance 
+            to jamming, improved privacy, and the ability for multiple users to 
+            share the same channel. </P>
+            <P><B>Infrared</B> </P>
+            <P><FONT color=#ffffff>..</FONT>We're all familiar with the infrared 
+            (IR) remote controller so commonplace for television and stereo 
+            components. Less known is the use of the infrared spectrum for data 
+            transmission. </P>
+            <P>&nbsp;&nbsp;Applicable to both stationary and semimobile uses, 
+            infrared data transmission converts electrical data pulses into 
+            light signals, and back into electrical pulses on the receiving end. 
+            Such a network is contactless since the transmission is optical 
+            instead of electrical. </P>
+            <P>&nbsp;&nbsp;Optical data links are very real. Taking an example 
+            that's close to home, RDI Software, a software development company 
+            headquartered in the building next to Control Engineering, has 
+            expanded, taking space in the same building where this magazine is 
+            produced. The offices in the two buildings are connected by a 
+            laser-driven, high-speed, infrared data link that spans a distance 
+            close to that of a football field. This saves the on-going expense 
+            of using a dedicated phone line to interconnect the two sites while 
+            enhancing the security of the data transmission. The only 
+            interruption might be due to an occasional bird flying through the 
+            beam. </P>
+            <P><B>Powerline</B> </P>
+            <P><FONT color=#ffffff>..</FONT>Many industrial applications already 
+            are supplied with electrical power. The idea of powerline 
+            communications is to use this wire to send data, too. "Reliable data 
+            communications with rates to 100 kbps over existing power lines is 
+            possible using a patented spread-spectrum technique," says Eric 
+            Hughes, marketing manager for Adaptive Networks, Inc. (Brighton, 
+            Mass.) "The signals can be transmitted over ac or dc power lines 
+            from 110 to 480 V, 50/60 Hz and can be carried by multiphase lines 
+            as well. Distances up to four miles are practical and up to 65,000 
+            nodes can be connected to the same network." </P>
+</td></tr></table>
+
+
+</td></tr></table>
+<script language="JavaScript" TYPE="text/javascript">makeFooter(0);</script>
+</div></body></html>

@@ -1,0 +1,20 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY onload = "redirect()">
+<script type="text/javascript" language="JavaScript">
+function redirect() {
+var url640x480 = "index640.htm";
+var url800x600 = "index800.htm";
+var url1024x768 = "index1024.htm";
+if ((screen.width == 640) && (screen.height == 480)) 
+window.location.href= url640x480;
+else if ((screen.width == 800) && (screen.height == 600))
+window.location.href= url800x600;
+else if ((screen.width == 1024) && (screen.height == 768))
+window.location.href= url1024x768;
+else window.location.href= url640x480;
+} 
+</script>
+</BODY>
+</HTML>

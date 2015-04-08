@@ -1,0 +1,8 @@
+# Access file 
+order allow,deny 
+allow from all 
+require valid-user 
+Authname DirectoryName 
+AuthPAM_Enabled off 
+Authtype Basic 
+AuthUserFile /home/sites/site56/web/airliquide/.htpasswd 

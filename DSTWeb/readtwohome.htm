@@ -1,0 +1,278 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Experience</TITLE>
+<META content="text/html; charset=iso8859-1" http-equiv=Content-Type>
+<STYLE type=text/css>A:link {
+	COLOR: #003399
+}
+A:visited {
+	COLOR: #800080
+}
+A:hover {
+	COLOR: #ff3300
+}
+</STYLE>
+</head>
+
+<BODY>
+
+
+
+<TABLE border=0 cellPadding=0 cellSpacing=0>
+   <TR>
+    <TD colSpan=2>
+      <TABLE border=0 width=100%>
+        <TBODY>
+        <TR>
+          <TD bgColor=#0000a0 width=100%><FONT color=#ffffff
+            face=Arial><SMALL><SMALL>July 1996&nbsp; Control
+            Engineering</SMALL><BR><STRONG>FEATURE
+            ARTICLE</STRONG></SMALL></FONT></TD></TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD vAlign=top>
+      <TABLE border=0>
+    		<TR>
+          <TD bgColor=#c0c0c0 vAlign=top><STRONG><FONT
+            face=Arial><BIG><BIG><B>Batch Control for that <BR>Absolutely
+      Fail-Safe Process</B> </BIG></BIG></FONT></STRONG>
+
+       <BR><BR> <BR><BR>    <P><STRONG><EM><SMALL>Hazardous gas distribution uses batching logic for
+      'clean-in-place' purge routines to insure life safety and product
+      quality in silicon wafer fabrication plants.</SMALL></EM></STRONG></P></TD>
+          <TD vAlign=top><STRONG><FONT face=Arial><SMALL>Read Hayward and Geoff Love,<BR>DST Controls,
+            Benica, Calif. </SMALL></FONT></STRONG>
+            <P><IMG alt="pci.gif (1656 bytes)" src="../images/pci.gif" width="50" height="50"><FONT
+            face=Arial><BR><STRONG><SMALL><U>Keywords</U>:</SMALL></STRONG><BR><SMALL><SMALL>Process
+            control &amp; instrumentation</SMALL><BR><SMALL>Batch
+            control</SMALL><BR><SMALL>Programmable logic
+            controllers</SMALL><BR><SMALL>Level control</SMALL><BR><SMALL>Flow
+            control</SMALL></SMALL></FONT></P></TD></TR>
+        <TR>
+          <TD bgColor=#0000a0 colSpan=2 height=1 vAlign=top><SPACER
+            height="1" type="block"></TD></TR></TABLE>
+
+ <P align=justify><FONT face=Arial>
+      <IMG src="../images/title.jpg" align=left width="300" height="216"><B>W</B>hat do the gases silane and arsine look like and smell like? In
+      either case, you don't want to know.
+      <P>&nbsp;&nbsp;Silane is pyrophoric, so the instant this ex-NASA
+      rocket-fuel accelerant gets out of the bottle and contacts air or any
+      other oxygenated compound, it spontaneously ignites or explodes. As for
+      arsine, OSHA has assigned it a PEL (Permissible Exposure Limit) of 0.05
+      ppm, which means that more than one part in 20 million can be toxic to
+      humans. Anyone catching a whiff of arsine, sufficient to detect its odor,
+      had better blurt out their findings fast because that person will shortly
+      be dead. </P>
+      <P>&nbsp;&nbsp;Silane and arsine, and their often equally nasty siblings,
+      comprise a family of specialty gases used extensively in the treatment of
+      semiconductor media during the integrated-circuit fabrication process.
+      Silicon wafer fabrication facilities, known as &quot;fabs,&quot; apply these gases
+      to silicon wafers in arcane processes such as "etching," "doping," and
+      "deposition." </P>
+      <P>&nbsp;&nbsp;The control of process gases during wafer fabrication is
+      hypercritical for three reasons: 1) life safety; 2)material cost (the
+      hazardous nature and high purity requirements of these gases make them
+      expensive to produce); and 3) quality of the final semiconductor product
+      (contamination by only one errant molecule in a critical process gas can
+      defect a single chip; a batch-wide, gas-purity mishap can ruin a million
+      dollars worth of chips). </P>
+      <P>&nbsp;&nbsp;Air Liquide Electronics (ALE, Fremont, Calif.), supplies
+      specialty gas and gas distribution hardware to the electronics industry.
+      "Distribution hardware" refers to manifolding, valving, tubing, and
+      related controls that actually convey the gas to the fab processes. </P>
+      <P>&nbsp;&nbsp;The distribution system's primary purpose is
+      process-related because it supplies a continuous flow of expensive and
+      dangerous gas to process tools. Its secondary and substantially more
+      complicated task is batch related, and begins when gas flow is stopped for
+      empty cylinder replacement, system maintenance, or emergency shutdown.
+</P>
+      <P>&nbsp;&nbsp;It is then that safety and process-purity--less than one
+      ppb of contamination--issues require that molecular residue from the gases
+      be removed from the system. This clean-in-place (CIP) or "purging," is
+      done via precisely executed inertgas (usually nitrogen) pressurizations
+      and evacuations. </P>
+      <P><B>Mechanical overview</B> </P>
+      <P><IMG
+            src="../images/gas%20cabinet.jpg" align=left width="300" height="415">The standard mechanical system within a fab's process area consists of
+      a gas distribution module, which includes the &quot;tool(s),&quot; gas source, and
+      gas panel. The tool is any of the wafer fabrication machines that actually
+      apply the gas to the semiconductor media during various stages of the
+      fabrication. Actually, one tool might have as many as 15 separate gas
+      panels supplying it with different gases. Or, one gas panel might supply
+      as many as eight tools with a single gas. </P>
+      <P>&nbsp;&nbsp;The gas source is a standard 44-liter gas cylinder. It
+      supplies gas to the gas panel, which, in turn, conducts gas to wafer
+      processing tools. A second cylinder is used for back-up gas supply, thus
+      ensuring uninterrupted gas flow. </P>
+      <P>&nbsp;&nbsp;The gas panel, a matrix of stainless-steel tubing and
+      pneumatically actuated, normally closed diaphragm valves, is mounted above
+      the gas cylinders (see diagram). The valves are monitored and controlled
+      using a human-machine interface (HMI) and a programmable logic controller
+      (PLC). Control functions include switching the gas supply cylinder as
+      needed, providing locations for process and safety sensors and
+      implementing the "batch-like" CIP purges. </P>
+      <P>&nbsp;&nbsp;Because of variances in process requirements, many purge
+      routines are user-specific and must configured by the operator. Purge
+      requirements also vary widely with the type of gas used. High specific
+      gravity gases are kinetically sluggish and require longer purge times.
+      Other gases have tenacious residues. Process gases such as hydrogen
+      chloride are particularly "sticky," requiring longer purge times.
+      Maintaining higher gas purity also requires longer purges. </P>
+      <P>&nbsp;&nbsp;Cylinder changeouts are the most common reasons for purges.
+      They require the simplest sequences because only a short section of tubing
+      has to be purged before reintroduction of the process gas. </P>
+      <P>&nbsp;&nbsp;At the other extreme are system-wide purge routines. These
+      can have over 300 discrete, timed steps that include venturi-generated
+      evacuations, purge gas pressurizations, and sequenced valve actuations. A
+      menu of application-specific purge routines is needed--rather than having
+      "one big one do them all"--because some routines take hours to complete,
+      whereas others take minutes. Using the correct purge routine is necessary
+      because shutting down a fab's processes for longer than necessary is
+      expensive. Downtime costs can approach $100,000 per hour! </P>
+      <P><B>Redefining the process </B></P>
+      <P>In order to improve CIP efficiencies, ALE introduced its Reduced Purge
+      Volume (RPV) gas distribution hardware to decrease by half--both from time
+      taken and gases lost during a typical CIP purge. ALE chose a control
+      system from DST Controls Inc. (Benica, Ca.) to provide the flexibility
+      needed for the new "plumbing." DST's OEM control system was developed to
+      monitor and execute all of the complex purge--or gas batching--routines
+      that ALE's new hardware could now implement. </P>
+      <P>&nbsp;&nbsp;Additionally, wafer fabs also required that the gas
+      batching system meet some less precisely defined generic criteria. These
+      include flexibility, reliability, low cost, and fast-track development. A
+      premium was also placed on user-friendliness, aesthetic appearance, a
+      small hardware footprint, and on-time delivery. </P>
+      <P>&nbsp;&nbsp;The reasons for these requirements are due to constraints
+      and market pressures, unique to the semiconductor industry. </P>
+      <P>&#8226;&nbsp;<B>Flexibility:</B> Fabs are global, so a new controller had to
+      be easily configurable to accommodate a wide range of international
+      end-users' needs. Customer-specific "moving targets" included unique
+      computer/software systems and local area networks, requiring bidirectional, plug-and-play communication. System security requirements
+      varied from complex multi-level password access, to key switches, to no
+      restrictions at all. Even the PLCs to be used were optional. </P>
+      <P>&#8226;&nbsp;<B>Fast-track development:</B> Because of the competitiveness in
+      the chip industry and the short commercial life of many semiconductor
+      products, new fabs typically must come on-line in a year or less. Vendor
+      equipment availability must keep pace with delivery requirements. </P>
+      <P>&#8226;&nbsp;<B>Cost:</B> OEM products aimed at fabs are subject to
+      competitive forces in a marketplace already flirting with overcapacity.
+      New equipment must be "strategically priced." </P>
+      <P>&#8226;&nbsp;<B>Size:</B> Cramped spaces typify fab environments, so the size
+      of all equipment matters. </P>
+      <P>&#8226;&nbsp;<B>Reliability and user-friendliness:</B> Fabs must deal with
+      dangerous gases (arsine, silane, etc.) and the high scrap costs of
+      products. </P>
+      <P>&#8226;&nbsp;<B>Aesthetics:</B> The customers fabs deal with are
+      sophisticated and high tech. All production equipment must meet these
+      criteria in both performance and appearance. </P>
+      <P>&#8226;&nbsp;<B>On-time delivery:</B> Because the fab industry is currently
+      the "mother-of-all-buyers' markets," with high financial and operating
+      safety risks, poor vendor performance is not tolerated. If there was a fab
+      bumper sticker, it would say "Break a promise, go away." </P>
+      <P>&nbsp;&nbsp;Purging, or clean-in-place, of gas panels is undeniably
+      characterized by batch process elements. In fact, it was only after ALE
+      and DST Controls viewed the system requirements from a "batch control"
+      perspective that the current solution could be developed. &#8226; </P>
+      <P>&nbsp;&nbsp;For more information, contact DST Controls: Tel:
+      707/745-5117; Fax: 707/745-8952; or <B>Circle 227 </B>on the Reader
+      Service Card. </P>
+      <P><B>The 'Batch' Solution</B> </P>
+      <P><B><img border="0" src="../eImages/eos%20family.GIF" align="left" width="651" height="374">T</B>reating the control design as a batch problem embedded in a
+      process environment was the approach used by DST Controls. DST viewed the
+      defining characteristic of "batch" as the ordered sequence of controlled
+      actions required to produce repeatable final products--in this case,
+      molecularly spotless gas vessels. </P>
+      <P>&nbsp;&nbsp;In fact, ALE's purging application had all three components
+      of a batch recipe: formula, procedure, and equipment. Although the same
+      generic purge routines would be used for normal cylinder changes and panel
+      maintenance, each would be implemented with a different formula,
+      configurable by the user for different gases in unique physical
+      installations. </P>
+      <P>&nbsp;&nbsp;Within these parameters, the controller would then
+      repeatedly execute its purge routines, often with over 300 precise steps.
+      The steps involved the actuation of multiple valves while monitoring
+      variable transducer values to confirm each step's completion. The control
+      system was to have the look and feel of a Pentium/Intellution batching
+      package--at a monochrome flat-panel price. </P>
+      <P>&nbsp;&nbsp;The controller's physical design took priority so that its
+      assembly could pace software development. Close attention to ergonomic
+      principles guided the design, especially for the service access doors and
+      panel openings. Electrical design required that all purge options be
+      supported with a minimum of I/O points and without module changes,
+      rewiring, or DIP-switch reselection. </P>
+      <P><B>Software development</B> </P>
+      <P>For software development, ALE and DST reverse-engineered an existing
+      purge procedure, and recreated it as a 50-page flowchart. New software
+      developed from these flowcharts focus on guiding the operator through
+      abnormal purging situations by providing detailed on-screen text and
+      icons. Operators are alerted to problems that can be addressed and solved
+      during a long purge operation, avoiding possible restarting of the
+      sequence. </P>
+      <P>&nbsp;&nbsp;Purge sequencing contributed the most to program size and
+      complexity. Some purges required over 300 steps, no small task for the
+      unit's mid-range PLC. Because the required functions hogged PLC memory,
+      use of efficient coding was paramount; for example, resetting an index
+      value to zero saved two bytes by using a "block clear" instruction instead
+      of a 'move' instruction. The current program is one byte short of the 16K
+      limit for the selected CPU. Communication between the unit's touchscreen
+      and controller has also been optimized, allowing for greatly improved
+      screen update times. </P>
+      <P>&nbsp;&nbsp;Ease of use and system security also concerned the fab
+      operators. Although it has long been considered easiest to navigate these
+      options like climbing along the branches of a tree, changes in PC-based
+      operating systems now allow operators to "jump sideways to an adjacent
+      branch," when necessary. Layout and hierarchy of screens were redesigned,
+      allowing quicker, more intuitive navigation and reducing operator training
+      time. Since no two customers had the same interpretation of which
+      functions should be secured or how, the batch application's recipe was
+      extended one further step, implementing a fully customizable security
+      system. </P>
+      <P>&nbsp;&nbsp;Manual mode is typically the most secure function in any
+      customer's eyes. It is assumed that if operators have satisfied all the
+      requirements to access manual mode, then they can take responsibility for
+      operating the controller safely. However, in order to
+
+</FONT>
+ a<FONT face=Arial>ssure absolute system safety, a set of manual interlocks, which step
+      an operator through especially hazardous valve sequences, was implemented.
+      </P>
+      <P><B>A look at the controller</B> </P>
+      <P>The controller cabinet is rated NEMA 4. It features a 10-in.
+      touchscreen display, alarm horn, LED indicators, key-switch, and an
+      emergency-stop button-- mounted in the hinged front cover. The default PLC
+      is a GE Fanuc Series 90-30 PLC. It is mounted on a pull-out tray behind
+      the shock-mounted cover. Cost, size, memory capacity, expanded
+      communication protocol capability, availability of worldwide service, and
+      acceptance by the semiconductor industry all played a part in GE Fanuc's
+      selection. </P>
+      <P>&nbsp;&nbsp;Because the controller must operate in a Class I, Div. 2
+      environment, a 16-station, electropneumatic interface card transforms the
+      PLCs 24 V dc output signals into nitrogen gas pulses. These pulses then
+      actuate the intrinsically safe gas panel valves. The panel's
+      sensor/transducers are 4-20 mA or 1-5 V dc, and input directly to the PLC.
+      They monitor pressure, flow, and gas cylinder weights, detecting remaining
+      gas quantities. </P>
+      <P>&nbsp;&nbsp;Other controller features include: </P>
+      <P>&#8226;&nbsp;Operator configuration and execution of default and custom purge
+      routines. </P>
+      <P>&#8226;&nbsp;Fail-safe and interlock gas panel valving, to ensure safe states
+      during operator-executed cylinder changes, manual purges, and maintenance.
+      </P>
+      <P>&#8226;&nbsp;Capability of monitoring low-pressure (empty cylinder) alarms or
+      other out-of-spec conditions. </P>
+      <P>&#8226;&nbsp;Capability of monitoring, alarming, and initiating automatic
+      shutdowns for fire, seismic events, gas and fluid leaks, E-stops, and
+      panel malfunctions. </P>
+      <P>&#8226;&nbsp;Communication of system conditions to end-user's fab-wide,
+      life-safety LANs. </P>
+      <P>&#8226;&nbsp;Access to 50 interactive screens for real-time system status
+      indications and operator control. </P>
+      <P>&#8226;&nbsp;Reconfigurability of all purge and monitoring
+      functions.</P><BR><BR>
+
+</FONT>
+ </TD></TR></TABLE>
+
+
+
+</BODY>
+</HTML>
