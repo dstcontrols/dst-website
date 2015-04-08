@@ -1,8 +1,0 @@
-﻿@using dst_website.Helpers
-@{
-    dynamic parentUrl = OptionsHelper.GetValue(Model.Options, "parentUrl");
-    if (parentUrl != null)
-    {
-        Html.RenderAction("SubMenu", "Navigation", new { area = string.Empty, parentUrl });
-    }
-}

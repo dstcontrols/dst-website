@@ -1,4 +1,0 @@
-﻿<?xml version="1.0"?>
-<cms>
-  <users createDefaultUserOnStart="true" enableCmsFormsAuthentication="true" />
-</cms>
