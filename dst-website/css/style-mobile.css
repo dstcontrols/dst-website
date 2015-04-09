@@ -184,7 +184,8 @@
 
 	#titleBar
 	{
-		background: #00a6eb;
+		/*background: #00a6eb;*/
+		background: #d9d9d9;
 		color: #fff;
 	}
 
@@ -200,6 +201,11 @@
 		#titleBar .title span
 		{
 			font-weight: 400;
+		}
+
+		#titleBar .title img
+		{
+			height: 44px;
 		}
 
 	#titleBar .toggle
