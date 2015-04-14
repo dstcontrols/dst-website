@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="about.html" />
+    <Content Include="quote-confirm.html" />
     <Content Include="contact-confirm.html" />
     <Content Include="contact-org.html" />
     <Content Include="contact.html" />
