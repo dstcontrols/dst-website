@@ -52,7 +52,7 @@
 
 	p, ul
 	{
-		margin-bottom: 3em;
+		margin-bottom: 1.5em;
         font-weight: 400;
 
 	}
@@ -271,6 +271,63 @@
 			padding-top: 0;
 			border-top: 0;
 		}
+
+
+    ul.style3
+	{
+	}
+
+		ul.style3 li
+		{
+			padding: .5em 0 0 0;
+			margin: 0 0 0 0;
+            font-size: 100%;
+		}
+		
+		ul.style3 li:after
+		{
+			content: '';
+			display: block;
+			clear: both;
+		}
+		
+		ul.style3 li:first-child
+		{
+			padding-top: 0;
+			border-top: 0;
+		}
+
+    ul.style4
+	{
+	}
+
+		ul.style4 li
+		{
+			padding: .5em 0 0 0;
+			margin: 0 0 0 0;
+            font-size: 100%;
+		}
+		
+		ul.style4 li:after
+		{
+			content: '';
+			display: block;
+			clear: both;
+		}
+		
+		ul.style4 li:first-child
+		{
+			padding-top: 0;
+			border-top: 0;
+		}
+
+        ul.style4 h3
+		{
+			margin: 0 0 0.5em 0;
+            font-size: 1.5em;
+            font-weight:400;
+		}
+
 		
 	ul.posts
 	{

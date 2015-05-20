@@ -57,6 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="career.html" />
     <Content Include="about.html" />
     <Content Include="quote-confirm.html" />
     <Content Include="contact-confirm.html" />
